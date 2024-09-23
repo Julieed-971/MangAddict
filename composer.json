@@ -1,0 +1,9 @@
+{
+    "require": {
+        "symfony/webpack-encore-bundle": "^2.1",
+        "symfony/orm-pack": "^2.4"
+    },
+    "require-dev": {
+        "symfony/maker-bundle": "^1.61"
+    }
+}
