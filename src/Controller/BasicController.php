@@ -20,7 +20,6 @@ class BasicController extends AbstractController
     public function greet(WelcomeMessage $welcomeMessage): Response
     {
         // Call the method on the message object
-        $welcomeMessage = new WelcomeMessage();
         $welcomeMsg = $welcomeMessage->getWelcomeMessage('Username');
         return $this->render('welcome.html.twig', [
             'welcomeMsg' => $welcomeMsg,
