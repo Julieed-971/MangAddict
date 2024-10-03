@@ -1,4 +1,60 @@
 body {
-    background-color: red;
+    background-color: #cf8537;
     color: white;
+    size: 1em;
 }
+
+nav {
+    
+    display: flex;
+    #home {
+        font-family: Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    #home:hover, li:hover {
+        background-color: #915a31;
+    }
+
+    ol {
+      width: 100%;
+    //   background-color: pink;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      justify-content: right;
+    }
+   
+    a {
+      display: block;
+      padding: 6px 12px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+    }
+
+    
+    li {
+        font-weight: bold;
+        font-family: Helvetica, sans-serif;
+    }
+    button {
+        justify-content: center;
+        background-color: #3c3e44;
+        border-color: #3c3e44;
+        border-radius: 5%;
+    }
+  }
+
+section {
+    height: 70%;
+
+    h1 {
+        // font-weight: bold;
+        font-family: Helvetica, sans-serif;
+        font-size: 50px;
+    }
+}
+  
