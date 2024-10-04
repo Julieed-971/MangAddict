@@ -3,13 +3,15 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
-#[ORM\UniqueConstraint(name: 'UNIQ_IDENTIFIER_EMAIL', fields: ['email'])]
+#[ORM\Table(name: '`user`')]
 #[UniqueEntity(fields: ['email'], message: 'Cet e-mail est déjà utilisé.')]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
@@ -18,18 +20,25 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?int $id = null;
 
+    #[ORM\Column(length: 180, nullable: true)]
+    private ?string $username = null;
+
     /**
      * @var string the user firstname
      */
+    #[Assert\NotBlank()]
     #[ORM\Column(length: 180)]
     private ?string $firstname = null;
     
     /**
      * @var string the user firstname
      */
+    #[Assert\NotBlank()]
     #[ORM\Column(length: 180)]
     private ?string $lastname = null;
     
+    #[Assert\Email()]
+    #[Assert\NotBlank()]
     #[ORM\Column(length: 180)]
     private ?string $email = null;
 
@@ -41,16 +50,37 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     /**
      * @var string The hashed password
+     * La contrainte Regex valide que le mot de passe :
+     * contient au moins un chiffre
+     * contient au moins une lettre en minuscule
+     * contient au moins une lettre en majuscule
+     * contient au moins un caractère spécial qui n'est pas un espace
+     * fait entre 8 et 32 caractères de long
      */
+    #[Assert\NotCompromisedPassword()]
+    #[Assert\PasswordStrength(minScore: Assert\PasswordStrength::STRENGTH_STRONG)]
+    #[Assert\Regex('/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.*\s).{8,32}$/')]
     #[ORM\Column]
     private ?string $password = null;
 
-    #[ORM\Column]
-    private bool $isVerified = false;
+    #[ORM\Column(type: Types::DATE_IMMUTABLE, nullable: true)]
+    private ?\DateTimeImmutable $lastConnectedAt = null;
 
     public function getId(): ?int
     {
         return $this->id;
+    }
+    
+    public function getUsername(): ?string
+    {
+        return $this->username;
+    }
+
+    public function setUsername(string $username): static
+    {
+        $this->username = $username;
+
+        return $this;
     }
 
     public function getFirstname(): ?string
@@ -147,15 +177,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         // $this->plainPassword = null;
     }
 
-    public function isVerified(): bool
+    // Getter for lastConnexion
+    public function getLastConnectedAt(): ?\DateTimeImmutable
     {
-        return $this->isVerified;
+        return $this->lastConnectedAt;
     }
 
-    public function setVerified(bool $isVerified): static
+    // Setter for lastConnexion
+    public function setLastConnectedAt(\DateTimeImmutable $lastConnectedAt): static
     {
-        $this->isVerified = $isVerified;
-
+        $this->lastConnectedAt = $lastConnectedAt;
         return $this;
     }
 }
