@@ -6,6 +6,7 @@ use App\Service\WelcomeMessage;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
 
 class BasicController extends AbstractController
 {
@@ -16,12 +17,14 @@ class BasicController extends AbstractController
             'controller_name' => 'BasicController',
         ]);
     }
-    #[Route('/Bienvenue', name:'app_welcome')]
+
+    #[IsGranted('IS_AUTHENTICATED')]
+    #[Route('/bienvenue', name:'app_welcome')]
     public function greet(WelcomeMessage $welcomeMessage): Response
     {
         // Call the method on the message object
-        $welcomeMsg = $welcomeMessage->getWelcomeMessage('Username');
-        return $this->render('welcome.html.twig', [
+        $welcomeMsg = $welcomeMessage->getWelcomeMessage();
+        return $this->render('welcome/welcome.html.twig', [
             'welcomeMsg' => $welcomeMsg,
         ]);
     }
