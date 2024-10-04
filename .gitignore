@@ -29,6 +29,9 @@
 ###> other ###
 db_bash_debug_history.txt
 bash_command.txt
+.sass-cache
+.vscode
+
 ###< other ###
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
