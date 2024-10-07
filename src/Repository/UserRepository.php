@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\User;
+use DateTimeImmutable;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
@@ -32,6 +33,22 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         $this->getEntityManager()->persist($user);
         $this->getEntityManager()->flush();
     }
+
+
+       /**
+        * @return User[] Returns an array of User objects
+        */
+       public function findByInactiveSince(\DateTimeImmutable $date)
+       {
+           $qb = $this->createQueryBuilder('u')
+            ->where('u.lastConnectedAt IS NULL OR u.lastConnectedAt <= :date')
+			->setParameter('date', $date)
+			->getQuery()
+			->getResult();
+           ;
+           return $qb;
+       }
+
 
     //    /**
     //     * @return User[] Returns an array of User objects
