@@ -2,9 +2,7 @@
 
 namespace App\Command;
 
-use App\Entity\User;
-use Doctrine\ORM\EntityManagerInterface;
-use Doctrine\ORM\Mapping\Entity;
+use App\Repository\UserRepository;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\Table;
@@ -15,13 +13,13 @@ use Symfony\Component\Console\Output\OutputInterface;
 #[AsCommand(name: 'app:list-inactive-users')]
 class ListInactiveUsersCommand extends Command
 {
-	// Inject entity manager to interact with database
-	private EntityManagerInterface $manager;
+	// Inject entity userRepository to interact with database
+	private UserRepository $userRepository;
 
-	public function __construct(EntityManagerInterface $manager)
+	public function __construct(UserRepository $userRepository)
 	{
 		parent::__construct();
-		$this->manager = $manager;
+		$this->userRepository = $userRepository;
 	}
 
 	protected function configure(): void
@@ -39,25 +37,18 @@ class ListInactiveUsersCommand extends Command
 		// Calculate the datetime to use to retrieve users
 		$date = (new \DateTimeImmutable())->modify("-$months months");
 		
-		// Query the users in db
-		// where the lastConnectedAt date is equal
-		// or superior to the current datetime minus the number of months
-		$users = $this->manager->getRepository(User::class)
-			->createQueryBuilder('u')
-			->where('u.lastConnectedAt IS NULL OR u.lastConnectedAt <= :date')
-			->setParameter('date', $date)
-			->getQuery()
-			->getResult();
+		// Use the findByInactiveSince method in user repository to query inactive users
+		$inactiveUsers = $this->userRepository->findByInactiveSince($date);
 		
 		// List and output the users
-		if (empty($users))
+		if (empty($inactiveUsers))
 		{
 			$output->writeln('No inactive users found');
 		} else {
 			$table = new Table($output);
 			$table->setHeaders(['First Name', 'Last Name', 'Email', 'LastConnectedAt']);
 
-			foreach ($users as $user) {
+			foreach ($inactiveUsers as $user) {
 				$lastConnectedAt = $user->getLastConnectedAt();
 				$formattedDate = $lastConnectedAt ? $lastConnectedAt->format('Y-m-d H:i:s') : 'Never';
 				$rows[] = [$user->getFirstname(), $user->getLastname(), $user->getEmail(), $formattedDate];
