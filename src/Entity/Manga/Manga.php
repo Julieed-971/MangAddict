@@ -19,10 +19,10 @@ class Manga
 	#[ORM\Column]
 	private ?int $id = null;
 
-	// title
+	// name
 	#[Assert\NotBlank()]
     #[ORM\Column(length: 255)]
-    private ?string $title = null;
+    private ?string $name = null;
 
 	// image
 	#[Assert\NotBlank()]
@@ -47,35 +47,36 @@ class Manga
     #[Assert\Type(type: 'integer')]
     #[Assert\NotBlank()]
     #[ORM\Column]
-    private ?int $volumeNumber = null;
+    private ?int $volumesNumber = null;
 
 	// author
 	#[Assert\NotBlank()]
     #[ORM\Column(length: 255)]
     private ?string $author = null;
 
-	// genre
+	// genres
     #[ORM\Column(length: 255)]
-	private ?MangaGenre $genre = null;
+	private ?MangaGenre $genres = null;
 
 	// description
 	#[Assert\Length(min: 50)]
     #[Assert\NotBlank()]
     #[ORM\Column(type: Types::TEXT)]
-    private ?string $plot = null;
+    private ?string $description = null;
+	
 	public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getTitle(): ?string
+    public function getName(): ?string
     {
-        return $this->title;
+        return $this->name;
     }
 
-    public function setTitle(string $title): self
+    public function setName(string $name): self
     {
-        $this->title = $title;
+        $this->name = $name;
         return $this;
     }
 
@@ -124,14 +125,14 @@ class Manga
 		return $this;
 	}
 
-	public function getVolumeNumber(): ?int
+	public function getVolumesNumber(): ?int
 	{
-		return $this->volumeNumber;
+		return $this->volumesNumber;
 	}
 
-	public function setVolumeNumber(int $volumeNumber): self
+	public function setVolumesNumber(int $volumesNumber): self
 	{
-		$this->volumeNumber = $volumeNumber;
+		$this->volumesNumber = $volumesNumber;
 		return $this;
 	}
 
@@ -146,25 +147,25 @@ class Manga
 		return $this;
 	}
 
-	public function getGenre(): ?MangaGenre
+	public function getGenres(): ?MangaGenre
 	{
-		return $this->genre;
+		return $this->genres;
 	}
 
-	public function setGenre(MangaGenre $genre): self
+	public function setGenres(MangaGenre $genres): self
 	{
-		$this->genre = $genre;
+		$this->genres = $genres;
 		return $this;
 	}
 
-	public function getPlot(): ?string
+	public function getDescription(): ?string
 	{
-		return $this->plot;
+		return $this->description;
 	}
 
-	public function setPlot(string $plot): self
+	public function setDescription(string $description): self
 	{
-		$this->plot = $plot;
+		$this->description = $description;
 		return $this; 
 	}
 }
