@@ -40,13 +40,13 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         */
        public function findByInactiveSince(\DateTimeImmutable $date)
        {
-           $qb = $this->createQueryBuilder('u')
+           $inactiveUsers = $this->createQueryBuilder('u')
             ->where('u.lastConnectedAt IS NULL OR u.lastConnectedAt <= :date')
 			->setParameter('date', $date)
 			->getQuery()
 			->getResult();
            ;
-           return $qb;
+           return !empty($inactiveUsers) ? $inactiveUsers : null;
        }
 
 

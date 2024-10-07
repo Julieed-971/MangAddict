@@ -41,7 +41,7 @@ class ListInactiveUsersCommand extends Command
 		$inactiveUsers = $this->userRepository->findByInactiveSince($date);
 		
 		// List and output the users
-		if (empty($inactiveUsers))
+		if ($inactiveUsers === null)
 		{
 			$output->writeln('No inactive users found');
 		} else {
