@@ -6,6 +6,8 @@ use App\Enum\MangaType;
 use App\Enum\MangaGenre;
 use App\Enum\MangaPublicationStatus;
 use App\Repository\MangaRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -31,6 +33,7 @@ class Manga
     private ?string $cover = null;
 
 	// type
+
     #[ORM\Column(length: 255)]
 	private ?MangaType $type = null;
 
@@ -49,20 +52,26 @@ class Manga
     #[ORM\Column]
     private ?int $volumesNumber = null;
 
-	// author
-	#[Assert\NotBlank()]
-    #[ORM\Column(length: 255)]
-    private ?string $author = null;
-
 	// genres
-    #[ORM\Column(length: 255)]
-	private ?MangaGenre $genres = null;
+    #[ORM\Column(type: 'json')]
+	private array $genres = [];
 
 	// description
 	#[Assert\Length(min: 50)]
     #[Assert\NotBlank()]
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
+
+    /**
+     * @var Collection<int, MangaAuthor>
+     */
+    #[ORM\OneToMany(targetEntity: MangaAuthor::class, mappedBy: 'manga', orphanRemoval: true)]
+    private Collection $mangaAuthors;
+
+    public function __construct()
+    {
+        $this->mangaAuthors = new ArrayCollection();
+    }
 	
 	public function getId(): ?int
     {
@@ -136,23 +145,12 @@ class Manga
 		return $this;
 	}
 
-	public function getAuthor(): ?string
-	{
-		return $this->author;
-	}
-
-	public function setAuthor(string $author): self
-	{
-		$this->author = $author;
-		return $this;
-	}
-
-	public function getGenres(): ?MangaGenre
+	public function getGenres(): array
 	{
 		return $this->genres;
 	}
 
-	public function setGenres(MangaGenre $genres): self
+	public function setGenres(array $genres): self
 	{
 		$this->genres = $genres;
 		return $this;
@@ -168,4 +166,34 @@ class Manga
 		$this->description = $description;
 		return $this; 
 	}
+
+    /**
+     * @return Collection<int, MangaAuthor>
+     */
+    public function getMangaAuthors(): Collection
+    {
+        return $this->mangaAuthors;
+    }
+
+    public function addMangaAuthor(MangaAuthor $mangaAuthor): static
+    {
+        if (!$this->mangaAuthors->contains($mangaAuthor)) {
+            $this->mangaAuthors->add($mangaAuthor);
+            $mangaAuthor->setManga($this);
+        }
+
+        return $this;
+    }
+
+    public function removeMangaAuthor(MangaAuthor $mangaAuthor): static
+    {
+        if ($this->mangaAuthors->removeElement($mangaAuthor)) {
+            // set the owning side to null (unless already changed)
+            if ($mangaAuthor->getManga() === $this) {
+                $mangaAuthor->setManga(null);
+            }
+        }
+
+        return $this;
+    }
 }
