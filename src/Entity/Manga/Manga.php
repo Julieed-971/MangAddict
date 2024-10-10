@@ -30,7 +30,7 @@ class Manga
 	#[Assert\NotBlank()]
     #[Assert\Url()]
     #[ORM\Column(length: 255)]
-    private ?string $cover = null;
+    private ?string $imageUrl = null;
 
 	// type
 
@@ -38,9 +38,10 @@ class Manga
 	private ?MangaType $type = null;
 
 	// startDate
+	#[Assert\Type(type: 'integer')]
     #[Assert\NotBlank()]
     #[ORM\Column]
-    private ?\DateTimeImmutable $startDate = null;
+    private ?int $startDate = null;
 
 	// status
     #[ORM\Column(length: 255)]
@@ -89,14 +90,14 @@ class Manga
         return $this;
     }
 
-    public function getCover(): ?string
+    public function getImageUrl(): ?string
     {
-        return $this->cover;
+        return $this->imageUrl;
     }
 
-    public function setCover(string $cover): self
+    public function setImageUrl(string $imageUrl): self
     {
-        $this->cover = $cover;
+        $this->imageUrl = $imageUrl;
         return $this;
     }
 
