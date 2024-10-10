@@ -2,7 +2,7 @@
 
 namespace App\Repository;
 
-use App\Entity\Manga\Manga;
+use App\Entity\Manga;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

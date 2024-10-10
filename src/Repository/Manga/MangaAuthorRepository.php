@@ -2,8 +2,8 @@
 
 namespace App\Repository;
 
-use App\Entity\Manga\MangaAuthor;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use App\Entity\MangaAuthor;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
