@@ -7,5 +7,9 @@ $(document).ready(function() {
 			'background-color': currentTextColor,
 			'color': currentBgColor
 		});
+		$('nav').css({
+			'background-color': currentTextColor,
+			'color': currentBgColor
+		});
 	});
 });
