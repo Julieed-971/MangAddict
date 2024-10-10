@@ -8851,5 +8851,665 @@
         }
       ]
     }
+  },
+  {
+    "name": "Black Butler",
+    "japName": "Kuroshitsuji / 黒執事",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/black+butler.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/79/black_butler_197.webp?11718794411",
+    "score": "9.17",
+    "votersNumber": "1239",
+    "country": "Japon",
+    "type": "Shonen",
+    "startDate": "2007",
+    "status": "En attente",
+    "volumesNumber": "34",
+    "genres": [
+      "Drame",
+      "Historique",
+      "Psychologique",
+      "Surnaturel"
+    ],
+    "author": {
+      "story": "Toboso Yana",
+      "art": "Toboso Yana"
+    },
+    "editor": {
+      "VO": "Square Enix",
+      "VF": "Kana"
+    },
+    "description": "Lorsqu'on le regarde au début, ce manoir perdu dans la campagne de Londres parait tout à fait normal. Mais ce manoir est habité par des personnes pour le moins étranges : Ciel Phantomhive (Funtomhive) jeune maître de 12 ans, industriel hors-pair à la tête de la famille la plus redoutée de l'Angleterre ; un majordome démoniaque, Sebastian Michaelis, doué pour les tâches ménagères comme pour les arts-martiaux ; un maître d'hôtel, Tanaka, qui ne sait rien faire d'autre que boire du saké et dire \"oh oh oh\" ; un cuisinier aux plats douteux, Bard, ne sachant cuisiner sa viande qu'au lance-flammes ; une servante, May Lin, tellement maladroite qu'elle pourrait vous tuer sans le vouloir ; et un jardinier, Finnian, à la force surhumaine, qui se croit à démolition land qui ne sait donc entretenir un jardin qu'en le dévastant. Et lorsque tout ce petit monde a affaire à des personnages aussi peu recommandable que Jack L'éventreur, forcément, ça fait tâche...",
+    "relations": {
+      "Animes": [
+        {
+          "name": "Kuroshitsuji",
+          "url": "https://nautiljon.com//animes/kuroshitsuji.html",
+          "relationType": "[Adaptation]",
+          "imageUrl": "https://nautiljon.com//images/anime/00/62/kuroshitsuji_926.webp?1704629626",
+          "additionnalInformations": "(Série - 2008)"
+        },
+        {
+          "name": "Kuroshitsuji : Book of Circus",
+          "url": "https://nautiljon.com//animes/kuroshitsuji+-+book+of+circus.html",
+          "relationType": "[Adaptation]",
+          "imageUrl": "https://nautiljon.com//images/anime/00/87/kuroshitsuji_book_of_circus_3178.webp?1660949421",
+          "additionnalInformations": "(Série - 2014)"
+        },
+        {
+          "name": "Kuroshitsuji : Book of Murder",
+          "url": "https://nautiljon.com//animes/kuroshitsuji+-+book+of+murder.html",
+          "relationType": "[Adaptation]",
+          "imageUrl": "https://nautiljon.com//images/anime/00/85/kuroshitsuji_book_of_murder_3658.webp?1640702684",
+          "additionnalInformations": "(OAV - 2014)"
+        },
+        {
+          "name": "Kuroshitsuji: Kishuku Gakkou-hen",
+          "url": "https://nautiljon.com//animes/kuroshitsuji-+kishuku+gakkou-hen.html",
+          "relationType": "[Adaptation]",
+          "imageUrl": "https://nautiljon.com//images/anime/00/09/kuroshitsuji_kishuku_gakkou-hen_11990.webp?1719350135",
+          "additionnalInformations": "(Série - 2024)"
+        },
+        {
+          "name": "Kuroshitsuji : Midori no Majo-hen",
+          "url": "https://nautiljon.com//animes/kuroshitsuji+-+midori+no+majo-hen.html",
+          "relationType": "[Adaptation]",
+          "imageUrl": "https://nautiljon.com//images/anime/00/69/kuroshitsuji_midori_no_majo-hen_12796.webp?1720306338",
+          "additionnalInformations": "(Série - 2025)"
+        },
+        {
+          "name": "Kuroshitsuji Bangai-Hen : Sono Shitsuji, Kougyou",
+          "url": "https://nautiljon.com//animes/kuroshitsuji+bangai-hen+-+sono+shitsuji,+kougyou.html",
+          "relationType": "[Adaptation]",
+          "imageUrl": "https://nautiljon.com//images/anime/00/15/kuroshitsuji_-_bangai-hen_-_sono_shitsuji_kougyou_1651.webp?1704647906",
+          "additionnalInformations": "(Spécial - 2009)"
+        },
+        {
+          "name": "Kuroshitsuji Movie: Book of the Atlantic",
+          "url": "https://nautiljon.com//animes/kuroshitsuji+movie-+book+of+the+atlantic.html",
+          "relationType": "[Adaptation]",
+          "imageUrl": "https://nautiljon.com//images/anime/00/09/kuroshitsuji_book_of_the_atlantic_4890.webp?1660856348",
+          "additionnalInformations": "(Film - 2017)"
+        },
+        {
+          "name": "Kuroshitsuji Picture Drama",
+          "url": "https://nautiljon.com//animes/kuroshitsuji+picture+drama.html",
+          "relationType": "[Adaptation]",
+          "imageUrl": "https://nautiljon.com//images/anime/00/02/kuroshitsuji_picture_drama_3620.webp?1705492228",
+          "additionnalInformations": "(Animix / Picture drama - 2010)"
+        }
+      ]
+    },
+    "news": {
+      "french": [
+        {
+          "name": "Trois coffrets découverte à retrouver ce mois-ci chez Kana",
+          "url": "https://nautiljon.com/breves/trois-coffrets-decouverte-a-retrouver-ce-mois-ci-chez-kana,19320.html",
+          "date": "03/10/2024",
+          "description": "Les éditions Kana nous annoncent que dès le 31 octobre prochain, elles proposeront dans les librairies pas moins de trois coffrets découverte comprenant les cinq premiers volumes de leurs séries le...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/02/trois_coffrets_decouverte_a_retrouver_ce_mois-ci_chez_kana_19320.webp?1727948500"
+        },
+        {
+          "name": "Black Butler l'arc Emerald Witch adapté en anime !",
+          "url": "https://nautiljon.com/breves/black-butler-l-arc-emerald-witch-adapte-en-anime,19002.html",
+          "date": "07/07/2024",
+          "description": "La nouvelle a été dévoilée à l'occasion de l'Anime Expo, qui se déroule actuellement à Los Angeles : l'anime Kuroshitsuji : Midori no Majo-hen (Black Butler: Emerald Witch Arc), adaptant l'arc épon...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/20/black_butler_l_arc_emerald_witch_adapte_en_anime_19002.webp?1720306251"
+        },
+        {
+          "name": "Une pause pour le manga Black Butler (Kuroshitsuji)",
+          "url": "https://nautiljon.com/breves/une-pause-pour-le-manga-black-butler-kuroshitsuji,18909.html",
+          "date": "18/06/2024",
+          "description": "C'est par un tweet posté par le compte officiel du magazine de prépublication GFantasy que nous apprenons la nouvelle : le célèbre manga Black Butler, aussi connu sous son nom japonais Kuroshitsuji...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/90/une_pause_pour_le_manga_black_butler_kuroshitsuji_18909.webp?1718790893"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 13 au 19 mai 2024",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-13-au-19-mai-2024,17870.html",
+          "date": "24/05/2024",
+          "description": "Classement Oricon des 30 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/07/top_volumes_mangas_oricon_semaine_du_13_au_19_mai_2024_17870.webp?1716540507"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 6 au 12 mai 2024",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-6-au-12-mai-2024,17845.html",
+          "date": "17/05/2024",
+          "description": "Classement Oricon des 30 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/54/top_volumes_mangas_oricon_semaine_du_6_au_12_mai_2024_17845.webp?1715933319"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 29 avril au 5 mai 2024",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-29-avril-au-5-mai-2024,17813.html",
+          "date": "10/05/2024",
+          "description": "Classement Oricon des 30 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/31/top_volumes_mangas_oricon_semaine_du_29_avril_au_5_mai_2024_17813.webp?1715332172"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 22 au 28 avril 2024",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-22-au-28-avril-2024,17797.html",
+          "date": "03/05/2024",
+          "description": "Classement Oricon des 30 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/79/top_volumes_mangas_oricon_semaine_du_22_au_28_avril_2024_17797.webp?1714723430"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 14 au 20 août 2023",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-14-au-20-aout-2023,16857.html",
+          "date": "25/08/2023",
+          "description": "Classement Oricon des 30 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/75/top_volumes_mangas_oricon_semaine_du_14_au_20_aout_2023_16857.webp?1692959442"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 7 au 13 août 2023",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-7-au-13-aout-2023,16822.html",
+          "date": "18/08/2023",
+          "description": "Classement Oricon des 30 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/22/top_volumes_mangas_oricon_semaine_du_7_au_13_aout_2023_16822.webp?1692347163"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 31 juillet au 6 août 2023",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-31-juillet-au-6-aout-2023,16810.html",
+          "date": "11/08/2023",
+          "description": "Classement Oricon des 30 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/01/top_volumes_mangas_oricon_semaine_du_31_juillet_au_6_aout_2023_16810.webp?1691738388"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 24 au 30 juillet 2023",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-24-au-30-juillet-2023,16791.html",
+          "date": "04/08/2023",
+          "description": "Classement Oricon des 30 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/19/top_volumes_mangas_oricon_semaine_du_24_au_30_juillet_2023_16791.webp?1691133863"
+        },
+        {
+          "name": "Un nouvel anime Kuroshitsuji annoncé !",
+          "url": "https://nautiljon.com/breves/un-nouvel-anime-kuroshitsuji-annonce,17594.html",
+          "date": "04/07/2023",
+          "description": "La nouvelle, inattendue, a été confirmée par Crunchyroll : un nouvel anime Kuroshitsuji (Black Butler) est actuellement en cours de production au Japon. Il est annoncé pour 2024. Pour l'occasion,...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/49/un_nouvel_anime_kuroshitsuji_annonce_17594.webp?1688430561"
+        },
+        {
+          "name": "Le quatrième artbook de Black Butler aux éditions Kana",
+          "url": "https://nautiljon.com/breves/le-quatrieme-artbook-de-black-butler-aux-editions-kana,17578.html",
+          "date": "02/07/2023",
+          "description": "Après les sorties des artbooks 1 à 3 du manga Black Butler (Kuroshitsuji), les éditions Kana ont annoncé l'arrivée prochaine du 4e artbook de la série dans leur catalogue. Sortie prévue le 17 novem...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/87/le_quatrieme_artbook_de_black_butler_aux_editions_kana_17578.webp?1688321457"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 8 au 14 août 2022",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-8-au-14-aout-2022,15398.html",
+          "date": "20/08/2022",
+          "description": "Classement Oricon des 30 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/89/top_volumes_mangas_oricon_semaine_du_8_au_14_aout_2022_15398.webp?1661011782"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 1er au 7 août 2022",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-1er-au-7-aout-2022,15385.html",
+          "date": "12/08/2022",
+          "description": "Classement Oricon des 30 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/58/top_volumes_mangas_oricon_semaine_du_1er_au_7_aout_2022_15385.webp?1660284428"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 25 au 31 juillet 2022",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-25-au-31-juillet-2022,15365.html",
+          "date": "05/08/2022",
+          "description": "Classement Oricon des 30 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/56/top_volumes_mangas_oricon_semaine_du_25_au_31_juillet_2022_15365.webp?1659688060"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 11 au 17 octobre 2021",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-11-au-17-octobre-2021,14368.html",
+          "date": "22/10/2021",
+          "description": "Classement Oricon des 30 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/86/top_volumes_mangas_oricon_semaine_du_11_au_17_octobre_2021_14368.webp?1634895013"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 4 au 10 octobre 2021",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-4-au-10-octobre-2021,14348.html",
+          "date": "15/10/2021",
+          "description": "Classement Oricon des 30 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/84/top_volumes_mangas_oricon_semaine_du_4_au_10_octobre_2021_14348.webp?1634295041"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 27 septembre au 3 octobre 2021",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-27-septembre-au-3-octobre-2021,14329.html",
+          "date": "08/10/2021",
+          "description": "Classement Oricon des 30 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/92/top_volumes_mangas_oricon_semaine_du_27_septembre_au_3_octobre_2021_14329.webp?1633685876"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 2 au 8 novembre 2020",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-2-au-8-novembre-2020,13439.html",
+          "date": "13/11/2020",
+          "description": "Classement Oricon des 30 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/93/top_volumes_mangas_oricon_semaine_du_2_au_8_novembre_2020_13439.webp?1605869182"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 26 octobre au 1er novembre 2020",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-26-octobre-au-1er-novembre-2020,13393.html",
+          "date": "06/11/2020",
+          "description": "Classement Oricon des 30 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/39/top_volumes_mangas_oricon_semaine_du_26_octobre_au_1er_novembre_2020_13393.webp?1604659955"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 6 au 12 janvier 2020",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-6-au-12-janvier-2020,12375.html",
+          "date": "17/01/2020",
+          "description": "Classement Oricon des 30 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/57/top_volumes_mangas_oricon_semaine_du_6_au_12_janvier_2020_12375.webp?1579255742"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 30 décembre 2019 au 5 janvier 2020",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-30-decembre-2019-au-5-janvier-2020,12331.html",
+          "date": "10/01/2020",
+          "description": "Classement Oricon des 30 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/13/top_volumes_mangas_oricon_semaine_du_30_decembre_2019_au_5_janvier_2020_12331.webp?1578653705"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 23 au 29 décembre 2019",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-23-au-29-decembre-2019,12302.html",
+          "date": "06/01/2020",
+          "description": "Classement Oricon des 30 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/20/top_volumes_mangas_oricon_semaine_du_23_au_29_decembre_2019_12302.webp?1578301105"
+        },
+        {
+          "name": "Japan Expo 2019 des posters aux éditions Kana",
+          "url": "https://nautiljon.com/breves/japan-expo-2019-des-posters-aux-editions-kana,10310.html",
+          "date": "18/06/2019",
+          "description": "En plus des goodies offerts pour certaines séries, il vous sera possible d'acheter des posters sur le stand des éditions Kana ! Black Butler Fire Force Monster March comes in like a lion Lorsqu...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/01/japan_expo_2019_les_posters_aux_editions_kana_10310.webp?1560886802"
+        },
+        {
+          "name": "JE 2019 un espace Black Butler et des goodies (2)",
+          "url": "https://nautiljon.com/breves/je-2019-un-espace-black-butler-et-des-goodies-2,10271.html",
+          "date": "14/06/2019",
+          "description": "!! Une erreur s'est glissée sur l'annonce de l'éditeur Kana !! De nombreux goodies aux couleurs de la série sont toujours à remporter : clearfiles, serviettes, peluches, badges, plaid, thermos, pos...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/17/je_2019_un_espace_black_butler_et_des_goodies_2_10271.webp?1560544139"
+        },
+        {
+          "name": "JE 2019 un espace Black Butler et des goodies",
+          "url": "https://nautiljon.com/breves/je-2019-un-espace-black-butler-et-des-goodies,10212.html",
+          "date": "09/06/2019",
+          "description": "À Japan Expo 2019, sur le stand des éditions Kana, un espace sera dédié à l'univers de Black Butler ainsi que de nombreux goodies à gagner ! Cet espace exposera les dessins de l'auteure de la série...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/21/je_2019_un_espace_black_butler_et_des_goodies_10212.webp?1560115029"
+        },
+        {
+          "name": "Tome 1 acheté, tome 2 offert aux éditions Kana",
+          "url": "https://nautiljon.com/breves/tome-1-achete-tome-2-offert-aux-editions-kana,9201.html",
+          "date": "18/01/2019",
+          "description": "Les éditions Kana proposent dès ce 9 janvier, 5 packs découverte pour les séries suivantes : Hunter X Hunter Black Butler Fire Force Blue Spring Ride DevilsLine Vous aurez les deux premiers tomes...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/10/tome_1_achete_tome_2_offert_aux_editions_kana_9201.webp?1548007117"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 8 au 14 janvier 2018",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-8-au-14-janvier-2018,8759.html",
+          "date": "18/01/2018",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/95/top_volumes_mangas_oricon_semaine_du_8_au_14_janvier_2018_8759.webp?1516266014"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 1er au 7 janvier 2018",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-1er-au-7-janvier-2018,8722.html",
+          "date": "11/01/2018",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/22/top_volumes_mangas_oricon_semaine_du_1er_au_7_janvier_2018_8722.webp?1515659341"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 12 au 18 juin 2017",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-12-au-18-juin-2017,7750.html",
+          "date": "22/06/2017",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/05/top_volumes_mangas_oricon_semaine_du_12_au_18_juin_2017_7750.webp?1498114060"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 5 au 11 juin 2017",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-5-au-11-juin-2017,7710.html",
+          "date": "15/06/2017",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/01/top_volumes_mangas_oricon_semaine_du_5_au_11_juin_2017_7710.webp?1497509972"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 29 mai au 4 juin 2017",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-29-mai-au-4-juin-2017,7671.html",
+          "date": "08/06/2017",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/17/top_volumes_mangas_oricon_semaine_du_29_mai_au_4_juin_2017_7671.webp?1496932229"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 22 au 28 mai 2017",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-22-au-28-mai-2017,7645.html",
+          "date": "06/06/2017",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/54/top_volumes_mangas_oricon_semaine_du_22_au_28_mai_2017_7645.webp?1496731707"
+        },
+        {
+          "name": "Le second artbook de Black Butler finalement annoncé pour juillet",
+          "url": "https://nautiljon.com/breves/le-second-artbook-de-black-butler-finalement-annonce-pour-juillet,5356.html",
+          "date": "21/03/2017",
+          "description": "On vous l'avait annoncé en janvier dernier, le second artbookdu manga Black Butler arrivera dans le catalogue de Kana cette année. Mais alors que celui-ci était prévu pour février, pour une sortie...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/65/le_second_artbook_de_black_butler_finalement_annonce_pour_juillet_5356.webp?1490099190"
+        },
+        {
+          "name": "Le second artbook de Black Butler reporté",
+          "url": "https://nautiljon.com/breves/le-second-artbook-de-black-butler-reporte,4946.html",
+          "date": "01/02/2017",
+          "description": "Mauvaise nouvelle pour ceux qui, suite à l'annonce faite en janvier dernier, attendaient de pied ferme l'arrivée du second artbook de la saga Black Butler : initialement prévu pour cette semaine au...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/64/le_second_artbook_de_black_butler_reporte_4946.webp?1490099117"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 9 au 15 janvier 2017",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-9-au-15-janvier-2017,6865.html",
+          "date": "19/01/2017",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/56/top_volumes_mangas_oricon_semaine_du_9_au_15_janvier_2017_6865.webp?1484812473"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 2 au 8 janvier 2017",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-2-au-8-janvier-2017,6823.html",
+          "date": "12/01/2017",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/32/top_volumes_mangas_oricon_semaine_du_2_au_8_janvier_2017_6823.webp?1484213363"
+        },
+        {
+          "name": "Le deuxième artbook de Black Butler débarque chez Kana en février",
+          "url": "https://nautiljon.com/actualite/mangas/le-deuxieme-artbook-de-black-butler-debarque-chez-kana-en-fevrier,6817.html",
+          "date": "11/01/2017",
+          "description": "Black Butler revient en février avec un 23e tome, mais également avec un artbook.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/71/le_deuxieme_artbook_de_black_butler_debarque_chez_kana_en_fevrier_6817.webp?1490099112"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 26 décembre 2016 au 1e janvier 2017",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-26-decembre-2016-au-1e-janvier-2017,6798.html",
+          "date": "09/01/2017",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/89/top_volumes_mangas_oricon_semaine_du_26_decembre_2016_au_1e_janvier_2017_6798.webp?1483950746"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 6 au 12 juin 2016",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-6-au-12-juin-2016,5974.html",
+          "date": "16/06/2016",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/47/top_volumes_mangas_oricon_semaine_du_6_au_12_juin_2016_5974.webp?1466074849"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 30 mai au 5 juin 2016",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-30-mai-au-5-juin-2016,5973.html",
+          "date": "16/06/2016",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/37/top_volumes_mangas_oricon_semaine_du_30_mai_au_5_juin_2016_5973.webp?1466074844"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 23 au 29 mai 2016",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-23-au-29-mai-2016,5942.html",
+          "date": "04/06/2016",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/24/top_volumes_mangas_oricon_semaine_du_23_au_29_mai_2016_5942.webp?1465024385"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 30 novembre au 6 décembre 2015",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-30-novembre-au-6-decembre-2015,5449.html",
+          "date": "10/12/2015",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/94/top_volumes_oricon_semaine_du_30_novembre_au_6_decembre_2015_5449.webp?1449765867"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 23 au 29 novembre 2015",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-23-au-29-novembre-2015,5438.html",
+          "date": "04/12/2015",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/83/top_volumes_oricon_semaine_du_23_au_29_novembre_2015_5438.webp?1449223381"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 16 au 22 novembre 2015",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-16-au-22-novembre-2015,5424.html",
+          "date": "26/11/2015",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/42/top_volumes_oricon_semaine_du_16_au_22_novembre_2015_5424.webp?1448555150"
+        },
+        {
+          "name": "Un film d'animation pour Black Butler",
+          "url": "https://nautiljon.com/breves/un-film-d-animation-pour-black-butler,3128.html",
+          "date": "11/10/2015",
+          "description": "C'est sur le compte Twitter officiel de la série, qu'on apprends que le manga Black Butler de Yana Toboso va avoir droit à un film anime. On se sait pas encore si ce sera une adaptation ou une hist...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/82/un_film_anime_pour_black_butler_3128.webp?1445006071"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 8 au 14 juin 2015",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-8-au-14-juin-2015,5167.html",
+          "date": "18/06/2015",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/76/top_volumes_oricon_semaine_du_8_au_14_juin_2015_5167.webp?1434639876"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 1 au 7 juin 2015",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-1-au-7-juin-2015,5145.html",
+          "date": "11/06/2015",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/54/top_volumes_oricon_semaine_du_1_au_7_juin_2015_5145.webp?1434039115"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 25 au 31 mai 2015",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-25-au-31-mai-2015,5133.html",
+          "date": "04/06/2015",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/33/top_volumes_oricon_semaine_du_25_au_31_mai_2015_5133.webp?1433433225"
+        },
+        {
+          "name": "De nouveaux goodies pour fêter les dix ans de Black Butler !",
+          "url": "https://nautiljon.com/breves/de-nouveaux-goodies-pour-feter-les-dix-ans-de-black-butler,2861.html",
+          "date": "30/05/2015",
+          "description": "Pour fêter les dix ans du manga Black Butler (Kuroshitsuji), Toboso Yana, son auteur, et Square Enix ont décidé de mettre en vente de nouveaux goodies. Ces objets seront disponibles en précommande...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/16/de_nouveaux_goodies_pour_feter_les_dix_ans_de_black_butler_2861.webp?1433001736"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 5 au 11 janvier 2015",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-5-au-11-janvier-2015,4897.html",
+          "date": "21/01/2015",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/79/top_volumes_oricon_semaine_du_5_au_11_janvier_2015_4897.webp?1421854070"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 29 décembre 2014 au 4 janvier 2015",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-29-decembre-2014-au-4-janvier-2015,4888.html",
+          "date": "16/01/2015",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/88/top_volumes_oricon_semaine_du_29_au_04_decembre_2014_4888.webp?1421423164"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 22 au 28 décembre 2014",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-22-au-28-decembre-2014,4887.html",
+          "date": "16/01/2015",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/78/top_volumes_oricon_semaine_du_22_au_28_decembre_2014_4887.webp?1421422119"
+        },
+        {
+          "name": "Kana dévoile ses calendriers pour l'année 2015",
+          "url": "https://nautiljon.com/breves/kana-devoile-ses-calendriers-pour-l-annee-2015,2307.html",
+          "date": "08/09/2014",
+          "description": "Les éditions Kana ont dévoilé hier leurs calendriers à paraître pour l'année 2015. Cette année, ce sont une fois de plus 3 séries phares de leur catalogue qui seront à l'honneur : Bakuman, Black Bu...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/70/kana_devoile_ses_calendriers_pour_l_annee_2015_2307.webp?1410172467"
+        },
+        {
+          "name": "Le character guide Black Butler chez Kana en novembre",
+          "url": "https://nautiljon.com/actualite/mangas/le-character-guide-black-butler-chez-kana-en-novembre,4675.html",
+          "date": "06/09/2014",
+          "description": "Le guide officiel des personnages de Black Butler enfin en France !",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/57/le_character_guide_black_butler_chez_kana_en_novembre_4675.webp?1410024730"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 7 au 13 juillet 2014",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-7-au-13-juillet-2014,4566.html",
+          "date": "17/07/2014",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/66/top_volumes_oricon_semaine_du_7_au_13_juillet_2014_4566.webp?1405616562"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 30 juin au 6 juillet 2014",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-30-juin-au-6-juillet-2014,4551.html",
+          "date": "10/07/2014",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/15/top_volumes_oricon_semaine_du_30_juin_au_6_juillet_2014_4551.webp?1405000643"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 23 au 29 juin 2014",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-23-au-29-juin-2014,4535.html",
+          "date": "04/07/2014",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/53/top_volumes_oricon_semaine_du_23_au_29_juin_2014_4535.webp?1404474183"
+        },
+        {
+          "name": "Les agendas Kana 2014-2015 se dévoilent",
+          "url": "https://nautiljon.com/breves/les-agendas-kana-2014-2015-se-devoilent,1859.html",
+          "date": "15/04/2014",
+          "description": "Pour la rentrée prochaine, c'est désormais la coutume, les éditeurs de manga vous proposeront des agendas à l'effigie de vos héros préférés. Cette année, Kana met le paquet avec 3 séries très appré...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/95/les_agendas_kana_2014-2015_se_devoilent_1859.webp?1397567108"
+        },
+        {
+          "name": "Black Butler (Kuroshitsuji) nouvel arc en production",
+          "url": "https://nautiljon.com/breves/black-butler-kuroshitsuji-nouvel-arc-en-production,1775.html",
+          "date": "22/03/2014",
+          "description": "C'est à l'occasion du salon nippon AnimeJapan 2014 qu'un nouvel arc pour la série Black Butler (Kuroshitusji) a été annoncé. Intitulé Kuroshitsuji Book of Circus, celui-ci devrait débarquer au Japo...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/57/black_butler_kuroshitsuji_nouvel_arc_en_production_1775.webp?1408397818"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 3 au 9 février 2014",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-3-au-9-fevrier-2014,3938.html",
+          "date": "13/02/2014",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/83/top_volumes_oricon_semaine_du_3_au_9_fevrier_2014_3938.webp?1403525149"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 27 janvier au 2 février 2014",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-27-janvier-au-2-fevrier-2014,3913.html",
+          "date": "06/02/2014",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/31/top_volumes_oricon_semaine_du_27_janvier_au_2_fevrier_2014_3913.webp?1411722168"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 20 au 26 janvier 2014",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-20-au-26-janvier-2014,3895.html",
+          "date": "01/02/2014",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/59/top_volumes_oricon_semaine_du_20_au_26_janvier_2014_3895.webp?1391380978"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 13 au 19 janvier 2014",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-13-au-19-janvier-2014,3868.html",
+          "date": "23/01/2014",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/86/top_volumes_oricon_semaine_du_13_au_19_janvier_2014_3868.webp?1390484051"
+        },
+        {
+          "name": "Un nouvel anime pour Kuroshitsuji/Black Butler !",
+          "url": "https://nautiljon.com/breves/un-nouvel-anime-pour-kuroshitsuji-black-butler,1573.html",
+          "date": "16/01/2014",
+          "description": "C'est via le magazine G-Fantasy, qui pré-publie la série, que l'annonce a été faites : le manga Kuroshitsuji/Black Butler sera prochainement de nouveau adapté en anime ! On ne sait pas encore s'il...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/37/1389878946512_image.webp?0"
+        },
+        {
+          "name": "Black Butler (Kuroshitsuji) The Movie trailer 3",
+          "url": "https://nautiljon.com/breves/black-butler-kuroshitsuji-the-movie-trailer-3,1418.html",
+          "date": "18/11/2013",
+          "description": "Le film live de Kuroshitsuji (Black Butler en vf) sortira le 18 janvier 2014 au Japon. Un nouveau trailer vient d'être dévoilé :",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/81/1384767405113_image.webp?1401710866"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 9 au 15 septembre 2013",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-9-au-15-septembre-2013,3362.html",
+          "date": "19/09/2013",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/26/top_volumes_oricon_semaine_du_9_au_15_septembre_2013_3362.webp?1388959245"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 2 au 8 septembre 2013",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-2-au-8-septembre-2013,3332.html",
+          "date": "12/09/2013",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/23/top_volumes_oricon_semaine_du_2_au_8_septembre_2013_3332.webp?1403532343"
+        },
+        {
+          "name": "Black Butler (Kuroshitsuji) The Movie trailer 2",
+          "url": "https://nautiljon.com/breves/black-butler-kuroshitsuji-the-movie-trailer-2,1198.html",
+          "date": "05/09/2013",
+          "description": "Le film live de Kuroshitsuji (Black Butler en vf) sortira le 18 janvier 2014 au Japon. Une nouvelle promotion vidéo vient d'être dévoilée :",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/89/1378411132900_image.webp?1401710879"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 26 août au 1 septembre 2013",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-26-aout-au-1-septembre-2013,3298.html",
+          "date": "05/09/2013",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/89/top_volumes_oricon_semaine_du_26_aout_au_1_septembre_2013_3298.webp?1389393269"
+        },
+        {
+          "name": "Black Butler (Kuroshitsuji) The Movie trailer !",
+          "url": "https://nautiljon.com/breves/black-butler-kuroshitsuji-the-movie-trailer,1042.html",
+          "date": "16/07/2013",
+          "description": "Après les premières photos, voici le trailer de Black Butler The Movie, le film live de Kuroshitsuji adapté du manga. La sortie dans les salles japonaises est prévue le 18 janvier 2014. Trailer Tra...",
+          "imageUrl": "https://nautiljon.com/static/images/no_image_63.png"
+        },
+        {
+          "name": "Premières photos du film live de Kuroshitsuji",
+          "url": "https://nautiljon.com/breves/premieres-photos-du-film-live-de-kuroshitsuji,933.html",
+          "date": "11/06/2013",
+          "description": "Le 6 Juin, trois photos provenant du film live du manga Kuroshitsuji (Black Butler en vf) on été révélées. Rappelons que les acteurs principaux sont Mizushima Hiro dans le rôle de Sebastian et Gori...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/33/1370894922849_image.webp?1401710911"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 8 au 14 avril 2013",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-8-au-14-avril-2013,2787.html",
+          "date": "18/04/2013",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/78/top_volumes_oricon_semaine_du_8_au_14_avril_2013_2787.webp?1403534258"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 1er au 7 avril 2013",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-1er-au-7-avril-2013,2763.html",
+          "date": "11/04/2013",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/36/top_volumes_oricon_semaine_du_1er_au_7_avril_2013_2763.webp?1388959306"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 25 au 31 mars 2013",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-25-au-31-mars-2013,2744.html",
+          "date": "04/04/2013",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/44/top_volumes_oricon_semaine_du_25_au_31_mars_2013_2744.webp?1365034138"
+        },
+        {
+          "name": "Des écouteurs Black Butler chez Kana !",
+          "url": "https://nautiljon.com/actualite/mangas/des-ecouteurs-black-butler-chez-kana,2651.html",
+          "date": "11/03/2013",
+          "description": "Dans quelques jours, découvrez les écouteurs Black Butler !",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/15/des_ecouteurs_black_butler_chez_kana_2651.webp?1364403578"
+        },
+        {
+          "name": "Black Butler (Kuroshitsuji) adapté en film live !",
+          "url": "https://nautiljon.com/actualite/films/black-butler-kuroshitsuji-adapte-en-film-live,2444.html",
+          "date": "09/01/2013",
+          "description": "Le film live est prévu en 2013, dans les salles japonaises",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/44/black_butler_kuroshitsuji_adapte_en_film_live_2444.webp?1401710843"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 05 au 11 novembre 2012",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-05-au-11-novembre-2012,2251.html",
+          "date": "15/11/2012",
+          "description": "Liste des 15 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/15/_prepa_top_volumes_semaine_du_05_au_11_novembre_2012_2251.webp?1618481138"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 29 octobre au 04 novembre 2012",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-29-octobre-au-04-novembre-2012,2229.html",
+          "date": "08/11/2012",
+          "description": "Liste des 15 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/92/top_volumes_semaine_du_29_octobre_au_04_novembre_2012_2229.webp?1618481092"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 22 au 28 octobre 2012",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-22-au-28-octobre-2012,2210.html",
+          "date": "02/11/2012",
+          "description": "Liste des 10 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/01/top_volumes_semaine_du_22_au_28_octobre_2012_2210.webp?1618481078"
+        }
+      ]
+    }
   }
 ]
