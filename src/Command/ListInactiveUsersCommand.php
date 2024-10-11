@@ -41,21 +41,27 @@ class ListInactiveUsersCommand extends Command
 		$inactiveUsers = $this->userRepository->findByInactiveSince($date);
 		
 		// List and output the users
-		if ($inactiveUsers === null)
+		if (empty($inactiveUsers))
 		{
 			$output->writeln('No inactive users found');
-		} else {
-			$table = new Table($output);
-			$table->setHeaders(['First Name', 'Last Name', 'Email', 'LastConnectedAt']);
-
-			foreach ($inactiveUsers as $user) {
-				$lastConnectedAt = $user->getLastConnectedAt();
-				$formattedDate = $lastConnectedAt ? $lastConnectedAt->format('Y-m-d H:i:s') : 'Never';
-				$rows[] = [$user->getFirstname(), $user->getLastname(), $user->getEmail(), $formattedDate];
-			}
-			$table->setRows($rows);
-			$table->render();
+			return Command::SUCCESS;
+		} 
+			
+		$rows = [];
+		foreach ($inactiveUsers as $user) {
+			$lastConnectedAt = $user->getLastConnectedAt();
+			$formattedDate = $lastConnectedAt ? $lastConnectedAt->format('Y-m-d H:i:s') : 'Never';
+			$rows[] = [
+				$user->getFirstname(), 
+				$user->getLastname(), 
+				$user->getEmail(), 
+				$formattedDate];
 		}
+		$table = new Table($output);
+		$table
+			->setHeaders(['First Name', 'Last Name', 'Email', 'LastConnectedAt'])
+			->setRows($rows);
+		$table->render();
 		return Command::SUCCESS;
 	}
 }
