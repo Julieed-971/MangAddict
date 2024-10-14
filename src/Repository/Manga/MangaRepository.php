@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repository;
+namespace App\Repository\Manga;
 
-use App\Entity\Manga;
+use App\Entity\Manga\Manga;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -21,6 +21,11 @@ class MangaRepository extends ServiceEntityRepository
 	}
 
 	// FindByName
+	public function findByName(string $name): ?Manga
+	{
+		return $this->findOneBy(['name' => $name]);
+	}
+
 	// FindByAuthor
 	// FindByStatus
 	// FindByGenre
