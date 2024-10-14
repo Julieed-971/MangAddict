@@ -8,6 +8,8 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
+#[ORM\Table(name: 'author')]
+#[ORM\UniqueConstraint(name: 'unique_author_name', columns: ['name'])]
 #[ORM\Entity(repositoryClass: AuthorRepository::class)]
 class Author
 {
