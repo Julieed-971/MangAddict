@@ -5,15 +5,16 @@ namespace App\Entity\Manga;
 use App\Enum\MangaType;
 use App\Enum\MangaGenre;
 use App\Enum\MangaPublicationStatus;
-use App\Repository\MangaRepository;
+use App\Repository\Manga\MangaRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
-#[ORM\Entity(repositoryClass: MangaRepository::class)]
 #[ORM\Table(name: '`manga`')]
+#[ORM\UniqueConstraint(name: 'unique_author_name', columns: ['name'])]
+#[ORM\Entity(repositoryClass: MangaRepository::class)]
 class Manga 
 {
 	#[ORM\Id]
@@ -33,9 +34,9 @@ class Manga
     private ?string $imageUrl = null;
 
 	// type
-
+	#[Assert\NotBlank()]
     #[ORM\Column(length: 255)]
-	private ?MangaType $type = null;
+	private ?string $type = null;
 
 	// startDate
 	#[Assert\Type(type: 'integer')]
@@ -44,13 +45,11 @@ class Manga
     private ?int $startDate = null;
 
 	// status
-    #[ORM\Column(length: 255)]
-	private ?MangaPublicationStatus $status = null;
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+	private ?string $status = null;
 
 	// volume
-    #[Assert\Type(type: 'integer')]
-    #[Assert\NotBlank()]
-    #[ORM\Column]
+    #[ORM\Column(type: 'integer', nullable: true)]
     private ?int $volumesNumber = null;
 
 	// genres
@@ -66,7 +65,7 @@ class Manga
     /**
      * @var Collection<int, MangaAuthor>
      */
-    #[ORM\OneToMany(targetEntity: MangaAuthor::class, mappedBy: 'manga', orphanRemoval: true)]
+    #[ORM\OneToMany(targetEntity: MangaAuthor::class, mappedBy: 'manga', orphanRemoval: true, cascade: ['persist'])]
     private Collection $mangaAuthors;
 
     public function __construct()
@@ -101,12 +100,12 @@ class Manga
         return $this;
     }
 
-    public function getType(): ?MangaType
+    public function getType(): ?string
     {
         return $this->type;
     }
 
-    public function setType(MangaType $type): self
+    public function setType(string $type): self
     {
         $this->type = $type;
         return $this;
@@ -124,12 +123,12 @@ class Manga
     }
 
     
-	public function getStatus(): ?MangaPublicationStatus
+	public function getStatus(): ?string
 	{
 		return $this->status;
 	}
 
-	public function setStatus(MangaPublicationStatus $status): self
+	public function setStatus(string $status): self
 	{
 		$this->status = $status;
 		return $this;
