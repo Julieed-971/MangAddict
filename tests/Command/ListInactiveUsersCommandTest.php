@@ -45,7 +45,7 @@ class ListInactiveUsersCommandTest extends TestCase
 		/** @var UserRepository $userRepository */
 		$userRepository->method('findByInactiveSince')->willReturn($inactiveUsers);
 
-		// Create the command and inject the mock user repository
+		// Create an instance of the command and inject the mock user repository
 		$command = new ListInactiveUsersCommand($userRepository);
 
 		// Set up the application and command tester
@@ -72,5 +72,33 @@ class ListInactiveUsersCommandTest extends TestCase
 			$this->assertStringContainsString('jane.doe@example.com', $output);
 			$this->assertStringContainsString('2024-06-01 00:00:00', $output);
 		}
+	}
+	/**
+     * @dataProvider userDataProvider
+     */
+	public function testExecuteListInactiveUsersCommandWrongInput($inactiveUsers)
+	{
+		// Mock the UserRepository to use the findByInactiveSince method
+		$userRepository = $this->createMock(UserRepository::class);
+		/** @var UserRepository $userRepository */
+		$userRepository->method('findByInactiveSince')->willReturn($inactiveUsers);
+
+		// Create an instance of the command and inject the mock user repository
+		$command = new ListInactiveUsersCommand($userRepository);
+
+		// Set up the application and command tester
+		$application = new Application();
+		$application->add($command);
+		$commandTester = new CommandTester($application->find('app:list-inactive-users'));
+
+		// Execute the command 
+		$commandTester->execute([
+			'command' => 'app:list-inactive-users',
+			'months' => 'str',
+		]);
+
+		// Assert the output
+		$output = $commandTester->getDisplay();
+        $this->assertStringContainsString('Error: The number of months must be a positive integer', $output);
 	}
 }
