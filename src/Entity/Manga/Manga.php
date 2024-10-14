@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity;
+namespace App\Entity\Manga;
 
 use App\Enum\MangaType;
 use App\Enum\MangaGenre;
@@ -112,12 +112,12 @@ class Manga
         return $this;
     }
 
-    public function getStartDate(): ?\DateTimeImmutable
+    public function getStartDate(): ?int
     {
         return $this->startDate;
     }
 
-    public function setStartDate(\DateTimeImmutable $startDate): self
+    public function setStartDate(int $startDate): self
     {
         $this->startDate = $startDate;
         return $this;

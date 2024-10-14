@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity;
+namespace App\Entity\Manga;
 
 use App\Repository\MangaAuthorRepository;
 use Doctrine\ORM\Mapping as ORM;
