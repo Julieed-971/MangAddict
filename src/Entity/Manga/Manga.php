@@ -39,9 +39,7 @@ class Manga
 	private ?string $type = null;
 
 	// startDate
-	#[Assert\Type(type: 'integer')]
-    #[Assert\NotBlank()]
-    #[ORM\Column]
+    #[ORM\Column(type: 'integer', nullable: true)]
     private ?int $startDate = null;
 
 	// status
