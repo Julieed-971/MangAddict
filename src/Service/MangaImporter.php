@@ -68,7 +68,11 @@ class MangaImporter
 			throw new \RuntimeException('Author key is missing in manga item: ' . json_encode($mangaItem));
 		}
 
-		// Provide a default value for status if it is null
+		// Provide a default value for startDate if it is null
+        if (!isset($mangaItem['startDate']) || $mangaItem['startDate'] === null) {
+            $mangaItem['startDate'] = 0;
+
+        }// Provide a default value for status if it is null
         if (!isset($mangaItem['status']) || $mangaItem['status'] === null) {
             $mangaItem['status'] = 'unknown';
         }
@@ -82,7 +86,10 @@ class MangaImporter
             // Update existing manga if necessary
             $manga = $existingManga;
         } else {
-            $manga = $mangaSerializer->denormalize($mangaItem, Manga::class);
+			$context = [
+				'skip_null_values' => false,
+			];
+            $manga = $mangaSerializer->denormalize($mangaItem, Manga::class, null, $context);
         }
 
 		if (isset($mangaItem['author'])) {
