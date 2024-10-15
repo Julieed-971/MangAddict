@@ -62,9 +62,7 @@ class MangaImporter
 	if (json_last_error() !== JSON_ERROR_NONE) {
 		throw new \InvalidArgumentException('The file does not contain valid JSON: ' . json_last_error_msg());
 	}
-	// var_dump($mangas);
 	foreach ($mangas as $mangaItem) {
-		// var_dump($mangaItem);
 		// Handle authors
 		if (!isset($mangaItem['author'])) {
 			throw new \RuntimeException('Author key is missing in manga item: ' . json_encode($mangaItem));
@@ -74,7 +72,7 @@ class MangaImporter
         if (!isset($mangaItem['status']) || $mangaItem['status'] === null) {
             $mangaItem['status'] = 'unknown';
         }
-		// Provide a default value for status if it is null
+		// Provide a default value for volumesNumber if it is null
         if (!isset($mangaItem['volumesNumber']) || $mangaItem['volumesNumber'] === null) {
             $mangaItem['volumesNumber'] = 0;
         }
@@ -97,11 +95,8 @@ class MangaImporter
 			// Handle validation errors
 			continue;
 		}
-		var_dump($manga);
 		$this->entityManager->persist($manga);
 		$importedMangaCount++;
-		// var_dump($importedMangaCount);
-		// die;
 		}
 	$this->entityManager->flush();
 	return $importedMangaCount;
