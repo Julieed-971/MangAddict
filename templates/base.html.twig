@@ -10,26 +10,31 @@
         {% endblock %}
        
     </head>
-    <body>
-        <nav class="topnav">
+    <body class="page">
+        <header class="page__header">
+        <nav class="navbar">
+        <div class="navbar__brand">
             <a id="home" href="{{ path('app_basic') }}">MangAddict</a>
+        </div>
             <ol>
-                <li><a href="#mangatheque">Mangathèque</a></li>
-                <li><a href="{{ path('app_register') }}">Mon compte</a></li>
+                <li class="navbar__item"><a href="#mangatheque">Mangathèque</a></li>
+                <li class="navbar__item"><a href="{{ path('app_register') }}">Mon compte</a></li>
                 {% if app.user %}
-                <li><a href="{{ path('app_logout') }}">Déconnexion</a></li>
+                <li class="navbar__item"><a href="{{ path('app_logout') }}">Déconnexion</a></li>
                 {% endif %}
                 <button><a class="active" id="toggleColor">Cliquez-moi</a></button>
             </ol>
         </nav>
+    </header>
+    <main class="page__main">
         {% block body %}
             <section>
             <h1>Bonjour MangAddict</h1>
             <section>
         {% endblock %}
-
+    </main>
         {% block javascripts %}
-        {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {# {% block importmap %}{{ importmap('app') }}{% endblock %} #}
             <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
             <script src="{{ asset('scripts/toggle_color.js') }}"></script>          
         {% endblock %} 
