@@ -1,0 +1,80 @@
+.manga {
+
+    padding: 20px;
+    // background-color: #f9f9f9;
+
+    &__header {
+        // background-color: blue;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: flex-start;
+        max-width: 75%;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: 2em;
+        // background-color: grey;
+        h1 {
+            margin: 0 0 20px 0;
+            padding: auto;
+            line-height: 1;
+        }
+    }
+
+    &__image {
+        // background-color: green;
+        // padding: 30px;
+        max-width: 30%;
+        height: auto;
+        margin: 10px 50px 0 0;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        // background-color: purple;
+        margin: 10px;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    &__description {
+        text-align: justify;
+        max-width: 100%;
+        // padding: 10px;
+        // margin: 10px;
+    }
+    // &__authors {
+    //     padding: 10px;
+    // }
+
+    // &__author-list {
+    //     list-style: none;
+    //     padding: 0;
+    // }
+
+    // &__author {
+    //     margin-bottom: 5px;
+    // }
+
+    &__info {
+        padding: 10px;
+    }
+
+    // &__genre-list {
+    //     list-style: none;
+    //     padding: 0;
+    // }
+
+    // &__genre {
+    //     margin-bottom: 5px;
+    // }
+
+    &__not-found {
+        color: red;
+        font-weight: bold;
+    }
+}
