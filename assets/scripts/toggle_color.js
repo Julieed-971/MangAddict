@@ -7,8 +7,7 @@ $(document).ready(function() {
 			'background-color': currentTextColor,
 			'color': currentBgColor
 		});
-		$('nav').css({
-			'background-color': currentTextColor,
+		$('nav a').css({
 			'color': currentBgColor
 		});
 	});
