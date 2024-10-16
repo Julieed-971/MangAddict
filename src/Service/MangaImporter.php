@@ -86,10 +86,7 @@ class MangaImporter
             // Update existing manga if necessary
             $manga = $existingManga;
         } else {
-			$context = [
-				'skip_null_values' => false,
-			];
-            $manga = $mangaSerializer->denormalize($mangaItem, Manga::class, null, $context);
+            $manga = $mangaSerializer->denormalize($mangaItem, Manga::class);
         }
 
 		if (isset($mangaItem['author'])) {
