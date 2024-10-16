@@ -14655,5 +14655,529 @@
         }
       ]
     }
+  },
+  {
+    "name": "Mononoke",
+    "japName": "モノノ怪",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/mononoke.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/27/mononoke_6772.webp?11521965732",
+    "score": "8.36",
+    "votersNumber": "11",
+    "country": "Japon",
+    "type": "Seinen",
+    "startDate": "2008",
+    "status": "Terminé",
+    "volumesNumber": "2",
+    "genres": [
+      "Drame",
+      "Fantastique",
+      "Historique",
+      "Horreur",
+      "Mystère",
+      "Surnaturel"
+    ],
+    "author": {
+      "story": "Ninagawa Yaeko",
+      "art": "Ninagawa Yaeko"
+    },
+    "editor": {
+      "VO": null,
+      "VF": null
+    },
+    "description": "Ce manga adapte l'anime Mononoke, produit en 2007 par la Toei Animation pour le programme noitaminA. Chaque tome correspond à un arc de la série TV originale.  Kusuriuri est un personnage atypique. Apothicaire, il erre de villages en villages et propose ses produits aux potentiels clients dans le besoin qu'il rencontre. En plus de son activité de vendeur ambulant, il est également exorciste et profite de ses larges connaissances du surnaturel pour venir en aide à de pauvres âmes en peine, hantées par des esprits et monstres malfaiteurs.",
+    "relations": {
+      "Animes": [
+        {
+          "name": "Ayakashi : Japanese Classic Horror",
+          "url": "https://nautiljon.com//animes/ayakashi+-+japanese+classic+horror.html",
+          "relationType": "[Origine de l'adaptation]",
+          "imageUrl": "https://nautiljon.com//images/anime/00/27/ayakashi_japanese_classic_horror_872.webp?1623349976",
+          "additionnalInformations": "(Série - 2006)"
+        },
+        {
+          "name": "Mononoke",
+          "url": "https://nautiljon.com//animes/mononoke.html",
+          "relationType": "[Origine de l'adaptation]",
+          "imageUrl": "https://nautiljon.com//images/anime/00/82/mononoke_1328.webp?1688592147",
+          "additionnalInformations": "(Série - 2007)"
+        }
+      ]
+    },
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Mononoke Mystery",
+    "japName": "モノノケミステリヰ",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/mononoke+mystery.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/32/mononoke_mystery_18323.webp?10",
+    "score": null,
+    "votersNumber": null,
+    "country": "Japon",
+    "type": "Shojo",
+    "startDate": "2014",
+    "status": "Terminé",
+    "volumesNumber": "2",
+    "genres": [
+      "Comédie",
+      "Histoires courtes",
+      "Mystère",
+      "Surnaturel"
+    ],
+    "author": {
+      "story": "Teniwoha",
+      "art": "Futaba Hazuki"
+    },
+    "editor": {
+      "VO": "MEDIA FACTORY",
+      "VF": null
+    },
+    "description": "L'histoire est adaptée du light novel éponyme.  Au sein de Tokyo se tient l'étrange agence de détectives Tsukioka dans le quartier de Kagurazaka, c'est ici que travaillent Haruhi Tsukioka, Yato Tetsuwa et Utsuhi Minamikata. Tous sont spécialisés dans la résolution de mystères surnaturels et seront prêts à recevoir n'importe quel client.",
+    "relations": {},
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Mononoke no Ran",
+    "japName": "もののけの乱",
+    "alternateName": "Mononokenoran",
+    "url": "https://nautiljon.com/mangas/mononoke+no+ran.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/68/mononoke_no_ran_26986.webp?11703623949",
+    "score": null,
+    "votersNumber": null,
+    "country": "Japon",
+    "type": "Shonen",
+    "startDate": "2023",
+    "status": "En cours",
+    "volumesNumber": "3",
+    "genres": [
+      "Action",
+      "School Life",
+      "Surnaturel"
+    ],
+    "author": {
+      "story": "Takeda Yosuke",
+      "art": "Takeda Yosuke"
+    },
+    "editor": {
+      "VO": "Kodansha",
+      "VF": null
+    },
+    "description": "Houichirou Shizuka, le descendant d'un vénérable ninja, est un lycéen de première année et un fervent pacifiste. Ne désirant rien de plus que la paix et la tranquillité il résiste à son grand-père qui veut faire de lui son successeur. Mais ses aspirations à une vie paisible vont se trouver contrariées lorsque Kyouka Mikogami , une collégienne descendante d'un onmyoji, apparaît !",
+    "relations": {},
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Mononoke Ranbu - Onmyou Kitan",
+    "japName": "もののけ乱舞 ～陰陽奇譚～",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/mononoke+ranbu+-+onmyou+kitan.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/31/mononoke_ranbu_-_onmyou_kitan_-_25913.webp?11692646090",
+    "score": null,
+    "votersNumber": null,
+    "country": "Japon",
+    "type": "Shojo",
+    "startDate": "2021",
+    "status": "Terminé",
+    "volumesNumber": "1",
+    "genres": [
+      "Action",
+      "Romance",
+      "Surnaturel"
+    ],
+    "author": {
+      "story": "Orito Kahori",
+      "art": "Orito Kahori"
+    },
+    "editor": {
+      "VO": "Shogakukan",
+      "VF": null
+    },
+    "description": "Haruka Suzakuin est une jeune fille qui descend d'une célèbre famille d'Onmyoji, les Onmyou. Le jour de ses 14 ans, un tengu du nom de Momochi apparaît devant elle et annonce qu'il va la tuer ! Mais Haruka ne se laissera pas faire !",
+    "relations": {},
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Mononoke Ranchiki Sensou",
+    "japName": "物の怪らんちき戦争",
+    "alternateName": "Mononoke Ranchiki Wars",
+    "url": "https://nautiljon.com/mangas/mononoke+ranchiki+sensou.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/59/mononoke_ranchiki_sensou_26895.webp?11702591042",
+    "score": null,
+    "votersNumber": null,
+    "country": "Japon",
+    "type": "Shonen",
+    "startDate": "1990",
+    "status": "Abandonné",
+    "volumesNumber": "3",
+    "genres": [
+      "Action",
+      "Comédie",
+      "School Life",
+      "Surnaturel"
+    ],
+    "author": {
+      "story": "Mukudori Nemu",
+      "art": "Mukudori Nemu"
+    },
+    "editor": {
+      "VO": null,
+      "VF": null
+    },
+    "description": "Une comédie occulte qui vous fera rire, pleurer et encourager le lycéen Daisuke Tachibana, qui est né avec de puissants pouvoirs d'exorciste malgré son aversion pour les fantômes ! Tome-san, alias \"Baba\", une esprit gardien qui s'amuse à effrayer le très lâche Daisuke, Tatsumi, un esprit dragon, et Rumi, l'esprit d'une jeune fille effrontée de 12 ans qui est morte a cause d'une malédiction, se joignent aux autres monstres amusants pour s'occuper (à contrecœur) d'un certain nombre d'incidents spirituels qui se produisent autour d'eux.",
+    "relations": {},
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Mononoke Sharing",
+    "japName": "もののけ◇しぇありんぐ",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/mononoke+sharing.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/18/mononoke_sharing_6581.webp?11581967596",
+    "score": "10",
+    "votersNumber": "2",
+    "country": "Japon",
+    "type": "Seinen",
+    "startDate": "2015",
+    "status": "Terminé",
+    "volumesNumber": "4",
+    "genres": [
+      "Comédie",
+      "Ecchi",
+      "Fantastique",
+      "Mature",
+      "Slice of Life",
+      "Surnaturel"
+    ],
+    "author": {
+      "story": "Cool Kyoushinsha",
+      "art": "Cool Kyoushinsha"
+    },
+    "editor": {
+      "VO": "Kodansha",
+      "VF": null
+    },
+    "description": "Comme elle est issue d'une famille relativement pauvre, Yata, une jeune étudiante, a trouvé un logement au sein d'une pension dans laquelle vivent plusieurs autres personnes. Et si le loyer est si peu bas, c'est que, les résidents de l'établissement ne sont autres que des monstres du folklore japonais et autres créatures bizarroïdes que Yata n'avait encore jamais rencontrées ! Malheureusement pour elle, notre jeune étudiante va devoir subir les caprices et les obscénités de ces yokais sans gêne, qui vont faire de son quotidien un véritable enfer !",
+    "relations": {},
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Mononoke Soushi",
+    "japName": "もののけ草紙",
+    "alternateName": "Book of Wraiths",
+    "url": "https://nautiljon.com/mangas/mononoke+soushi.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/00/mononoke_soushi_6600.webp?11503393945",
+    "score": "10",
+    "votersNumber": "2",
+    "country": "Japon",
+    "type": "Josei",
+    "startDate": "2008",
+    "status": "Terminé",
+    "volumesNumber": "4",
+    "genres": [
+      "Aventure",
+      "Drame",
+      "Fantastique",
+      "Horreur",
+      "Mystère",
+      "Surnaturel"
+    ],
+    "author": {
+      "story": "Takahashi Yosuke",
+      "art": "Takahashi Yosuke"
+    },
+    "editor": {
+      "VO": "Bunkasha",
+      "VF": null
+    },
+    "description": "Mononoke Soushi raconte l'histoire d'une jeune fille qui travaille au sein d'une maison de saké. Celle-ci possède une particularité ; un tatouage d'œil sur la main qui lui donne ce que l'on appelle la « seconde vue », autrement dit, la capacité de contrôler l'imaginaire : rêves, illusions... Et bien que ce don puisse être particulièrement attrayant, il cause régulièrement des ennuis à notre héroïne, qui se retrouve souvent mêlée aux affaires de diverses créatures surnaturelles... des histoires dans lesquelles il vaut parfois mieux ne pas tremper !",
+    "relations": {},
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Mononoke! Nyantaro",
+    "japName": "もののけ!にゃんタロー",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/mononoke!+nyantaro.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/89/mononoke_nyantaro_6498.webp?11600602951",
+    "score": "10",
+    "votersNumber": "1",
+    "country": "Japon",
+    "type": "Shonen",
+    "startDate": "2002",
+    "status": "Terminé",
+    "volumesNumber": "2",
+    "genres": [
+      "Comédie"
+    ],
+    "author": {
+      "story": "Oguri Kazumata",
+      "art": "Oguri Kazumata"
+    },
+    "editor": {
+      "VO": "Shueisha",
+      "VF": null
+    },
+    "description": "N/C",
+    "relations": {},
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Chuuzenji Sensei Mononoke Kougi-roku - Sensei ga Nazo wo Hodoite Shimaukara",
+    "japName": "中禅寺先生物怪講義録～先生が謎を解いてしまうから",
+    "alternateName": "The Mononoke Journal by Chuzenji-sensei",
+    "url": "https://nautiljon.com/mangas/chuuzenji+sensei+mononoke+kougi-roku+-+sensei+ga+nazo+wo+hodoite+shimaukara.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/99/chuuzenji_sensei_mononoke_kougi-roku_-_sensei_ga_nazo_wo_hodoite_shimaukara_22599.webp?11713191071",
+    "score": null,
+    "votersNumber": null,
+    "country": "Japon",
+    "type": "Shonen",
+    "startDate": "2019",
+    "status": "En cours",
+    "volumesNumber": "10",
+    "genres": [
+      "Fantastique",
+      "Mystère",
+      "School Life"
+    ],
+    "author": {
+      "story": "Shimizu AkiKyogoku Natsuhiko",
+      "art": "Shimizu AkiKyogoku Natsuhiko"
+    },
+    "editor": {
+      "VO": "Kodansha",
+      "VF": null
+    },
+    "description": "Kusakabe Shiina, est un étudiant qui vient de passer en deuxième année d'un nouveau lycée. Il fait la rencontre d'Akihiko Chuzenji, son nouveau professeur de japonais. Shiina remarque que Chuzenji lit toujours des livres en étant de mauvaise humeur... mais pas seulement : tout un tas de micro-événements étranges semblent toucher les enseignants et les élèves de ce nouvel établissement scolaire.",
+    "relations": {},
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Fukigen na Mononokean",
+    "japName": "不機嫌なモノノケ庵",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/fukigen+na+mononokean.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/03/fukigen_na_mononokean_5230.webp?11653828098",
+    "score": "8.82",
+    "votersNumber": "33",
+    "country": "Japon",
+    "type": "Shonen",
+    "startDate": "2014",
+    "status": "Terminé",
+    "volumesNumber": "18",
+    "genres": [
+      "Comédie",
+      "Fantasy",
+      "School Life",
+      "Surnaturel"
+    ],
+    "author": {
+      "story": "Wazawa Kiri",
+      "art": "Wazawa Kiri"
+    },
+    "editor": {
+      "VO": "Square Enix",
+      "VF": null
+    },
+    "description": "Hanae Ashiya, 15 ans, a fait la rencontre d'un démon : un mononoke. Ce dernier s'est accroché alors à notre jeune ami qui passa ses sept premiers jours de lycée à l'infirmerie. Désespéré par sa situation, il finit par contacter un exorciste. Il va alors découvrir une mystérieuse salle de thé et rencontrer Haruitsuki Abeno, un Maître Mononoke. Avec son aide, Hanae réussira à se débarrasser de son démon, mais ne pouvant payer l'exorcisme, il se verra contraint de travailler pour lui ! Et ainsi commence sa vie lycéenne pleine de démons et de dettes...",
+    "relations": {
+      "Animes": [
+        {
+          "name": "Fukigen na Mononokean",
+          "url": "https://nautiljon.com//animes/fukigen+na+mononokean.html",
+          "relationType": "[Adaptation]",
+          "imageUrl": "https://nautiljon.com//images/anime/00/98/fukigen_na_mononokean_5289.webp?1629987811",
+          "additionnalInformations": "(Série - 2016)"
+        },
+        {
+          "name": "Fukigen na Mononokean : Tsuzuki",
+          "url": "https://nautiljon.com//animes/fukigen+na+mononokean+-+tsuzuki.html",
+          "relationType": "[Adaptation]",
+          "imageUrl": "https://nautiljon.com//images/anime/00/79/fukigen_na_mononokean_2_7997.webp?1559940241",
+          "additionnalInformations": "(Série - 2019)"
+        }
+      ]
+    },
+    "news": {
+      "french": [
+        {
+          "name": "Une deuxième saison pour Fukigen na Mononokean !",
+          "url": "https://nautiljon.com/breves/une-deuxieme-saison-pour-fukigen-na-mononokean,7842.html",
+          "date": "21/06/2018",
+          "description": "Après une première saison de 13 épisodes, la série animée Fukigen na Mononokean fera son retour prochainement avec une deuxième saison ! L'information a été révélée via un bandeau publicitaire pré...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/24/une_deuxieme_saison_pour_fukigen_na_mononokean_7842.webp?1529617155"
+        },
+        {
+          "name": "Top Volumes Mangas (Oricon) semaine du 22 au 28 janvier 2018",
+          "url": "https://nautiljon.com/actualite/mangas/top-volumes-mangas-oricon-semaine-du-22-au-28-janvier-2018,8831.html",
+          "date": "01/02/2018",
+          "description": "Classement Oricon des 15 volumes les plus vendus cette semaine au Japon.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/13/top_volumes_mangas_oricon_semaine_du_22_au_28_janvier_2018_8831.webp?1517472885"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Monmon Mononoke",
+    "japName": "もんもんモノノ怪",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/monmon+mononoke.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/90/monmon_mononoke_8509.webp?10",
+    "score": "9.5",
+    "votersNumber": "2",
+    "country": "Japon",
+    "type": "Shojo",
+    "startDate": "2015",
+    "status": "Terminé",
+    "volumesNumber": "4",
+    "genres": [
+      "Comédie",
+      "Mature",
+      "Romance",
+      "Surnaturel"
+    ],
+    "author": {
+      "story": "Kurumatani Haruko",
+      "art": "Kurumatani Haruko"
+    },
+    "editor": {
+      "VO": "Kodansha",
+      "VF": null
+    },
+    "description": "Un jour, une lycéenne, Tsubaki, se réveille à côté d'un beau garçon dans un futon. Il la force à se rendre à la « maison d'été Ousaka » avec lui pour \"célébrer\" leur mariage... Là-bas, elle découvre des youkais et d'autres créatures issues du folklore japonais...",
+    "relations": {},
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Onmyouji to Tengugan - Tomoe-shi Yakusho Mononoke Trouble Kakari THE COMIC",
+    "japName": "陰陽師と天狗眼-巴市役所もののけトラブル係 THE COMIC-",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/onmyouji+to+tengugan+-+tomoe-shi+yakusho+mononoke+trouble+kakari+the+comic.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/27/onmyouji_to_tengugan_21072.webp?11648203062",
+    "score": null,
+    "votersNumber": null,
+    "country": "Japon",
+    "type": "Josei",
+    "startDate": "2022",
+    "status": null,
+    "volumesNumber": null,
+    "genres": [
+      "Drame",
+      "Fantastique",
+      "Surnaturel"
+    ],
+    "author": {
+      "story": "Utamine Yoshiko",
+      "art": "Mito (mangaka 2)Kazuki Yone"
+    },
+    "editor": {
+      "VO": "Kill Time Communication",
+      "VF": null
+    },
+    "description": "La ville de Tomoe dans la préfecture d'Hiroshima est une ville qui est entourée de monstres depuis les temps anciens. Misato Miyazawa, un beau jeune homme aux cheveux noirs issu d'une célèbre famille d'exorcistes, est embauché pour travailler à la \"Section des catastrophes spéciales\" à la mairie de Tomoe. Il y rencontre Reiji Kano, un bel homme aux cheveux blonds, aux yeux verts et au sang chaud. Il a été recueilli enfant par un homme qui disait être un Tengu, et est devenu un prêtre de montagne indépendant. Et ils se retrouvent soudainement à vivre ensemble...",
+    "relations": {},
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Princesse Mononoké",
+    "japName": "Mononoke Hime / もののけ姫",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/princesse+mononoke.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/25/princesse_mononoke_2452.webp?11721137055",
+    "score": "8.52",
+    "votersNumber": "29",
+    "country": "Japon",
+    "type": "Anime comics",
+    "startDate": "1997",
+    "status": "Terminé",
+    "volumesNumber": "4",
+    "genres": [
+      "Action",
+      "Aventure",
+      "Drame",
+      "Fantastique",
+      "Surnaturel"
+    ],
+    "author": {
+      "story": "Miyazaki Hayao",
+      "art": "Miyazaki Hayao"
+    },
+    "editor": {
+      "VO": "Tokuma Shoten",
+      "VF": "Glénat"
+    },
+    "description": "Ashitaka, jeune descendant de guerriers Emishi, est voué à devenir le chef de son clan. Mais le destin en a voulu autrement : une créature monstrueuse, le Tatarigami, se met à attaquer son village sans raison apparente. Ashitaka parvient à vaincre la monstre mais, touché par ce dernier, il est condamné à une mort aussi lente que certaine. Obligé de quitter son village et les siens, il part à la recherche d'un remède au mal qui le ronge. Il arrive bientôt aux abords d'une gigantesque forêt, un territoire inaccessible aux hommes : en son sein, des animaux géants et étranges, craints et redoutés comme autant de divinités, livrent une guerre sans merci aux humains des environs qui cherchent à étendre leur territoire. Bientôt, Ashitaka rencontre San, la \"Princesse Mononoke\", une jeune femme élevée par les loups, qui voue une haine féroce aux humains. Un lien très fort commence à les unir, au moment où la guerre prend un tournant irrémédiable et tragique...",
+    "relations": {
+      "Anime": [
+        {
+          "name": "Mononoke Hime",
+          "url": "https://nautiljon.com//animes/mononoke+hime.html",
+          "relationType": "[Origine de l'adaptation]",
+          "imageUrl": "https://nautiljon.com//images/anime/00/02/mononoke_hime_220.webp?1725394779",
+          "additionnalInformations": "(Film - 1997)"
+        }
+      ]
+    },
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Tokimeki☆ Mononoke Jogakuen",
+    "japName": "ときめき☆もののけ女学園",
+    "alternateName": "Heart-Pounding Excitement at Mononoke Girls' Academy",
+    "url": "https://nautiljon.com/mangas/tokimeki☆+mononoke+jogakuen.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/11/tokimekiy_mononoke_jogakuen_11211.webp?10",
+    "score": "10",
+    "votersNumber": "2",
+    "country": "Japon",
+    "type": "Yuri",
+    "startDate": "2006",
+    "status": "Terminé",
+    "volumesNumber": "2",
+    "genres": [
+      "Comédie",
+      "Ecchi",
+      "Fantasy",
+      "Romance",
+      "School Life",
+      "Shôjo-aï",
+      "Surnaturel"
+    ],
+    "author": {
+      "story": "Nangoku Banana",
+      "art": "Nangoku Banana"
+    },
+    "editor": {
+      "VO": "Ichijinsha",
+      "VF": null
+    },
+    "description": "Pour ne pas être en retard à la cérémonie d'entrée de sa nouvelle école, Arare se voit dans l'obligation de couper son trajet à travers un cimetière. Seulement voilà, elle se heurte contre une femme en kimono qui la prend pour une élève transférée à l'Académie pour filles Mononoke, une école qui abrite des créatures de toutes sortes avec différents pouvoirs. Arare se retrouve donc coincée dans cette nouvelle école et doit tout faire pour que personne ne découvre son identité humaine.",
+    "relations": {},
+    "news": {
+      "french": []
+    }
   }
 ]
