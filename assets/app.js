@@ -1,4 +1,4 @@
-import './styles/basic.scss';
+// import './styles/basic.scss';
 import './bootstrap.js';
 /*
  * Welcome to your app's main JavaScript file!
