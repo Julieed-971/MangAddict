@@ -2,9 +2,10 @@
 
 namespace App\Entity\Manga;
 
-use App\Repository\MangaAuthorRepository;
+use App\Repository\Manga\MangaAuthorRepository;
 use Doctrine\ORM\Mapping as ORM;
 
+#[ORM\UniqueConstraint(name: "unique_manga_author", columns: ['manga_id', 'author_id'])]
 #[ORM\Entity(repositoryClass: MangaAuthorRepository::class)]
 class MangaAuthor
 {
@@ -13,11 +14,11 @@ class MangaAuthor
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\ManyToOne(inversedBy: 'mangaAuthors')]
+    #[ORM\ManyToOne(inversedBy: 'mangaAuthors', cascade: ['persist'])]
     #[ORM\JoinColumn(nullable: false)]
     private ?Manga $manga = null;
 
-    #[ORM\ManyToOne(inversedBy: 'mangaAuthors')]
+    #[ORM\ManyToOne(inversedBy: 'mangaAuthors', cascade: ['persist'])]
     #[ORM\JoinColumn(nullable: false)]
     private ?Author $author = null;
 
