@@ -5,7 +5,7 @@ namespace App\Entity\Manga;
 use App\Repository\Manga\MangaAuthorRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\UniqueConstraint(name: "unique_manga_author", columns: ['manga_id', 'author_id'])]
+#[ORM\UniqueConstraint(name: "unique_manga_author", columns: ['manga_id', 'author_id', 'role'])]
 #[ORM\Entity(repositoryClass: MangaAuthorRepository::class)]
 class MangaAuthor
 {
