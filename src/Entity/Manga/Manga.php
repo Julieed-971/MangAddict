@@ -66,9 +66,23 @@ class Manga
     #[ORM\OneToMany(targetEntity: MangaAuthor::class, mappedBy: 'manga', orphanRemoval: true, cascade: ['persist'])]
     private Collection $mangaAuthors;
 
+    /**
+     * @var Collection<int, Review>
+     */
+    #[ORM\OneToMany(targetEntity: Review::class, mappedBy: 'manga', orphanRemoval: true)]
+    private Collection $reviews;
+
+    /**
+     * @var Collection<int, Rating>
+     */
+    #[ORM\OneToMany(targetEntity: Rating::class, mappedBy: 'manga', orphanRemoval: true)]
+    private Collection $ratings;
+
     public function __construct()
     {
         $this->mangaAuthors = new ArrayCollection();
+        $this->reviews = new ArrayCollection();
+        $this->ratings = new ArrayCollection();
     }
 	
 	public function getId(): ?int
@@ -189,6 +203,66 @@ class Manga
             // set the owning side to null (unless already changed)
             if ($mangaAuthor->getManga() === $this) {
                 $mangaAuthor->setManga(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Review>
+     */
+    public function getReviews(): Collection
+    {
+        return $this->reviews;
+    }
+
+    public function addReview(Review $review): static
+    {
+        if (!$this->reviews->contains($review)) {
+            $this->reviews->add($review);
+            $review->setManga($this);
+        }
+
+        return $this;
+    }
+
+    public function removeReview(Review $review): static
+    {
+        if ($this->reviews->removeElement($review)) {
+            // set the owning side to null (unless already changed)
+            if ($review->getManga() === $this) {
+                $review->setManga(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Rating>
+     */
+    public function getRatings(): Collection
+    {
+        return $this->ratings;
+    }
+
+    public function addRating(Rating $rating): static
+    {
+        if (!$this->ratings->contains($rating)) {
+            $this->ratings->add($rating);
+            $rating->setManga($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRating(Rating $rating): static
+    {
+        if ($this->ratings->removeElement($rating)) {
+            // set the owning side to null (unless already changed)
+            if ($rating->getManga() === $this) {
+                $rating->setManga(null);
             }
         }
 
