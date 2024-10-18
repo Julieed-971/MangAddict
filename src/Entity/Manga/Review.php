@@ -28,11 +28,18 @@ class Review
     private ?Manga $manga = null;
 
     #[ORM\Column]
-    private ?\DateTimeImmutable $date = null;
+    private ?\DateTimeImmutable $createdAt = null;
+    
+    #[ORM\Column]
+    private ?\DateTimeImmutable $updatedAt = null;
 
     #[ORM\Column(nullable: true)]
     private ?int $likesCount = null;
 
+    public function __construct() {
+        $this->createdAt = new \DateTimeImmutable();
+        $this->updatedAt = new \DateTimeImmutable();
+    }
     public function getId(): ?int
     {
         return $this->id;
@@ -73,15 +80,42 @@ class Review
 
         return $this;
     }
-
-    public function getDate(): ?\DateTimeImmutable
+    /**
+     * @ORM\PrePersist
+     */
+    public function setCreatedAtValue()
     {
-        return $this->date;
+        $this->createdAt = new \DateTimeImmutable();
     }
 
-    public function setDate(\DateTimeImmutable $date): static
+    /**
+     * @ORM\PreUpdate
+     */
+    public function setUpdatedAtValue()
     {
-        $this->date = $date;
+        $this->updatedAt = new \DateTimeImmutable;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(\DateTimeInterface $updatedAt): self 
+    {
+        $this->updatedAt = $updatedAt;
 
         return $this;
     }
