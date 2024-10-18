@@ -1,8 +1,7 @@
 .manga {
 
     padding: 20px;
-    // background-color: #f9f9f9;
-
+    
     &__header {
         // background-color: blue;
         text-align: center;
@@ -74,7 +73,74 @@
     // }
 
     &__not-found {
-        color: red;
-        font-weight: bold;
+        h1 {
+            color: purple;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+.rating {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+
+    &__form {
+        display: flex;
+        width: 80%;
+        justify-content: center;
+        background-color: orange;
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: purple;
+        width: 50%;
+    }
+
+    &__stars {
+        background-color: green;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        max-width: fit-content;
+        max-height: fit-content;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+
+    input {
+        background-color: crimson;
+    }
+
+    &__button {
+        display: flex;
+        max-width: fit-content;
+        background-color: red;
+        margin-left: 10px;
+    }
+
+    &__stars input[type="radio"] {
+        display: none;
+    }
+
+    &__stars label {
+        font-size: 2em;
+        color: #ddd;
+        cursor: pointer;
+        transition: color 0.2s;
+    }
+    
+    &__stars input[type="radio"]:checked ~ label {
+        color: #f5b301;
+    }
+
+    &__stars label:hover,
+    &__stars label:hover ~ label {
+        color: #f5b301;
     }
 }
