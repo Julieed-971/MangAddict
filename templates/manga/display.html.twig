@@ -8,8 +8,8 @@
 	{% endblock %}
 {%block body %}
 <section class="manga">
+{% if manga is not null %}
 	<div class="manga__header">
-		{% if manga is not null %}
 			<img class="manga__image" src="{{ manga.imageUrl }}" alt="Couverture de {{ manga.name }}">
 			<div class="manga__details">
 				<div class="manga__title">
@@ -17,7 +17,7 @@
 				</div>
 				<div class="manga__info">
 				<div class="manga__authors">
-					<span>Auteur·ice :
+					<span>Auteur-Autrice :</span>
 					<ul class="manga__author-list">
 						{% for author in manga.mangaAuthors %}
 							{% if author.role == 'story' %}
@@ -28,7 +28,6 @@
 							{% endif %}
 						{% endfor %}
 					</ul>
-					</span>
 				</div>
 				<div class="manga__type">
 					<span>Type : {{ manga.type }}</span>
@@ -43,23 +42,45 @@
 					<span>Nombre de volumes : {{ manga.volumesNumber }}</span>
 				</div>
 				<div class="manga__genres">
-					<span>Genres :
+					<span>Genres :</span>
 					<ul class="manga__genre-list">
 						{% for genre in manga.genres %}
 							<li class="manga__genre">{{ genre }}</li>
 						{% endfor %}
 					</ul>
-					</span>
 				</div>
 				<div class="manga__description">
 					<p>{{ manga.description }}</p>
 				</div>
 			</div>
 		</div>
-		{% else %}
-			<div class="manga__not-found"><h1>Manga non trouvé</h1></div>
-		{% endif %}
 	</div>
+<section class="rating">
+	{% if app.user %}
+		<form class="rating__form" action="{{ path('app_manga_display', { id: manga.id }) }}" method="POST">
+		<div class="rating__user">
+			{{ form_row(ratingForm._token) }}
+			<div class="rating__stars">
+				{% for i in 5..1 %}
+					<input class="rating__star--{{ i }}" type="radio" name="{{ ratingForm.note.vars.full_name }}" value="{{ i }}"
+						{% if currentRating is not null and currentRating == i %} checked {% endif %} required id="star{{ i }}"/>
+					<label for="star{{ i }}" title="{{ i }} star{{ i > 1 ? 's' : '' }}">★</label>
+           		 {% endfor %}
+			</div>
+			<button class="rating__button" type="submit">Laisser une note</button>
+			</div>
+		</form>
 </section>
-
+<section class="review">
+	<div class="review__user">
+	</div>
+		<!-- Review form will go here -->
+</section>
+	{% else %}
+		<p>Vous devez être <a href="{{ path('app_login') }}">connecté</a> ou <a href="{{ path('app_register') }}">vous inscrire</a> pour noter ou écrire une critique</p>
+	{% endif %}
+	{% else %}
+	<div class="manga__not-found"><h1>Manga non trouvé</h1></div>
+	{% endif %}
+</section>
 {% endblock %}
