@@ -72,9 +72,21 @@
 		</form>
 </section>
 <section class="review">
-	<div class="review__user">
-	</div>
-		<!-- Review form will go here -->
+	<form class="review__form" action="{{ path('app_manga_display', { id: manga.id }) }}" method="POST">
+		<div class="review__user">
+			{{ form_row(reviewForm._token) }}
+			{% if currentReview is not null %}
+				<label for="review">Ma critique: </label>
+				<textarea class="review__content "id="review">{{ currentReview.content }}</textarea>
+				<span class="review__date">Date de création: </span><p>{{ currentReview.createdAt|date('Y-m-d H:i:s') }}</p>
+				<span class="review__date">Dernière mise à jour: </span><p>{{ currentReview.updatedAt|date('Y-m-d H:i:s') }}</p>
+			{% else %}
+				<label for="review">Ma critique: </label>
+				<textarea class="review__content" id="review" type="input" name="{{ reviewForm.content.vars.full_name }}" rows="4" cols="50" placeholder="J'écris ma critique..." required ></textarea>
+				<button class="review__button" type="submit">Valider ma critique</button>
+			{% endif %}
+		</div>
+	</form>
 </section>
 	{% else %}
 		<p>Vous devez être <a href="{{ path('app_login') }}">connecté</a> ou <a href="{{ path('app_register') }}">vous inscrire</a> pour noter ou écrire une critique</p>
