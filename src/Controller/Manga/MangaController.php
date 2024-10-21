@@ -74,7 +74,9 @@ class MangaController extends AbstractController
 			} else {
 				$entityManager->persist($rating);
 			}
-		// $entityManager->flush();
+			$entityManager->flush();
+			return $this->redirectToRoute('app_manga_display', ['id' => $manga->getId()]);		
+		}
 		
 		if ($reviewForm->isSubmitted() && $reviewForm->isValid()) {
 			$user = $this->getUser();
@@ -88,9 +90,8 @@ class MangaController extends AbstractController
 			} else {
 				$entityManager->persist($review);
 			}
-		$entityManager->flush();
-		}
-		return $this->redirectToRoute('app_manga_display', ['id' => $manga->getId()]);
+			$entityManager->flush();
+			return $this->redirectToRoute('app_manga_display', ['id' => $manga->getId()]);
 		}
 
 		return $this->render('/manga/display.html.twig', [
@@ -98,7 +99,7 @@ class MangaController extends AbstractController
 			'ratingForm' => $ratingForm,
 			'reviewForm' => $reviewForm,
 			'currentRating' => $currentRating ? $currentRating->getNote() : null,
-			'currentReview' => $currentReview ? $currentReview->getContent() : null,
+			'currentReview' => $currentReview ? $currentReview : null,
 		]);
 	}
 }

@@ -77,7 +77,7 @@
 			{{ form_row(reviewForm._token) }}
 			{% if currentReview is not null %}
 				<label for="review">Ma critique: </label>
-				<textarea class="review__content "id="review">{{ currentReview.content }}</textarea>
+				<p class="review__content "id="review">{{ currentReview.content }}</p>
 				<span class="review__date">Date de création: </span><p>{{ currentReview.createdAt|date('Y-m-d H:i:s') }}</p>
 				<span class="review__date">Dernière mise à jour: </span><p>{{ currentReview.updatedAt|date('Y-m-d H:i:s') }}</p>
 			{% else %}
