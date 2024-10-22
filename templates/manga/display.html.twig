@@ -62,58 +62,83 @@
 			</div>
 		</div>
 	</div>
-<section class="rating">
-	{% if app.user %}
-		<form class="rating__form" action="{{ path('app_manga_display', { id: manga.id }) }}" method="POST">
-		<div class="rating__user">
-			{{ form_row(ratingForm._token) }}
-			<div class="rating__stars">
-				{% for i in 5..1 %}
-					<input class="rating__star--{{ i }}" type="radio" name="{{ ratingForm.note.vars.full_name }}" value="{{ i }}"
-						{% if rating is not null and rating == i %} checked {% endif %} required id="star{{ i }}"/>
-					<label for="star{{ i }}" title="{{ i }} star{{ i > 1 ? 's' : '' }}">★</label>
-           		 {% endfor %}
+{% if app.user %}
+	<section class="rating">
+			<form class="rating__form" action="{{ path('app_manga_display', { id: manga.id }) }}" method="POST">
+			<div class="rating__user">
+				{{ form_row(ratingForm._token) }}
+				<div class="rating__stars">
+					{% for i in 5..1 %}
+						<input class="rating__star--{{ i }}" type="radio" name="{{ ratingForm.note.vars.full_name }}" value="{{ i }}"
+							{% if rating is not null and rating.note == i %} checked {% endif %} required id="star{{ i }}"/>
+						<label for="star{{ i }}" title="{{ i }} star{{ i > 1 ? 's' : '' }}">★</label>
+					{% endfor %}
+				</div>
+				<button class="rating__button" type="submit">Laisser une note</button>
+				<button class="rating__button-delete" type="button" onclick="deleteRating()">Supprimer ma note</button>
 			</div>
-			<button class="rating__button" type="submit">Laisser une note</button>
-		</div>
-		</form>
-</section>
-<section class="review">
-	<form class="review__form" action="{{ path('app_manga_display', { id: manga.id }) }}" method="POST">
-		{{ form_row(reviewForm._token) }}
-		<div class="review__user">
-			{% if review is not null %}
-				<div class="review__current">
-					<label for="review__existing">Ma critique: </label>
-					<p class="review__content-current" id="review__existing">{{ review.content }}</p>
-					<span class="review__date">Date de création: </span><p>{{ review.createdAt|date('Y-m-d H:i:s') }}</p>
-					<span class="review__date">Dernière mise à jour: </span><p>{{ review.updatedAt|date('Y-m-d H:i:s') }}</p>
-					<button class="review__button-modify" type="button">Modifier</button>
-					<button class="review__button-delete" type="button" onclick="deleteReview()">Supprimer ma critique</button>
-				</div>
-				<div class="review__current-edit" style="display:none;">
-					<textarea class="review__content-current-edit" type="input" id="review" rows="4" cols="50" name="{{ reviewForm.content.vars.full_name }}">{{ review.content }}</textarea>
-					<button class="review__content-edit-save" type="submit">Sauvegarder</button>
-					<button class="review__content-edit-cancel" type="button">Annuler</button>
-				</div>
-			{% else %}
-				<label for="review__new">Ma critique: </label>
-				<textarea class="review__content" id="review__new" type="input" name="{{ reviewForm.content.vars.full_name }}" rows="4" cols="50" placeholder="J'écris ma critique..." required ></textarea>
-				<button class="review__button-submit" type="submit">Valider ma critique</button>
+			</form>
+			{% if rating is not null %}
+			<form id="delete-rating-form" action="{{ path('app_rating_delete', { id: rating.id }) }}" method="POST" style="display: none;">
+				<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ rating.id) }}">
+			</form>
 			{% endif %}
-		</div>
-	</form>
-	{% if review is not null %}
-	<form id="delete-review-form" action="{{ path('app_review_delete', { id: review.id }) }}" method="POST" style="display: none;">
-		<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ review.id) }}">
-	</form>
-	{% endif %}
-</section>
-	{% else %}
+	</section>
+	<section class="review">
+		<form class="review__form" action="{{ path('app_manga_display', { id: manga.id }) }}" method="POST">
+			{{ form_row(reviewForm._token) }}
+			<div class="review__user">
+				{% if review is not null %}
+					<div class="review__current">
+						<label for="review__existing">Ma critique: </label>
+						<p class="review__content-current" id="review__existing">{{ review.content }}</p>
+						<span class="review__date">Date de création: {{ review.createdAt|date('Y-m-d H:i:s') }}</span>
+						<span class="review__date">Dernière mise à jour: {{ review.updatedAt|date('Y-m-d H:i:s') }}</span>
+						<button class="review__button-modify" type="button">Modifier</button>
+						<button class="review__button-delete" type="button" onclick="deleteReview()">Supprimer ma critique</button>
+					</div>
+					<div class="review__current-edit" style="display:none;">
+						<textarea class="review__content-current-edit" type="input" id="review" rows="4" cols="50" name="{{ reviewForm.content.vars.full_name }}">{{ review.content }}</textarea>
+						<button class="review__content-edit-save" type="submit">Sauvegarder</button>
+						<button class="review__content-edit-cancel" type="button">Annuler</button>
+					</div>
+				{% else %}
+					<label for="review__new">Ma critique: </label>
+					<textarea class="review__content" id="review__new" type="input" name="{{ reviewForm.content.vars.full_name }}" rows="4" cols="50" placeholder="J'écris ma critique..." required ></textarea>
+					<button class="review__button-submit" type="submit">Valider ma critique</button>
+				{% endif %}
+			</div>
+		</form>
+		{% if review is not null %}
+		<form id="delete-review-form" action="{{ path('app_review_delete', { id: review.id }) }}" method="POST" style="display: none;">
+			<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ review.id) }}">
+		</form>
+		{% endif %}
+	</section>
+	<div class="reviews__display">
+		{% for review in manga.reviews %}
+			{% if review.user.id != currentUser.id %}
+				<span>Auteur-Autrice : {{ review.user.username ?: review.user.firstname }}</span>
+				<p>{{ review.content }}</p>
+				<span>Créée le : {{ review.createdAt|date('Y-m-d H:i:s') }}</span>
+				<span>Mise à jour le : {{ review.updatedAt|date('Y-m-d H:i:s') }}</span>
+			{% endif %}
+		{% endfor %}
+	</div>
+{% else %}
+	<div class="user__not-connected">
 		<p>Vous devez être <a href="{{ path('app_login') }}">connecté</a> ou <a href="{{ path('app_register') }}">vous inscrire</a> pour noter ou écrire une critique</p>
-	{% endif %}
-	{% else %}
+	</div>
+	<div class="reviews__display">
+		{% for review in manga.reviews %}
+			<span>Auteur-Autrice : {{ review.user.username ?: review.user.firstname }}</span>
+			<p>{{ review.content }}</p>
+			<span>Créée le : {{ review.createdAt|date('Y-m-d H:i:s') }}</span>
+			<span>Mise à jour le : {{ review.updatedAt|date('Y-m-d H:i:s') }}</span>
+		{% endfor %}
+	</div>
+{% endif %}
+{% else %}
 	<div class="manga__not-found"><h1>Manga non trouvé</h1></div>
-	{% endif %}
-</section>
+{% endif %}
 {% endblock %}
