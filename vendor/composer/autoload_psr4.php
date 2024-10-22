@@ -97,6 +97,8 @@ return array(
     'Masterminds\\' => array($vendorDir . '/masterminds/html5/src'),
     'LibDNS\\' => array($vendorDir . '/daverandom/libdns/src'),
     'League\\Uri\\' => array($vendorDir . '/league/uri', $vendorDir . '/league/uri-interfaces', $vendorDir . '/league/uri-parser/src'),
+    'Knp\\Component\\' => array($vendorDir . '/knplabs/knp-components/src/Knp/Component'),
+    'Knp\\Bundle\\PaginatorBundle\\' => array($vendorDir . '/knplabs/knp-paginator-bundle/src'),
     'Kelunik\\Certificate\\' => array($vendorDir . '/kelunik/certificate/src'),
     'Egulias\\EmailValidator\\' => array($vendorDir . '/egulias/email-validator/src'),
     'Doctrine\\SqlFormatter\\' => array($vendorDir . '/doctrine/sql-formatter/src'),
