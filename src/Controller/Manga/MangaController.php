@@ -29,21 +29,17 @@ class MangaController extends AbstractController
 	public function display(?Manga $manga, Request $request, EntityManagerInterface $entityManager): Response
 	{
 		// Get currently connected user's manga rating if exist
-		$rating = null;
-		$review = null;
 		$user = $this->getUser();
-		if ($user) {
-			$rating = $this->ratingRepository->findOneBy([
+		$rating = $this->ratingRepository->findOneBy([
 				'user' => $user,
 				'manga' => $manga]);
-			$review = $this->reviewRepository->findOneBy([
+		$review = $this->reviewRepository->findOneBy([
 				'user' => $user,
 				'manga' => $manga]);
-		}
 
 		// Create the forms
-		$ratingForm = $this->createForm(RatingType::class, $rating);
-		$reviewForm = $this->createForm(ReviewType::class, $review);
+		$ratingForm = $this->createForm(RatingType::class, $rating ?: new Rating());
+		$reviewForm = $this->createForm(ReviewType::class, $review ?: new Review());
 
 		// Handle form submission
 		$ratingForm->handleRequest($request);
@@ -59,7 +55,7 @@ class MangaController extends AbstractController
 			// Update or create rating and save to database
 			$rating->setUser($user);
 			$rating->setManga($manga);
-			$rating->setNote($rating->getNote());
+			$rating->setNote($ratingForm->get('note')->getData());
 			$entityManager->persist($rating);
 			$entityManager->flush();
 			$this->addFlash('success', 'Votre note a été ajoutée.');
@@ -88,13 +84,14 @@ class MangaController extends AbstractController
 			'manga' => $manga,
 			'ratingForm' => $ratingForm,
 			'reviewForm' => $reviewForm,
-			'rating' => $rating ? $rating->getNote() : null,
+			'rating' => $rating ? $rating : null,
 			'review' => $review ? $review : null,
+			'currentUser' => $user,
 		]);
 	}
 
 	#[Route('/review/{id}/delete', name: 'app_review_delete', methods: ['POST'])]
-	public function delete(Request $request, Review $review, EntityManagerInterface $entityManager) : Response
+	public function deleteReview(Request $request, Review $review, EntityManagerInterface $entityManager) : Response
 	{
 		if ($this->isCsrfTokenValid('delete' . $review->getId(), $request->request->get('_token'))) {
 			$entityManager->remove($review);
@@ -102,5 +99,16 @@ class MangaController extends AbstractController
 			$this->addFlash('success', 'Votre critique a été supprimée.');
 		}
 	return $this->redirectToRoute('app_manga_display', ['id' => $review->getManga()->getId()]);
+	}
+	
+	#[Route('/rating/{id}/delete', name: 'app_rating_delete', methods: ['POST'])]
+	public function delete(Request $request, Rating $rating, EntityManagerInterface $entityManager) : Response
+	{
+		if ($this->isCsrfTokenValid('delete' . $rating->getId(), $request->request->get('_token'))) {
+			$entityManager->remove($rating);
+			$entityManager->flush();
+			$this->addFlash('success', 'Votre note a été supprimée.');
+		}
+	return $this->redirectToRoute('app_manga_display', ['id' => $rating->getManga()->getId()]);
 	}
 }
