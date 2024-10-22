@@ -14,6 +14,10 @@ function deleteReview() {
     const deleteForm = document.getElementById('delete-review-form');
     deleteForm.submit();
 }
+function deleteRating() {
+    const deleteForm = document.getElementById('delete-rating-form');
+    deleteForm.submit();
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     const modifyButton = document.querySelector('.review__button-modify');
@@ -26,8 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
         cancelButton.addEventListener('click', toggleEdit);
     }
 
-	const deleteButton = document.querySelector('.review__button-delete');
-    if (deleteButton) {
-        deleteButton.addEventListener('click', deleteReview);
+	const deleteReviewButton = document.querySelector('.review__button-delete');
+    if (deleteReviewButton) {
+        deleteReviewButton.addEventListener('click', deleteReview);
+    }
+    const deleteRatingButton = document.querySelector('.rating__button-delete');
+    if (deleteRatingButton) {
+        deleteRatingButton.addEventListener('click', deleteRating);
     }
 });
