@@ -3,8 +3,14 @@
 MangaAddict
 {% endblock %}
 {%block body %}
+<div class="manga-page">
 <div class="manga-index">
-{% for manga in mangas %}
+	{# <div class="manga-index__filter">
+		<form class="manga-index__filter-form" action="{{ path('app_manga_index') }}" method="POST">
+
+		</form>
+	</div> #}
+	{% for manga in mangas %}
 	<div class="manga-item">
 		<div class="manga-item__image">
 			<img class="manga-item__thumbnail" src="{{ manga.imageUrl }}" alt="Couverture de {{ manga.name }}">
@@ -27,5 +33,10 @@ MangaAddict
 		</button>
 	</div>
 {% endfor %}
+</div>
+{# Render pagination links #}
+<div class="pagination">
+    {{ knp_pagination_render(mangas) }}
+</div>
 </div>
 {% endblock %}
