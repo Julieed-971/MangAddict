@@ -6,7 +6,9 @@ MangaAddict
 <div class="manga-index">
 {% for manga in mangas %}
 	<div class="manga-item">
-		<img class="manga-item__image" src="{{ manga.imageUrl }}" alt="Couverture de {{ manga.name }}">
+		<div class="manga-item__image">
+			<img class="manga-item__thumbnail" src="{{ manga.imageUrl }}" alt="Couverture de {{ manga.name }}">
+		</div>
 		<div class="manga-item__title">
 			<h4>{{ manga.name }}</h4>
 		</div>
