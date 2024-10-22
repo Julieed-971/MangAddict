@@ -5,12 +5,14 @@ namespace App\Controller\Manga;
 use App\Entity\Manga\Manga;
 use App\Entity\Manga\Rating;
 use App\Entity\Manga\Review;
+use App\Form\MangaFilterType;
 use App\Form\RatingType;
 use App\Form\ReviewType;
 use App\Repository\Manga\MangaRepository;
 use App\Repository\Manga\RatingRepository;
 use App\Repository\Manga\ReviewRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -30,12 +32,29 @@ class MangaController extends AbstractController
 	}
 
 	#[Route('', name: 'app_manga_index', methods: 'GET')]
-	public function index(Request $request, MangaRepository $mangaRepository): Response
+	public function index(Request $request, MangaRepository $mangaRepository, PaginatorInterface $paginator): Response
 	{
-		$mangas = $mangaRepository->findAll();
+		// Create filter form
+		$filterForm = $this->createForm(MangaFilterType::class);
+		$filterForm->handleRequest($request);
+
+		// Get filter data from form
+		$filterData = [];
+		if ($filterForm->isSubmitted() && $filterForm->isValid()) {
+			$filterData = $filterForm->getData();
+		}
+
+		// Get paginated results based on filter data
+		$page = $request->query->getInt('page', 1);
+		$mangas = $mangaRepository->getPaginatedMangas($filterData, $paginator, $page);
+		
+		
+		// $mangas = $mangaRepository->findAll();
 
 		return $this->render('/manga/index.html.twig', [
 			'mangas' => $mangas,
+			'filterForm' => $filterForm,
+			'currentPage' => $page,
 		]);
 	}
 
