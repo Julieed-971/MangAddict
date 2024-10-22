@@ -60,8 +60,10 @@
 					<p>{{ manga.description }}</p>
 				</div>
 			</div>
+			<button class="manga-index__link"><a href="{{ path('app_manga_index') }}">Retour à la liste de mangas</a></button>
 		</div>
 	</div>
+	</section>
 {% if app.user %}
 	<section class="rating">
 			<form class="rating__form" action="{{ path('app_manga_display', { id: manga.id }) }}" method="POST">
