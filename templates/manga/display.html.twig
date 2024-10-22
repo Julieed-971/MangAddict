@@ -118,10 +118,12 @@
 	<div class="reviews__display">
 		{% for review in manga.reviews %}
 			{% if review.user.id != currentUser.id %}
-				<span>Auteur-Autrice : {{ review.user.username ?: review.user.firstname }}</span>
-				<p>{{ review.content }}</p>
-				<span>Créée le : {{ review.createdAt|date('Y-m-d H:i:s') }}</span>
-				<span>Mise à jour le : {{ review.updatedAt|date('Y-m-d H:i:s') }}</span>
+				<div class="review__display">
+					<span>Auteur-Autrice : {{ review.user.username ?: review.user.firstname }}</span>
+					<p>{{ review.content }}</p>
+					<span>Créée le : {{ review.createdAt|date('Y-m-d H:i:s') }}</span>
+					<span>Mise à jour le : {{ review.updatedAt|date('Y-m-d H:i:s') }}</span>
+				</div>
 			{% endif %}
 		{% endfor %}
 	</div>
@@ -131,10 +133,12 @@
 	</div>
 	<div class="reviews__display">
 		{% for review in manga.reviews %}
-			<span>Auteur-Autrice : {{ review.user.username ?: review.user.firstname }}</span>
-			<p>{{ review.content }}</p>
-			<span>Créée le : {{ review.createdAt|date('Y-m-d H:i:s') }}</span>
-			<span>Mise à jour le : {{ review.updatedAt|date('Y-m-d H:i:s') }}</span>
+			<div class="review__display">
+				<span>Auteur-Autrice : {{ review.user.username ?: review.user.firstname }}</span>
+				<p>{{ review.content }}</p>
+				<span>Créée le : {{ review.createdAt|date('Y-m-d H:i:s') }}</span>
+				<span>Mise à jour le : {{ review.updatedAt|date('Y-m-d H:i:s') }}</span>
+			</div>
 		{% endfor %}
 	</div>
 {% endif %}
