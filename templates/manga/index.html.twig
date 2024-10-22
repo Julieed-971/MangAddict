@@ -3,25 +3,27 @@
 MangaAddict
 {% endblock %}
 {%block body %}
+<div class="manga-index">
 {% for manga in mangas %}
-	<div class="manga">
-		<img class="manga__image" src="{{ manga.imageUrl }}" alt="Couverture de {{ manga.name }}">
-		<div class="manga__title">
-			<h1>{{ manga.name }}</h1>
+	<div class="manga-item">
+		<img class="manga-item__image" src="{{ manga.imageUrl }}" alt="Couverture de {{ manga.name }}">
+		<div class="manga-item__title">
+			<h4>{{ manga.name }}</h4>
 		</div>
-		{% for author in manga.mangaAuthors %}
-			{% if author.role == 'story' %}
-			<li class="manga__author manga__author--story">Scénario: {{ author.author.name }}</li>
-			{% endif %}
-			{% if author.role == 'art' %}
-			<li class="manga__author manga__author--art">Art: {{ author.author.name }}</li>
-			{% endif %}
-		{% endfor %}
-	</div>
-	<div class="manga__page">
-		<button class="manga__button">
-			<a class="manga__link" href="{{ path('app_manga_display', {id: manga.id}) }}">Voir</a>
+		<div class="manga-item__author">
+			{% for author in manga.mangaAuthors %}
+				{% if author.role == 'story' %}
+				<p  class="manga-item__author--story">Scénario: {{ author.author.name }}</p>
+				{% endif %}
+				{% if author.role == 'art' %}
+				<p class="manga-item__author--art">Art: {{ author.author.name }}</p>
+				{% endif %}
+			{% endfor %}
+		</div>
+	<button class="manga-item__button">
+			<a class="manga-item__link" href="{{ path('app_manga_display', {id: manga.id}) }}">Voir</a>
 		</button>
 	</div>
 {% endfor %}
+</div>
 {% endblock %}
