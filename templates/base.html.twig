@@ -17,7 +17,7 @@
             <a id="home" href="{{ path('app_basic') }}">MangAddict</a>
         </div>
             <ol>
-                <li class="navbar__item"><a href="#mangatheque">Mangathèque</a></li>
+                <li class="navbar__item"><a href="{{ path('app_manga_index') }}">Mangathèque</a></li>
                 <li class="navbar__item"><a href="{{ path('app_register') }}">Mon compte</a></li>
                 {% if app.user %}
                 <li class="navbar__item"><a href="{{ path('app_logout') }}">Déconnexion</a></li>
