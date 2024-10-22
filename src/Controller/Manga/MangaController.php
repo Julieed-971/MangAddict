@@ -7,6 +7,7 @@ use App\Entity\Manga\Rating;
 use App\Entity\Manga\Review;
 use App\Form\RatingType;
 use App\Form\ReviewType;
+use App\Repository\Manga\MangaRepository;
 use App\Repository\Manga\RatingRepository;
 use App\Repository\Manga\ReviewRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -20,11 +21,24 @@ class MangaController extends AbstractController
 {
 	private RatingRepository $ratingRepository;
 	private ReviewRepository $reviewRepository;
+	private MangaRepository $mangaRepository;
 
-	public function __construct(RatingRepository $ratingRepository, ReviewRepository $reviewRepository) {
+	public function __construct(RatingRepository $ratingRepository, ReviewRepository $reviewRepository, MangaRepository $mangaRepository) {
 		$this->ratingRepository = $ratingRepository;
 		$this->reviewRepository = $reviewRepository;
+		$this->mangaRepository = $mangaRepository;
 	}
+
+	#[Route('', name: 'app_manga_index', methods: 'GET')]
+	public function index(Request $request, MangaRepository $mangaRepository): Response
+	{
+		$mangas = $mangaRepository->findAll();
+
+		return $this->render('/manga/index.html.twig', [
+			'mangas' => $mangas,
+		]);
+	}
+
 	#[Route('/{id}', name: 'app_manga_display', requirements: ['id' => '\d+'], methods: ['GET', 'POST'])]
 	public function display(?Manga $manga, Request $request, EntityManagerInterface $entityManager): Response
 	{
