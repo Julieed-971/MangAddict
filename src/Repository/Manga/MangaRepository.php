@@ -23,25 +23,76 @@ class MangaRepository extends ServiceEntityRepository
 	}
 
 	// FindByName
-	public function findByName(string $name): ?Manga
+	public function findByName(string $name)
 	{
-		return $this->findOneBy(['name' => $name]);
+		$mangaByName = $this->createQueryBuilder('mbn')
+			->where('mbn.name LIKE :name')
+			->setParameter('name', '%' . $name . '%')
+			->getQuery()
+			->getResult();
+		
+			return !empty($mangaByName) ? $mangaByName : null;
 	}
+
+	// FindByType
+	public function findByType(string $type)
+	{
+		$mangaByType = $this->createQueryBuilder('mbt')
+			->where('mbt.type LIKE :type')
+			->setParameter('type', '%' . $type . '%')
+			->getQuery()
+			->getResult();
+
+		return !empty($mangaByType) ? $mangaByType : null;
+	}
+
+	// FindByGenre
+	public function findByGenre(string $genre)
+	{
+		$mangaByGenre = $this->createQueryBuilder('mbg')
+			->where('JSON_CONTAINS(LOWER(mbg.genres), LOWER(:genre)) = 1')
+			->setParameter('genre', json_encode($genre))
+			->getQuery()
+			->getResult();
+		
+		return !empty($mangaByGenre) ? $mangaByGenre : null;
+	}
+
+	// FindByAuthor
+	public function findByAuthor(string $author)
+	{
+		$queryBuilder = $this->createQueryBuilder('mba');
+
+		$queryBuilder->join('mba.mangaAuthors', 'ma')
+					 ->join('ma.author', 'a')
+					 ->where('a.name LIKE :authorName')
+					 ->setParameter('authorName', '%' . $author . '%');
+		
+		$mangaByAuthor = $queryBuilder->getQuery()->getResult();
+
+		return !empty($mangaByAuthor) ? $mangaByAuthor : null;
+	}
+
+	// FindByStatus
 
 	public function getPaginatedMangas($filterData, PaginatorInterface $paginator, $page = 1, $limit = 16)
 	{
 		$queryBuilder = $this->createQueryBuilder('m');
 
 		if (!empty($filterData['type'])) {
-			$queryBuilder->andWhere('m.type LIKE :type')
-						 ->setParameter('type', '%' . $filterData['type'] . '%');
+			$queryBuilder->where('m.type LIKE :type')
+						 ->setParameter('type', '%' . $filterData['type'] . '%')
+						 ->getQuery()
+						 ->getResult();
 		}
 		if (!empty($filterData['genre'])) {
-			$queryBuilder->andWhere('m.genres LIKE :genre')
-						 ->setParameter('genre', '%' . $filterData['genre'] . '%');
+			$queryBuilder->andWhere('JSON_CONTAINS(m.genres, :genre) = 1')
+						 ->setParameter('genre', json_encode($filterData['genre']));
 		}
 		if (!empty($filterData['author'])) {
-			$queryBuilder->andWhere('m.mangaAuthor LIKE :author')
+			$queryBuilder->join('m.mangaAuthors', 'ma')
+						 ->join('ma.author', 'a')
+						 ->andWhere('a.name LIKE :author')
 						 ->setParameter('author', '%' . $filterData['author'] . '%');
 		}
 
@@ -51,7 +102,6 @@ class MangaRepository extends ServiceEntityRepository
 			$limit
 			);
 	}
-	// FindByAuthor
-	// FindByStatus
-	// FindByGenre
+
+
 }
