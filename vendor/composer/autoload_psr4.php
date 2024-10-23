@@ -115,6 +115,7 @@ return array(
     'Doctrine\\Common\\' => array($vendorDir . '/doctrine/event-manager/src'),
     'Doctrine\\Bundle\\MigrationsBundle\\' => array($vendorDir . '/doctrine/doctrine-migrations-bundle'),
     'Doctrine\\Bundle\\DoctrineBundle\\' => array($vendorDir . '/doctrine/doctrine-bundle/src'),
+    'DoctrineExtensions\\' => array($vendorDir . '/beberlei/doctrineextensions/src'),
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
     'Composer\\Semver\\' => array($vendorDir . '/composer/semver/src'),
     'App\\Tests\\' => array($baseDir . '/tests'),
