@@ -24,5 +24,21 @@ services:
             $mangaImporter: '@App\Service\MangaImporter'
         tags:
             - { name: 'console.command' }
+    App\Command\FindMangaByNameCommand:
+        arguments:
+            $mangaRepository: '@App\Repository\Manga\MangaRepository'
+        tags: ['console.command']
+    App\Command\FindMangaByTypeCommand:
+        arguments:
+            $mangaRepository: '@App\Repository\Manga\MangaRepository'
+        tags: ['console.command']
+    App\Command\FindMangaByGenreCommand:
+        arguments:
+            $mangaRepository: '@App\Repository\Manga\MangaRepository'
+        tags: ['console.command']
+    App\Command\FindMangaByAuthorCommand:
+        arguments:
+            $mangaRepository: '@App\Repository\Manga\MangaRepository'
+        tags: ['console.command']
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
