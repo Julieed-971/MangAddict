@@ -59,16 +59,15 @@ class MangaRepository extends ServiceEntityRepository
 	}
 
 	// FindByAuthor
-	public function findByAuthor(string $author)
+	public function findByAuthor(string $authorName)
 	{
-		$queryBuilder = $this->createQueryBuilder('mba');
-
-		$queryBuilder->join('mba.mangaAuthors', 'ma')
-					 ->join('ma.author', 'a')
-					 ->where('a.name LIKE :authorName')
-					 ->setParameter('authorName', '%' . $author . '%');
-		
-		$mangaByAuthor = $queryBuilder->getQuery()->getResult();
+		$mangaByAuthor = $this->createQueryBuilder('mba')
+			->join('mba.mangaAuthors', 'ma')
+			->join('ma.author', 'a')
+			->where('a.name LIKE :authorName')
+			->setParameter('authorName', '%' . $authorName . '%')
+			->getQuery()
+			->getResult();
 
 		return !empty($mangaByAuthor) ? $mangaByAuthor : null;
 	}
