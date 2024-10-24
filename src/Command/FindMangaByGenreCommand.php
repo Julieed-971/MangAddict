@@ -7,6 +7,7 @@ use InvalidArgumentException;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\Table;
+use Symfony\Component\Console\Input\Input;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -24,7 +25,7 @@ class FindMangaByGenreCommand extends Command
 
 	protected function configure()
 	{
-		$this->addArgument('genre', InputArgument::REQUIRED, 'The genre of the manga to find');
+		$this->addArgument('genre', InputArgument::IS_ARRAY | InputArgument::REQUIRED, 'The genre(s) of the manga to find');
 	}
 
 	protected function execute(InputInterface $input, OutputInterface $output): int
