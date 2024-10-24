@@ -4,12 +4,33 @@ MangaAddict
 {% endblock %}
 {%block body %}
 <div class="manga-page">
-<div class="manga-index">
-	{# <div class="manga-index__filter">
+	<div class="manga-index__filter">
 		<form class="manga-index__filter-form" action="{{ path('app_manga_index') }}" method="POST">
-
+            <input type="hidden" id="manga_filter__token" name="manga_filter[_token]" value="{{ csrf_token('manga_filter') }}">
+			
+			<div class="filter-form-type">
+				<label>Type de manga</label>
+				<div class="filter-form-type__popover">
+					<ul>
+						{% for type in mangaTypes%}
+							<li>
+								<input type="checkbox" id="filter-form-type-{{ type.name }}" name="{{ filterForm.type.vars.full_name }}" value="">
+                                <label for="filter-form-type-{{ type.name }}">{{ type.name }}</label>							
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			{# <label for="filter-form-type">Type de manga</label>
+			<input type="text" id="filter-form-type" name="{{ filterForm.type.vars.full_name }}"> #}
+			<label for="filter-form-genre">Genres</label>
+			<input type="text" id="filter-form-genre" name="{{ filterForm.genre.vars.full_name }}">
+			<label for="filter-form-author">Auteur-Autrice</label>
+			<input type="text" id="filter-form-author" name="{{ filterForm.author.vars.full_name }}">
+			<button type="submit">Filtrer</button>
 		</form>
-	</div> #}
+	</div>
+<div class="manga-index">
 	{% for manga in mangas %}
 	<div class="manga-item">
 		<div class="manga-item__image">
