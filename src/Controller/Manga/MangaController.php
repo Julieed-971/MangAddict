@@ -2,6 +2,8 @@
 
 namespace App\Controller\Manga;
 
+use App\Enum\MangaType;
+use App\Enum\MangaGenre;
 use App\Entity\Manga\Manga;
 use App\Entity\Manga\Rating;
 use App\Entity\Manga\Review;
@@ -13,6 +15,7 @@ use App\Repository\Manga\RatingRepository;
 use App\Repository\Manga\ReviewRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
+use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -31,8 +34,8 @@ class MangaController extends AbstractController
 		$this->mangaRepository = $mangaRepository;
 	}
 
-	#[Route('', name: 'app_manga_index', methods: 'GET')]
-	public function index(Request $request, MangaRepository $mangaRepository, PaginatorInterface $paginator): Response
+	#[Route('', name: 'app_manga_index', methods: ['GET', 'POST'])]
+	public function index(Request $request, PaginatorInterface $paginator, LoggerInterface $logger): Response
 	{
 		// Create filter form
 		$filterForm = $this->createForm(MangaFilterType::class);
@@ -43,18 +46,31 @@ class MangaController extends AbstractController
 		if ($filterForm->isSubmitted() && $filterForm->isValid()) {
 			$filterData = $filterForm->getData();
 		}
-
-		// Get paginated results based on filter data
 		$page = $request->query->getInt('page', 1);
-		$mangas = $mangaRepository->getPaginatedMangas($filterData, $paginator, $page);
-		
-		
-		// $mangas = $mangaRepository->findAll();
+
+		if (!empty($filterData)) {
+			// Get paginated results based on filter data
+			$mangas = $this->mangaRepository->getPaginatedMangas($filterData, $paginator, $page);
+		} else {
+			// Get all mangas and paginate them
+            $query = $this->mangaRepository->createQueryBuilder('m')
+                ->getQuery();
+            $mangas = $paginator->paginate($query, $page, 16);
+			// $mangas = sort($mangas);
+		}
+	
+		$mangaTypes = MangaType::cases();
+		$mangaGenres = MangaGenre::cases();
+		// Log the filter data
+		// $logger->info('Filter data:', ['data' => $filterData]);
+
 
 		return $this->render('/manga/index.html.twig', [
 			'mangas' => $mangas,
 			'filterForm' => $filterForm,
 			'currentPage' => $page,
+			'mangaTypes' => $mangaTypes,
+			'mangaGenres' => $mangaGenres,
 		]);
 	}
 
