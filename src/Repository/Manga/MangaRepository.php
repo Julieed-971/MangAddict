@@ -47,13 +47,16 @@ class MangaRepository extends ServiceEntityRepository
 	}
 
 	// FindByGenre
-	public function findByGenre(string $genre)
+	public function findByGenre(array $genres)
 	{
-		$mangaByGenre = $this->createQueryBuilder('mbg')
-			->where('JSON_CONTAINS(LOWER(mbg.genres), LOWER(:genre)) = 1')
-			->setParameter('genre', json_encode($genre))
-			->getQuery()
-			->getResult();
+		$queryBuilder = $this->createQueryBuilder('mbg');
+
+		foreach ($genres as $genre) {
+			// Generate unique parameter names for each genre to avoid conflicts.
+			$queryBuilder->andWhere("JSON_CONTAINS(LOWER(mbg.genres), LOWER(:$genre)) = 1")
+						 ->setParameter($genre, json_encode($genre));
+		}
+		$mangaByGenre = $queryBuilder->getQuery()->getResult();
 		
 		return !empty($mangaByGenre) ? $mangaByGenre : null;
 	}
@@ -76,27 +79,39 @@ class MangaRepository extends ServiceEntityRepository
 
 	public function getPaginatedMangas($filterData, PaginatorInterface $paginator, $page = 1, $limit = 16)
 	{
-		$queryBuilder = $this->createQueryBuilder('m');
+		$mangasList = [];
 
 		if (!empty($filterData['type'])) {
-			$queryBuilder->where('m.type LIKE :type')
-						 ->setParameter('type', '%' . $filterData['type'] . '%')
-						 ->getQuery()
-						 ->getResult();
+			$mangasList = $this->findByType($filterData['type']);
 		}
 		if (!empty($filterData['genre'])) {
-			$queryBuilder->andWhere('JSON_CONTAINS(m.genres, :genre) = 1')
-						 ->setParameter('genre', json_encode($filterData['genre']));
+			$mangaByGenre = $this->findByGenre($filterData['genre']);
+			if (empty($mangasList)) {
+				$mangasList = $mangaByGenre;
+			} else {
+				// If the mangasList contains already filtered manga, get the mangas by genre and keep the one that matches the list
+				$mangasList = array_uintersect_uassoc($mangasList, $mangaByGenre, function ($a, $b) {
+					return $a->getId() <=> $b->getId();
+				});
+			}
 		}
 		if (!empty($filterData['author'])) {
-			$queryBuilder->join('m.mangaAuthors', 'ma')
-						 ->join('ma.author', 'a')
-						 ->andWhere('a.name LIKE :author')
-						 ->setParameter('author', '%' . $filterData['author'] . '%');
-		}
+			$mangaByAuthor = $this->findByAuthor($filterData['author']);
+			if (empty($mangasList)) {
+				$mangasList = $mangaByAuthor;
+			} else {
+				// If the mangasList contains already filtered manga, get the mangas by genre and keep the one that matches the list
+				$mangasList = array_uintersect_uassoc($mangasList, $mangaByAuthor, function ($a, $b) {
+					return $a->getId() <=> $b->getId();
+				});
+			}
+		} 
+		// else {
+		// 	$mangasList = $this->findAll();
+		// }
 
 		return $paginator->paginate(
-			$queryBuilder,
+			$mangasList,
 			$page,
 			$limit
 			);
