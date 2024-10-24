@@ -2,7 +2,6 @@
 
 namespace App\Form;
 
-use App\Entity\Manga\Manga;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -15,20 +14,24 @@ class MangaFilterType extends AbstractType
 		$builder
 			->add('type', TextType::class, [
 				'required' => false,
+				'label' => 'Type de manga',
 			])
 			->add('genre', TextType::class, [
 				'required' => false,
+				'label' => 'Genres',
 			])
 			->add('author', TextType::class, [
 				'required' => false,
+				'label' => 'Auteur-Autrice',
+
 			]);
 	}
 
 	public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-			'data_class' => Manga::class,
-            'method' => 'GET',
+			'data_class' => null,
+			'block_name' => 'manga_filter',
         ]);
     }
 }
