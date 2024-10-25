@@ -7,26 +7,26 @@ namespace App\Enum;
 enum MangaGenre: string
 {
     case Action = 'action';
-    case Adventure = 'adventure';
+    case Aventure = 'aventure';
     case Bara = 'bara';
-    case Biographical = 'biographical';
-    case Comedy = 'comedy';
+    case Biographique = 'biographique';
+    case Comédie = 'comédie';
     case Crossover = 'crossover';
-    case Drama = 'drama';
+    case Drame = 'drame';
     case Ecchi = 'ecchi';
-    case Erotic = 'erotic';
-    case Fantastic = 'fantastic';
+    case Erotique = 'erotique';
+    case Fantastique = 'fantastique';
     case Fantasy = 'fantasy';
     case Furyo = 'furyo';
     case Gekiga = 'gekiga';
-    case ShortStories = 'short_stories';
-    case Historical = 'historical';
-    case Horror = 'horror';
+    case HistoiresCourtes = 'histoires courtes';
+    case Historique = 'historique';
+    case Horreur = 'horreur';
     case Isekai = 'isekai';
     case Mature = 'mature';
-    case Mystery = 'mystery';
+    case Mystère = 'mystère';
     case Nekketsu = 'nekketsu';
-    case Psychological = 'psychological';
+    case Psychologique = 'psychologique';
     case Romance = 'romance';
     case SchoolLife = 'school_life';
     case ScienceFantasy = 'science_fantasy';
@@ -34,35 +34,35 @@ enum MangaGenre: string
     case ShoujoAi = 'shoujo_ai';
     case ShonenAi = 'shonen_ai';
     case SliceOfLife = 'slice_of_life';
-    case Supernatural = 'supernatural';
+    case Surnaturel = 'surnaturel';
     case Thriller = 'thriller';
-    case Tragic = 'tragic';
+    case Tragique = 'tragique';
     case Yonkoma = 'yonkoma';
 
     public function getLabel(): string
     {
         return match ($this) {
             self::Action => 'Action',
-            self::Adventure => 'Aventure',
+            self::Aventure => 'Aventure',
             self::Bara => 'Bara',
-            self::Biographical => 'Biographique',
-            self::Comedy => 'Comédie',
+            self::Biographique => 'Biographique',
+            self::Comédie => 'Comédie',
             self::Crossover => 'Crossover',
-            self::Drama => 'Drame',
+            self::Drame => 'Drame',
             self::Ecchi => 'Ecchi',
-            self::Erotic => 'Érotique',
-            self::Fantastic => 'Fantastique',
+            self::Erotique => 'Érotique',
+            self::Fantastique => 'Fantastique',
             self::Fantasy => 'Fantasy',
             self::Furyo => 'Furyo',
             self::Gekiga => 'Gekiga',
-            self::ShortStories => 'Histoires courtes',
-            self::Historical => 'Historique',
-            self::Horror => 'Horreur',
+            self::HistoiresCourtes => 'Histoires courtes',
+            self::Historique => 'Historique',
+            self::Horreur => 'Horreur',
             self::Isekai => 'Isekai',
             self::Mature => 'Mature',
-            self::Mystery => 'Mystère',
+            self::Mystère => 'Mystère',
             self::Nekketsu => 'Nekketsu',
-            self::Psychological => 'Psychologique',
+            self::Psychologique => 'Psychologique',
             self::Romance => 'Romance',
             self::SchoolLife => 'School Life',
             self::ScienceFantasy => 'Science-Fantasy',
@@ -70,9 +70,9 @@ enum MangaGenre: string
             self::ShoujoAi => 'Shôjo-aï',
             self::ShonenAi => 'Shônen-aï',
             self::SliceOfLife => 'Slice of Life',
-            self::Supernatural => 'Surnaturel',
+            self::Surnaturel => 'Surnaturel',
             self::Thriller => 'Thriller',
-            self::Tragic => 'Tragique',
+            self::Tragique => 'Tragique',
             self::Yonkoma => 'Yonkoma',
         };
     }

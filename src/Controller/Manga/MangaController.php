@@ -13,6 +13,7 @@ use App\Form\ReviewType;
 use App\Repository\Manga\MangaRepository;
 use App\Repository\Manga\RatingRepository;
 use App\Repository\Manga\ReviewRepository;
+use App\Service\CustomPaginator;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
 use Psr\Log\LoggerInterface;
@@ -27,44 +28,55 @@ class MangaController extends AbstractController
 	private RatingRepository $ratingRepository;
 	private ReviewRepository $reviewRepository;
 	private MangaRepository $mangaRepository;
+	private CustomPaginator $customPaginator;
+	private LoggerInterface $logger;
 
-	public function __construct(RatingRepository $ratingRepository, ReviewRepository $reviewRepository, MangaRepository $mangaRepository) {
+
+
+	public function __construct(RatingRepository $ratingRepository, ReviewRepository $reviewRepository, MangaRepository $mangaRepository, CustomPaginator $customPaginator, LoggerInterface $logger) {
 		$this->ratingRepository = $ratingRepository;
 		$this->reviewRepository = $reviewRepository;
 		$this->mangaRepository = $mangaRepository;
+		$this->customPaginator = $customPaginator;
+		$this->logger = $logger;
 	}
 
 	#[Route('', name: 'app_manga_index', methods: ['GET', 'POST'])]
-	public function index(Request $request, PaginatorInterface $paginator, LoggerInterface $logger): Response
+	public function index(Request $request): Response
 	{
+		$mangaTypes = MangaType::cases();
+		$mangaGenres = MangaGenre::cases();
+
 		// Create filter form
-		$filterForm = $this->createForm(MangaFilterType::class);
+		$filterForm = $this->createForm(MangaFilterType::class, null, [
+			'genres' => array_combine(array_column($mangaGenres, 'name'), array_column($mangaGenres, 'name')),
+		]);
 		$filterForm->handleRequest($request);
 
 		// Get filter data from form
 		$filterData = [];
+
+		// Check if the form is submitted and valid
 		if ($filterForm->isSubmitted() && $filterForm->isValid()) {
+			// Get the filter data from the form
 			$filterData = $filterForm->getData();
 		}
+		
+		// Retrieve the current page number from the query parameters, defaulting to 1 if not present
 		$page = $request->query->getInt('page', 1);
 
 		if (!empty($filterData)) {
 			// Get paginated results based on filter data
-			$mangas = $this->mangaRepository->getPaginatedMangas($filterData, $paginator, $page);
+			$mangasList = $this->mangaRepository->getFilteredMangas($filterData);
+
+			$mangas = $this->customPaginator->paginate($mangasList, $page, 16);
 		} else {
 			// Get all mangas and paginate them
-            $query = $this->mangaRepository->createQueryBuilder('m')
-                ->getQuery();
-            $mangas = $paginator->paginate($query, $page, 16);
-			// $mangas = sort($mangas);
+			$mangasList = $this->mangaRepository->findAll();
+
+            $mangas = $this->customPaginator->paginate($mangasList, $page, 16);
 		}
 	
-		$mangaTypes = MangaType::cases();
-		$mangaGenres = MangaGenre::cases();
-		// Log the filter data
-		// $logger->info('Filter data:', ['data' => $filterData]);
-
-
 		return $this->render('/manga/index.html.twig', [
 			'mangas' => $mangas,
 			'filterForm' => $filterForm,

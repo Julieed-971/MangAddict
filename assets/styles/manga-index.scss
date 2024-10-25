@@ -11,19 +11,21 @@
 	justify-content: space-around;
 	align-items: center;
 	max-width: 70vw;
-	background-color: blueviolet;
+	// background-color: blueviolet;
 }
 
 .manga-item {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	background-color: greenyellow;
+	// background-color: greenyellow;
 	max-width: fit-content;
 	max-height: fit-content;
 	margin: 10px;
 	padding: auto;
+	z-index: 1;
 
 	&__image {
 		display: flex;
@@ -31,7 +33,7 @@
 		justify-content: center;
 		height: 30vh;
 		width: 15vw;
-		background-color: chocolate;
+		// background-color: chocolate;
 	}
 
 	&__thumbnail {
@@ -50,7 +52,7 @@
 		max-height: 60px;
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: small;
-		background-color: cornflowerblue;
+		// background-color: cornflowerblue;
 	}
 
 	&__author {
@@ -65,7 +67,7 @@
 	}
 
 	&__author--story, &__author--art {
-		background-color: darkred;
+		// background-color: darkred;
 		margin: 0;
 		padding: 0;
 
@@ -75,4 +77,65 @@
 		display: flex;
 		justify-self: flex-end;
 	}
+}
+
+.manga-index-filter {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		max-height: 50px;
+		// background-color: mediumslateblue;
+		z-index: 10;
+
+		&__author {
+			max-height: fit-content;
+			display: flex;
+			flex-direction: column;
+			margin-left: 15px;
+		}
+
+		&__button {
+			max-height: fit-content;
+			// background-color: firebrick;
+			margin: 19px 0 0 5px;
+		}
+
+		&__type--popover,
+		&__genre--popover {
+			visibility: hidden;
+			width: 100%;
+			border: 1px solid #DDDDDD;
+			border-radius: 4px;
+			background: #FAFAFA;
+			padding-bottom: 15px;
+			height: 300px;
+			overflow-y: scroll;
+			// scrollbar-width: none;
+			max-height: 300px;
+			margin: 15px 10px 0 10px;
+			// padding: 5px;
+
+			ul {
+				display: flex;
+				flex-direction: column;
+				// justify-content: left;
+				align-items: start;
+				// background-color: chartreuse;
+				list-style-type: none;
+				// padding-left: 0;
+				// margin-left: 0;
+			}
+		}
+
+		&__type--popover::-webkit-scrollbar {
+			scrollbar-width: 10px;
+			scrollbar-color: #cf8537;
+		}
+
+		&__type:hover &__type--popover, 
+		&__genre:hover &__genre--popover 
+		{
+			visibility: visible;
+			color: firebrick;
+		}
 }

@@ -5,7 +5,7 @@ namespace App\Enum;
 enum MangaType: string
 {
     case AnimeComics = 'anime_comics';
-    case Anthology = 'anthologie';
+    case Anthologie = 'anthologie';
     case BDComics = 'bd_comics';
     case GlobalManga = 'global_manga';
     case Hentai = 'hentai';
@@ -13,7 +13,7 @@ enum MangaType: string
     case Kodomo = 'kodomo';
     case Manhua = 'manhua';
     case Manhwa = 'manhwa';
-    case Parodic = 'parodic';
+    case Parodique = 'parodique';
     case Seinen = 'seinen';
     case Shojo = 'shojo';
     case Shonen = 'shonen';
@@ -24,7 +24,7 @@ enum MangaType: string
     {
         return match ($this) {
             self::AnimeComics => 'Anime Comics',
-            self::Anthology => 'Anthologie',
+            self::Anthologie => 'Anthologie',
             self::BDComics => 'BD / Comics',
             self::GlobalManga => 'Global Manga',
             self::Hentai => 'Hentai',
@@ -32,7 +32,7 @@ enum MangaType: string
             self::Kodomo => 'Kodomo',
             self::Manhua => 'Manhua',
             self::Manhwa => 'Manhwa',
-            self::Parodic => 'Parodique',
+            self::Parodique => 'Parodique',
             self::Seinen => 'Seinen',
             self::Shojo => 'Shojo',
             self::Shonen => 'Shonen',

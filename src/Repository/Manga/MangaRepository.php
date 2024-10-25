@@ -51,10 +51,11 @@ class MangaRepository extends ServiceEntityRepository
 	{
 		$queryBuilder = $this->createQueryBuilder('mbg');
 
-		foreach ($genres as $genre) {
+		foreach ($genres as $index => $genre) {
 			// Generate unique parameter names for each genre to avoid conflicts.
-			$queryBuilder->andWhere("JSON_CONTAINS(LOWER(mbg.genres), LOWER(:$genre)) = 1")
-						 ->setParameter($genre, json_encode($genre));
+			$parameterName = 'genre' . $index;
+			$queryBuilder->andWhere("JSON_CONTAINS(LOWER(mbg.genres), LOWER(:$parameterName)) = 1")
+						 ->setParameter($parameterName, json_encode($genre, JSON_UNESCAPED_UNICODE));
 		}
 		$mangaByGenre = $queryBuilder->getQuery()->getResult();
 		
@@ -77,8 +78,31 @@ class MangaRepository extends ServiceEntityRepository
 
 	// FindByStatus
 
-	public function getPaginatedMangas($filterData, PaginatorInterface $paginator, $page = 1, $limit = 16)
+	public function getFilteredMangas(array $filterData)
 	{
+		// $qb = $this->createQueryBuilder('m');
+
+        // if (!empty($filterData['type'])) {
+        //     $qb->andWhere('m.type LIKE :type')
+        //        ->setParameter('type', '%' . $filterData['type'] . '%');
+        // }
+
+        // if (!empty($filterData['genre'])) {
+        //     foreach ($filterData['genre'] as $index => $genre) {
+        //         $paramName = 'genre' . $index;
+        //         $qb->andWhere("JSON_CONTAINS(LOWER(m.genres), LOWER(:$paramName)) = 1")
+        //            ->setParameter($paramName, json_encode($genre, JSON_UNESCAPED_UNICODE));
+        //     }
+        // }
+
+        // if (!empty($filterData['author'])) {
+        //     $qb->join('m.mangaAuthors', 'ma')
+        //        ->join('ma.author', 'a')
+        //        ->andWhere('a.name LIKE :authorName')
+        //        ->setParameter('authorName', '%' . $filterData['author'] . '%');
+        // }
+
+        // return $qb->getQuery();
 		$mangasList = [];
 
 		if (!empty($filterData['type'])) {
@@ -90,7 +114,7 @@ class MangaRepository extends ServiceEntityRepository
 				$mangasList = $mangaByGenre;
 			} else {
 				// If the mangasList contains already filtered manga, get the mangas by genre and keep the one that matches the list
-				$mangasList = array_uintersect_uassoc($mangasList, $mangaByGenre, function ($a, $b) {
+				$mangasList = array_uintersect($mangasList, $mangaByGenre, function ($a, $b) {
 					return $a->getId() <=> $b->getId();
 				});
 			}
@@ -101,20 +125,18 @@ class MangaRepository extends ServiceEntityRepository
 				$mangasList = $mangaByAuthor;
 			} else {
 				// If the mangasList contains already filtered manga, get the mangas by genre and keep the one that matches the list
-				$mangasList = array_uintersect_uassoc($mangasList, $mangaByAuthor, function ($a, $b) {
+				$mangasList = array_uintersect($mangasList, $mangaByAuthor, function ($a, $b) {
 					return $a->getId() <=> $b->getId();
 				});
 			}
 		} 
+
+		// dump($mangasList);
 		// else {
 		// 	$mangasList = $this->findAll();
 		// }
 
-		return $paginator->paginate(
-			$mangasList,
-			$page,
-			$limit
-			);
+		return $mangasList;
 	}
 
 
