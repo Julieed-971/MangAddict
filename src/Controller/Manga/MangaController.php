@@ -64,19 +64,43 @@ class MangaController extends AbstractController
 		
 		// Retrieve the current page number from the query parameters, defaulting to 1 if not present
 		$page = $request->query->getInt('page', 1);
-
+		
 		if (!empty($filterData)) {
+			
 			// Get paginated results based on filter data
-			$mangasList = $this->mangaRepository->getFilteredMangas($filterData);
+			$filteredResults = $this->mangaRepository->getFilteredMangas($filterData);
 
-			$mangas = $this->customPaginator->paginate($mangasList, $page, 16);
+			// Set flash messages based on which filters were found
+			if (!$filteredResults['results']['typeExists'] && !empty($filterData['type'])) {
+				$this->addFlash('warning', 'Aucun manga trouvé pour le type sélectionné.');
+			}
+			if (!$filteredResults['results']['genreExists'] && !empty($filterData['genre'])) {
+				$this->addFlash('warning', 'Aucun manga trouvé pour le ou les genre(s) sélectionné(s).');
+			}
+			if (!$filteredResults['results']['authorExists'] && !empty($filterData['author'])) {
+				$this->addFlash('warning', 'Aucun manga trouvé pour l\'auteur-autrice sélectionné·e.');
+			 
+				// Check if the list of mangas is empty
+			} elseif (!empty($filteredResults['mangasList'])) {
+				$mangas = $this->customPaginator->paginate($filteredResults['mangasList'], $page, 16);
+			} else {
+				// Get all mangas and paginate them
+				$mangasList = $this->mangaRepository->findAll();
+				$mangas = $this->customPaginator->paginate($mangasList, $page, 16);		
+
+				return $this->render('/manga/index.html.twig', [
+					'mangas' => $mangas,
+					'filterForm' => $filterForm,
+					'currentPage' => $page,
+					'mangaTypes' => $mangaTypes,
+					'mangaGenres' => $mangaGenres,
+				]);
+			}
 		} else {
 			// Get all mangas and paginate them
 			$mangasList = $this->mangaRepository->findAll();
-
-            $mangas = $this->customPaginator->paginate($mangasList, $page, 16);
+			$mangas = $this->customPaginator->paginate($mangasList, $page, 16);		
 		}
-	
 		return $this->render('/manga/index.html.twig', [
 			'mangas' => $mangas,
 			'filterForm' => $filterForm,
