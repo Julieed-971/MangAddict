@@ -20,7 +20,9 @@ MangaAddict
 					<ul>
 						{% for type in mangaTypes%}
 							<li>
-								<input type="checkbox" id="filter-form-type-{{ type.name }}" name="{{ filterForm.type.vars.full_name }}" value="{{ type.name }}">
+								<input type="checkbox" id="filter-form-type-{{ type.name }}" name="{{ filterForm.type.vars.full_name }}" value="{{ type.name }}" {% if filterData is not empty and filterData['type'] == type.name %}
+									checked
+								{% endif %}>
                                 <label for="filter-form-type-{{ type.name }}">{{ type.name }}</label>							
 							</li>
 						{% endfor %}
@@ -33,7 +35,9 @@ MangaAddict
 					<ul>
 						{% for genre in mangaGenres%}
 							<li>
-								<input type="checkbox" id="filter-form-genre-{{ genre.name }}" name="manga_filter[genre][]" value="{{ genre.name }}">
+								<input type="checkbox" id="filter-form-genre-{{ genre.name }}" name="manga_filter[genre][]" value="{{ genre.name }}" {% if filterData is not empty and filterData['genre'] == genre.name %}
+									checked
+								{% endif %}>
                                 <label for="filter-form-genre-{{ genre.name }}">{{ genre.name }}</label>							
 							</li>
 						{% endfor %}

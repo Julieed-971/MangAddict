@@ -20,6 +20,7 @@ use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Routing\Attribute\Route;
 
 #[Route('/manga')]
@@ -29,15 +30,18 @@ class MangaController extends AbstractController
 	private ReviewRepository $reviewRepository;
 	private MangaRepository $mangaRepository;
 	private CustomPaginator $customPaginator;
+	private RequestStack $requestStack;
+
 	private LoggerInterface $logger;
 
 
 
-	public function __construct(RatingRepository $ratingRepository, ReviewRepository $reviewRepository, MangaRepository $mangaRepository, CustomPaginator $customPaginator, LoggerInterface $logger) {
+	public function __construct(RatingRepository $ratingRepository, ReviewRepository $reviewRepository, MangaRepository $mangaRepository, CustomPaginator $customPaginator, RequestStack $requestStack, LoggerInterface $logger) {
 		$this->ratingRepository = $ratingRepository;
 		$this->reviewRepository = $reviewRepository;
 		$this->mangaRepository = $mangaRepository;
 		$this->customPaginator = $customPaginator;
+		$this->requestStack = $requestStack;
 		$this->logger = $logger;
 	}
 
@@ -60,6 +64,11 @@ class MangaController extends AbstractController
 		if ($filterForm->isSubmitted() && $filterForm->isValid()) {
 			// Get the filter data from the form
 			$filterData = $filterForm->getData();
+			// Store filter data in the session
+			$this->getSession()->set('filterData', $filterData);
+		} else {
+			// Retrieve filter data from the session
+			$filterData = $this->getSession()->get('filterData', []);
 		}
 		
 		// Retrieve the current page number from the query parameters, defaulting to 1 if not present
@@ -82,20 +91,25 @@ class MangaController extends AbstractController
 			 
 				// Check if the list of mangas is empty
 			} elseif (!empty($filteredResults['mangasList'])) {
-				$mangas = $this->customPaginator->paginate($filteredResults['mangasList'], $page, 16);
+				$mangas = $this->customPaginator->paginate($filteredResults['mangasList'], $page, 16, [
+					'query' => $request->query->all(),
+				]);
 				return $this->render('/manga/index.html.twig', [
 					'mangas' => $mangas,
 					'filterForm' => $filterForm,
 					'currentPage' => $page,
 					'mangaTypes' => $mangaTypes,
 					'mangaGenres' => $mangaGenres,
+					'filterData' => $filterData,
 				]);
 			}
 		}
 
 		// Get all mangas and paginate them
 		$mangasList = $this->mangaRepository->findAllSortedByName();
-		$mangas = $this->customPaginator->paginate($mangasList, $page, 16);		
+		$mangas = $this->customPaginator->paginate($mangasList, $page, 16, [
+			'query' => $request->query->all(),
+		]);		
 
 		return $this->render('/manga/index.html.twig', [
 			'mangas' => $mangas,
@@ -103,8 +117,14 @@ class MangaController extends AbstractController
 			'currentPage' => $page,
 			'mangaTypes' => $mangaTypes,
 			'mangaGenres' => $mangaGenres,
+			'filterData' => $filterData,
 		]);
 	}
+
+	private function getSession()
+    {
+        return $this->requestStack->getCurrentRequest()->getSession();
+    }
 
 	#[Route('/{id}', name: 'app_manga_display', requirements: ['id' => '\d+'], methods: ['GET', 'POST'])]
 	public function display(?Manga $manga, Request $request, EntityManagerInterface $entityManager): Response
