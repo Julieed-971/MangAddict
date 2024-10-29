@@ -22,6 +22,14 @@ class MangaRepository extends ServiceEntityRepository
 		parent::__construct($registry, Manga::class);
 	}
 
+	public function findAllSortedByName(): array 
+	{
+		return $this->createQueryBuilder('m')
+			->orderBy('m.name', 'ASC')
+			->getQuery()
+			->getResult();
+	}
+
 	// FindByName
 	public function findByName(string $name)
 	{
@@ -40,6 +48,7 @@ class MangaRepository extends ServiceEntityRepository
 		$mangaByType = $this->createQueryBuilder('mbt')
 			->where('mbt.type LIKE :type')
 			->setParameter('type', '%' . $type . '%')
+			->orderBy('mbt.name', 'ASC')
 			->getQuery()
 			->getResult();
 
@@ -57,7 +66,9 @@ class MangaRepository extends ServiceEntityRepository
 			$queryBuilder->andWhere("JSON_CONTAINS(LOWER(mbg.genres), LOWER(:$parameterName)) = 1")
 						 ->setParameter($parameterName, json_encode($genre, JSON_UNESCAPED_UNICODE));
 		}
-		$mangaByGenre = $queryBuilder->getQuery()->getResult();
+		$mangaByGenre = $queryBuilder->orderBy('mbg.name', 'ASC')
+									 ->getQuery()
+									 ->getResult();
 		
 		return !empty($mangaByGenre) ? $mangaByGenre : null;
 	}
@@ -70,6 +81,7 @@ class MangaRepository extends ServiceEntityRepository
 			->join('ma.author', 'a')
 			->where('a.name LIKE :authorName')
 			->setParameter('authorName', '%' . $authorName . '%')
+			->orderBy('mba.name', 'ASC')
 			->getQuery()
 			->getResult();
 

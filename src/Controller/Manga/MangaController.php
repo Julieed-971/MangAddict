@@ -64,7 +64,7 @@ class MangaController extends AbstractController
 		
 		// Retrieve the current page number from the query parameters, defaulting to 1 if not present
 		$page = $request->query->getInt('page', 1);
-		
+
 		if (!empty($filterData)) {
 			
 			// Get paginated results based on filter data
@@ -83,11 +83,6 @@ class MangaController extends AbstractController
 				// Check if the list of mangas is empty
 			} elseif (!empty($filteredResults['mangasList'])) {
 				$mangas = $this->customPaginator->paginate($filteredResults['mangasList'], $page, 16);
-			} else {
-				// Get all mangas and paginate them
-				$mangasList = $this->mangaRepository->findAll();
-				$mangas = $this->customPaginator->paginate($mangasList, $page, 16);		
-
 				return $this->render('/manga/index.html.twig', [
 					'mangas' => $mangas,
 					'filterForm' => $filterForm,
@@ -96,11 +91,12 @@ class MangaController extends AbstractController
 					'mangaGenres' => $mangaGenres,
 				]);
 			}
-		} else {
-			// Get all mangas and paginate them
-			$mangasList = $this->mangaRepository->findAll();
-			$mangas = $this->customPaginator->paginate($mangasList, $page, 16);		
 		}
+
+		// Get all mangas and paginate them
+		$mangasList = $this->mangaRepository->findAllSortedByName();
+		$mangas = $this->customPaginator->paginate($mangasList, $page, 16);		
+
 		return $this->render('/manga/index.html.twig', [
 			'mangas' => $mangas,
 			'filterForm' => $filterForm,
