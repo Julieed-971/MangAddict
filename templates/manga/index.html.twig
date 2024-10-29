@@ -3,6 +3,13 @@
 MangaAddict
 {% endblock %}
 {%block body %}
+{% for label, messages in app.flashes %}
+<div class="flash-{{ label }}">
+	{% for message in messages %}
+		<p>{{ message }}</p>
+	{% endfor %}
+</div>
+{% endfor %}
 <div class="manga-page">
 	<form class="manga-index-filter__form" action="{{ path('app_manga_index') }}" method="POST">
         <input type="hidden" id="manga_filter__token" name="manga_filter[_token]" value="{{ csrf_token('manga_filter') }}">
