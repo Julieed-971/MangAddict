@@ -80,36 +80,22 @@ class MangaRepository extends ServiceEntityRepository
 
 	public function getFilteredMangas(array $filterData)
 	{
-		// $qb = $this->createQueryBuilder('m');
-
-        // if (!empty($filterData['type'])) {
-        //     $qb->andWhere('m.type LIKE :type')
-        //        ->setParameter('type', '%' . $filterData['type'] . '%');
-        // }
-
-        // if (!empty($filterData['genre'])) {
-        //     foreach ($filterData['genre'] as $index => $genre) {
-        //         $paramName = 'genre' . $index;
-        //         $qb->andWhere("JSON_CONTAINS(LOWER(m.genres), LOWER(:$paramName)) = 1")
-        //            ->setParameter($paramName, json_encode($genre, JSON_UNESCAPED_UNICODE));
-        //     }
-        // }
-
-        // if (!empty($filterData['author'])) {
-        //     $qb->join('m.mangaAuthors', 'ma')
-        //        ->join('ma.author', 'a')
-        //        ->andWhere('a.name LIKE :authorName')
-        //        ->setParameter('authorName', '%' . $filterData['author'] . '%');
-        // }
-
-        // return $qb->getQuery();
 		$mangasList = [];
+		$results = [
+			'typeExists' => false,
+			'genreExists' => false,
+			'authorExists' => false,
+		];
 
 		if (!empty($filterData['type'])) {
 			$mangasList = $this->findByType($filterData['type']);
+			$results['typeExists'] = !empty($mangasList);
 		}
 		if (!empty($filterData['genre'])) {
 			$mangaByGenre = $this->findByGenre($filterData['genre']);
+			if (empty($mangaByGenre)) {
+				$mangaByGenre = [];
+			}
 			if (empty($mangasList)) {
 				$mangasList = $mangaByGenre;
 			} else {
@@ -118,9 +104,13 @@ class MangaRepository extends ServiceEntityRepository
 					return $a->getId() <=> $b->getId();
 				});
 			}
+			$results['genreExists'] = !empty($mangaByGenre);
 		}
 		if (!empty($filterData['author'])) {
 			$mangaByAuthor = $this->findByAuthor($filterData['author']);
+			if (empty($mangaByAuthor)) {
+				$mangaByAuthor = [];
+			}
 			if (empty($mangasList)) {
 				$mangasList = $mangaByAuthor;
 			} else {
@@ -129,14 +119,13 @@ class MangaRepository extends ServiceEntityRepository
 					return $a->getId() <=> $b->getId();
 				});
 			}
+			$results['authorExists'] = !empty($mangaByAuthor);
 		} 
 
-		// dump($mangasList);
-		// else {
-		// 	$mangasList = $this->findAll();
-		// }
-
-		return $mangasList;
+		return [
+			'mangasList' => $mangasList,
+			'results' => $results,
+		];
 	}
 
 
