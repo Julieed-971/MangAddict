@@ -96,8 +96,9 @@
 
 		&__button {
 			max-height: fit-content;
-			// background-color: firebrick;
-			margin: 19px 0 0 5px;
+			background-color: firebrick;
+			margin: 18px 0 0 5px;
+			text-align: center;
 		}
 
 		&__type--popover,
@@ -137,5 +138,22 @@
 		{
 			visibility: visible;
 			color: firebrick;
+		}
+
+		&__clear-button {
+			max-height: fit-content;
+			display: flex;
+			background-color: blueviolet;
+			text-decoration: none;
+			align-items: center;
+			justify-content: center;
+			margin: 18px 0 0 5px;
+		}
+
+		&__clear-button-link {
+			color: inherit;
+			cursor: pointer;
+			font: inherit;
+			text-decoration: none;
 		}
 }
