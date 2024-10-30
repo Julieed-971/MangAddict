@@ -35,7 +35,7 @@ MangaAddict
 					<ul>
 						{% for genre in mangaGenres%}
 							<li>
-								<input type="checkbox" id="filter-form-genre-{{ genre.name }}" name="manga_filter[genre][]" value="{{ genre.name }}" {% if filterData is not empty and filterData['genre'] == genre.name %}
+								<input type="checkbox" id="filter-form-genre-{{ genre.name }}" name="manga_filter[genre][]" value="{{ genre.name }}" {% if filterData is not empty and genre.name in filterData['genre'] %}
 									checked
 								{% endif %}>
                                 <label for="filter-form-genre-{{ genre.name }}">{{ genre.name }}</label>							
@@ -44,16 +44,15 @@ MangaAddict
 					</ul>
 				</div>
 			</div>
-			{# <label for="filter-form-type">Type de manga</label>
-			<input type="text" id="filter-form-type" name="{{ filterForm.type.vars.full_name }}"> #}
-			{# <label for="filter-form-genre">Genres</label>
-			<input type="text" id="filter-form-genre" name="{{ filterForm.genre.vars.full_name }}"> #}
 			<div class="manga-index-filter__author">
 				<label for="filter-form-author">Auteur-Autrice</label>
 				<input type="text" id="filter-form-author" name="{{ filterForm.author.vars.full_name }}">
 			</div>
 			<div class="manga-index-filter__button">
 				<button type="submit">Filtrer</button>
+			</div>
+			<div class="manga-index-filter__clear-button">
+				<button><a href="{{ path('app_manga_clear_filters') }}" class="manga-index-filter__clear-button-link">Supprimer les filtres</a></button>
 			</div>
 			</div>
 		</form>
