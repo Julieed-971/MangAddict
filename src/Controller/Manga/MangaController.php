@@ -121,6 +121,13 @@ class MangaController extends AbstractController
 		]);
 	}
 
+	#[Route('/supprimer-filtres', name: 'app_manga_clear_filters', methods: ['GET'])]
+	public function clearFilters(): Response
+	{
+		$this->getSession()->remove('filterData');
+		return $this->redirectToRoute('app_manga_index');
+	}
+
 	private function getSession()
     {
         return $this->requestStack->getCurrentRequest()->getSession();
