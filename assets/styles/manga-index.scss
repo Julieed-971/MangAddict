@@ -96,7 +96,7 @@
 
 		&__button {
 			max-height: fit-content;
-			background-color: firebrick;
+			// background-color: firebrick;
 			margin: 18px 0 0 5px;
 			text-align: center;
 		}
@@ -143,11 +143,11 @@
 		&__clear-button {
 			max-height: fit-content;
 			display: flex;
-			background-color: blueviolet;
+			// background-color: blueviolet;
 			text-decoration: none;
-			align-items: center;
+			align-items: start;
 			justify-content: center;
-			margin: 18px 0 0 5px;
+			margin: 18px 0 0 10px;
 		}
 
 		&__clear-button-link {
