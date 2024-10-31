@@ -1,2 +1,26 @@
 hello: "Hello"
-wlecome: "Welcome"
+welcome: "Welcome"
+author: "Author"
+scenario: "Story"
+publication_date: "Publication Date"
+status: "Status"
+volume_number: "Number of Volumes"
+return_to:
+    mangas_list: "Return to the list of mangas"
+note:
+    leave: "Leave a note"
+    delete: "Delete my note"
+review:
+    my: "My review"
+    udpate: "Update"
+    delete: "Delete my review"
+    write: "Write a review"
+    submit: "Submit my review"
+date:
+    creation: "Created at"
+    update: "Last updated at"
+save: "Save"
+cancel: "Cancel"
+login_required: 'You must be <a href="{{ login_path }}">logged in</a> or <a href="{{ register_path }}">register</a> to rate or write a review'
+manga: 
+    not_found: "Manga not found"

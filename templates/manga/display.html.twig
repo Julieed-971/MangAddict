@@ -24,11 +24,11 @@
 				</div>
 				<div class="manga__info">
 				<div class="manga__authors">
-					<span>Auteur-Autrice :</span>
+					<span>{{ 'author'|trans }} :</span>
 					<ul class="manga__author-list">
 						{% for author in manga.mangaAuthors %}
 							{% if author.role == 'story' %}
-							<li class="manga__author manga__author--story">Scénario: {{ author.author.name }}</li>
+							<li class="manga__author manga__author--story">{{ 'scenario'|trans }}: {{ author.author.name }}</li>
 							{% endif %}
 							{% if author.role == 'art' %}
 							<li class="manga__author manga__author--art">Art: {{ author.author.name }}</li>
@@ -40,13 +40,13 @@
 					<span>Type : {{ manga.type }}</span>
 				</div>
 				<div class="manga__publication-date">
-					<span>Date de publication : {{ manga.startDate }}</span>
+					<span>{{ 'publication_date'|trans }} : {{ manga.startDate }}</span>
 				</div>
 				<div class="manga__status">
-					<span>Statut : {{ manga.status }}</span>
+					<span>{{ 'status'|trans }} : {{ manga.status }}</span>
 				</div>
 				<div class="manga__volume-number">
-					<span>Nombre de volumes : {{ manga.volumesNumber }}</span>
+					<span>{{ 'volume_number'|trans }} : {{ manga.volumesNumber }}</span>
 				</div>
 				<div class="manga__genres">
 					<span>Genres :</span>
@@ -60,7 +60,7 @@
 					<p>{{ manga.description }}</p>
 				</div>
 			</div>
-			<button class="manga-index__link"><a href="{{ path('app_manga_index') }}">Retour à la liste de mangas</a></button>
+			<button class="manga-index__link"><a href="{{ path('app_manga_index') }}">{{ 'return_to.mangas_list'|trans }}</a></button>
 		</div>
 	</div>
 	</section>
@@ -76,7 +76,7 @@
 						<label for="star{{ i }}" title="{{ i }} star{{ i > 1 ? 's' : '' }}">★</label>
 					{% endfor %}
 				</div>
-				<button class="rating__button" type="submit">Laisser une note</button>
+				<button class="rating__button" type="submit">{{ 'note.leave'|trans }}</button>
 				<button class="rating__button-delete" type="button" onclick="deleteRating()">Supprimer ma note</button>
 			</div>
 			</form>
@@ -92,22 +92,22 @@
 			<div class="review__user">
 				{% if review is not null %}
 					<div class="review__current">
-						<label for="review__existing">Ma critique: </label>
+						<label for="review__existing">{{ 'review.my'|trans }}: </label>
 						<p class="review__content-current" id="review__existing">{{ review.content }}</p>
-						<span class="review__date">Date de création: {{ review.createdAt|date('Y-m-d H:i:s') }}</span>
-						<span class="review__date">Dernière mise à jour: {{ review.updatedAt|date('Y-m-d H:i:s') }}</span>
-						<button class="review__button-modify" type="button">Modifier</button>
-						<button class="review__button-delete" type="button" onclick="deleteReview()">Supprimer ma critique</button>
+						<span class="review__date">{{ 'date.creation'|trans }}: {{ review.createdAt|date('Y-m-d H:i:s') }}</span>
+						<span class="review__date">{{ 'date.update'|trans }}: {{ review.updatedAt|date('Y-m-d H:i:s') }}</span>
+						<button class="review__button-modify" type="button">{{ 'review.update'|trans }}</button>
+						<button class="review__button-delete" type="button" onclick="deleteReview()">{{ 'review.delete'|trans }}</button>
 					</div>
 					<div class="review__current-edit" style="display:none;">
 						<textarea class="review__content-current-edit" type="input" id="review" rows="4" cols="50" name="{{ reviewForm.content.vars.full_name }}">{{ review.content }}</textarea>
-						<button class="review__content-edit-save" type="submit">Sauvegarder</button>
-						<button class="review__content-edit-cancel" type="button">Annuler</button>
+						<button class="review__content-edit-save" type="submit">{{ 'save'|trans }}</button>
+						<button class="review__content-edit-cancel" type="button">{{ 'cancel'|trans }}</button>
 					</div>
 				{% else %}
-					<label for="review__new">Ma critique: </label>
-					<textarea class="review__content" id="review__new" type="input" name="{{ reviewForm.content.vars.full_name }}" rows="4" cols="50" placeholder="J'écris ma critique..." required ></textarea>
-					<button class="review__button-submit" type="submit">Valider ma critique</button>
+					<label for="review__new">{{ 'review.my'|trans }}: </label>
+					<textarea class="review__content" id="review__new" type="input" name="{{ reviewForm.content.vars.full_name }}" rows="4" cols="50" placeholder="{{ 'review.write'|trans }}" required ></textarea>
+					<button class="review__button-submit" type="submit">{{ 'review.submit'|trans }}</button>
 				{% endif %}
 			</div>
 		</form>
@@ -121,30 +121,33 @@
 		{% for review in manga.reviews %}
 			{% if review.user.id != currentUser.id %}
 				<div class="review__display">
-					<span>Auteur-Autrice : {{ review.user.username ?: review.user.firstname }}</span>
+					<span>{{ 'author'|trans }} : {{ review.user.username ?: review.user.firstname }}</span>
 					<p>{{ review.content }}</p>
-					<span>Créée le : {{ review.createdAt|date('Y-m-d H:i:s') }}</span>
-					<span>Mise à jour le : {{ review.updatedAt|date('Y-m-d H:i:s') }}</span>
+					<span>{{ 'date.creation'|trans }} : {{ review.createdAt|date('Y-m-d H:i:s') }}</span>
+					<span>{{ 'date.update'|trans }} : {{ review.updatedAt|date('Y-m-d H:i:s') }}</span>
 				</div>
 			{% endif %}
 		{% endfor %}
 	</div>
 {% else %}
 	<div class="user__not-connected">
-		<p>Vous devez être <a href="{{ path('app_login') }}">connecté</a> ou <a href="{{ path('app_register') }}">vous inscrire</a> pour noter ou écrire une critique</p>
+		<p>{{ 'login_required'|trans({
+			'%login_path%': path('app_login'),
+			'%register_path%': path('app_register')
+		})|raw }}</p>
 	</div>
 	<div class="reviews__display">
 		{% for review in manga.reviews %}
 			<div class="review__display">
-				<span>Auteur-Autrice : {{ review.user.username ?: review.user.firstname }}</span>
+				<span>{{ 'author'|trans }} : {{ review.user.username ?: review.user.firstname }}</span>
 				<p>{{ review.content }}</p>
-				<span>Créée le : {{ review.createdAt|date('Y-m-d H:i:s') }}</span>
-				<span>Mise à jour le : {{ review.updatedAt|date('Y-m-d H:i:s') }}</span>
+				<span>{{ 'date.creation'|trans }} : {{ review.createdAt|date('Y-m-d H:i:s') }}</span>
+				<span>{{ 'date.update'|trans }} : {{ review.updatedAt|date('Y-m-d H:i:s') }}</span>
 			</div>
 		{% endfor %}
 	</div>
 {% endif %}
 {% else %}
-	<div class="manga__not-found"><h1>Manga non trouvé</h1></div>
+	<div class="manga__not-found"><h1>{{ 'manga.not_found'|trans }}</h1></div>
 {% endif %}
 {% endblock %}

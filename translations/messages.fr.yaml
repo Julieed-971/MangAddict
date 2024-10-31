@@ -1,2 +1,26 @@
 hello: "Bonjour"
 welcome: "Bienvenue"
+author: "Auteur-Autrice"
+scenario: "Scénario"
+publication_date: "Date de publication"
+status: "Statut"
+volume_number: "Nombre de volumes"
+return_to:
+    mangas_list: "Retour à la liste de mangas"
+note: 
+    leave: "Laisser une note"
+    delete: "Supprimer ma note"
+review:
+    my: "Ma critique"
+    update: "Modifier"
+    delete: "Supprimer ma critique"
+    write: "J'écris ma critique..."
+    submit: "Valider ma critique"
+date:
+    creation: "Créée le"
+    update: "Mise à jour le"
+save: "Sauvegarder"
+cancel: "Annuler"
+login_required: 'Vous devez être <a href="{{ login_path }}">connecté</a> ou <a href="{{ register_path }}">vous inscrire</a> pour noter ou écrire une critique'
+manga:
+    not_found: "Manga introuvable"
