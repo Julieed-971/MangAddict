@@ -1,0 +1,5 @@
+node_modules/
+test/
+
+# Ignore all hidden files and folders
+.font-unix
