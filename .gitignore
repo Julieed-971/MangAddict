@@ -40,3 +40,15 @@ useful_commands.txt
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
+
+# Ignore everything in nautiljon-scraper except specific files
+nautiljon-scraper/*
+
+# Allow only specific files in nautiljon-scraper
+!nautiljon-scraper/lib/
+!nautiljon-scraper/.gitignore
+!nautiljon-scraper/index.js
+!nautiljon-scraper/LICENSE.md
+!nautiljon-scraper/package.json
+!nautiljon-scraper/README.md
+!nautiljon-scraper/scrapeManga.js
