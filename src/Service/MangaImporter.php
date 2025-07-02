@@ -54,56 +54,145 @@ class MangaImporter
 
 	public function mangaDeserializer(string $jsonData): int
 	{
-	$normalizers = [new ObjectNormalizer()];
-	$mangaSerializer = new Serializer($normalizers);
-	$importedMangaCount = 0;
-	
-	$mangas = json_decode($jsonData, true);
-	if (json_last_error() !== JSON_ERROR_NONE) {
-		throw new \InvalidArgumentException('The file does not contain valid JSON: ' . json_last_error_msg());
-	}
-	foreach ($mangas as $mangaItem) {
-		// Handle authors
-		if (!isset($mangaItem['author'])) {
-			throw new \RuntimeException('Author key is missing in manga item: ' . json_encode($mangaItem));
+		$normalizers = [new ObjectNormalizer()];
+		$mangaSerializer = new Serializer($normalizers);
+		$importedMangaCount = 0;
+
+		$mangas = json_decode($jsonData, true);
+		if (json_last_error() !== JSON_ERROR_NONE) {
+			throw new \InvalidArgumentException('The file does not contain valid JSON: ' . json_last_error_msg());
 		}
 
-		// Provide a default value for startDate if it is null
-        if (!isset($mangaItem['startDate']) || $mangaItem['startDate'] === null) {
-            $mangaItem['startDate'] = 0;
+		$importedMangaCount = 0;
 
-        }// Provide a default value for status if it is null
-        if (!isset($mangaItem['status']) || $mangaItem['status'] === null) {
-            $mangaItem['status'] = 'unknown';
-        }
-		// Provide a default value for volumesNumber if it is null
-        if (!isset($mangaItem['volumesNumber']) || $mangaItem['volumesNumber'] === null) {
-            $mangaItem['volumesNumber'] = 0;
-        }
-		// Check if manga already exists
-        $existingManga = $this->mangaRepository->findByName($mangaItem['name']);
-        if ($existingManga) {
-            // Update existing manga if necessary
-            $manga = $existingManga;
-        } else {
-            $manga = $mangaSerializer->denormalize($mangaItem, Manga::class);
-        }
+		foreach ($mangas as $manga) {
+			$newManga = new Manga();
+			$newManga->setName($manga['name']);
+			$newManga->setImageUrl($manga['imageUrl']);
+			$newManga->setType($manga['type']);
+			$newManga->setStartDate((int)$manga['startDate']);
+			$manga['status'] ? $newManga->setStatus($manga['status']) : $newManga->setStatus("");
+			$newManga->setVolumesNumber((int)$manga['volumesNumber']);
 
-		if (isset($mangaItem['author'])) {
-			$this->handleAuthors($manga, $mangaItem['author']);
-		}
+			// Handle array of genre and map it to existing MangaGenre enum 
+			if (isset($manga['genres'])) {
+				$genreEnums = [];
+				foreach ($manga['genres'] as $genre) {
+					// Checks if enum value exists
+					if (MangaGenre::tryFrom($genre)) {
+						$genreEnums[] = MangaGenre::from($genre);
+					}
+				}
+				$newManga->setGenres($genreEnums);
+			}
+			$newManga->setDescription($manga['description']);
 
-		// Validate and persist the manga entity using Doctrine
-		$errors = $this->validator->validate($manga);
-		if (count($errors) > 0) {
-			// Handle validation errors
-			continue;
+			// Handle authors
+			if (isset($manga['author'])) {
+				// Check if story author exists in database
+				$storyAuthorName = $manga['author']['story'];
+				var_dump($storyAuthorName);
+				if ($storyAuthorName) {
+					$storyAuthor = $this->authorRepository->findOneBy(['name' => $storyAuthorName]);
+				}
+
+				if (!$storyAuthor) {
+					$storyAuthor = new Author();
+					$storyAuthor->setName($storyAuthorName ? $storyAuthorName : "");
+					$this->entityManager->persist($storyAuthor);
+				}
+
+				// Create a MangaAuthor entity instance for the story author
+				$mangaAuthorStory = new MangaAuthor();
+				$mangaAuthorStory->setManga($newManga);
+				$mangaAuthorStory->setAuthor($storyAuthor);
+				$mangaAuthorStory->setRole('story');
+
+				// Add story author relationship to manga
+				$newManga->addMangaAuthor($mangaAuthorStory);
+
+				// Checks if art author exists and is different from story author
+				if (isset($manga['author']['art']) && $manga['author']['art'] !== $storyAuthorName) {
+					$artAuthorName = $manga['author']['art'];
+					$artAuthor = $this->authorRepository->findOneBy(['name' => $artAuthorName]);
+
+					if (!$artAuthor) {
+						$artAuthor = new Author();
+						$artAuthor->setName($artAuthorName);
+						$this->entityManager->persist($artAuthor);
+					}
+
+					$mangaAuthorArt = new MangaAuthor();
+					$mangaAuthorArt->setManga($newManga);
+					$mangaAuthorArt->setAuthor($artAuthor);
+					$mangaAuthorArt->setRole('art');
+
+					// Add art author relationship to manga
+					$newManga->addMangaAuthor($mangaAuthorArt);
+				}
+			}
+
+			// Validate and persist the manga entity using Doctrine
+			$errors = $this->validator->validate($newManga);
+			if (count($errors) > 0) {
+				// Handle validation errors
+				continue;
+			}
+			// Persist the manga entity
+			$this->entityManager->persist($newManga);
+			$importedMangaCount++;
 		}
-		$this->entityManager->persist($manga);
-		$importedMangaCount++;
-		}
-	$this->entityManager->flush();
-	return $importedMangaCount;
+		// Flush all changes to the database
+		$this->entityManager->flush();
+
+		return $importedMangaCount;
+
+		// 	$mangas = json_decode($jsonData, true);
+		// 	if (json_last_error() !== JSON_ERROR_NONE) {
+		// 		throw new \InvalidArgumentException('The file does not contain valid JSON: ' . json_last_error_msg());
+		// }
+		// foreach ($mangas as $mangaItem) {
+		// 	// Handle authors
+		// 	if (!isset($mangaItem['author'])) {
+		// 		throw new \RuntimeException('Author key is missing in manga item: ' . json_encode($mangaItem));
+		// 	}
+
+		// 	// Provide a default value for startDate if it is null
+		//     if (!isset($mangaItem['startDate']) || $mangaItem['startDate'] === null) {
+		//         $mangaItem['startDate'] = 0;
+
+		//     }// Provide a default value for status if it is null
+		//     if (!isset($mangaItem['status']) || $mangaItem['status'] === null) {
+		//         $mangaItem['status'] = 'unknown';
+		//     }
+		// 	// Provide a default value for volumesNumber if it is null
+		//     if (!isset($mangaItem['volumesNumber']) || $mangaItem['volumesNumber'] === null) {
+		//         $mangaItem['volumesNumber'] = 0;
+		//     }
+		// 	// Check if manga already exists
+		//     $existingManga = $this->mangaRepository->findByName($mangaItem['name']);
+		//     if ($existingManga) {
+		//         // Update existing manga if necessary
+		//         $manga = $existingManga;
+		//     } else {
+		//         $manga = $mangaSerializer->denormalize($mangaItem, Manga::class);
+		//     }
+
+		// 	if (isset($mangaItem['author'])) {
+		// 		$this->handleAuthors($manga, $mangaItem['author']);
+		// 	}
+
+		// 	// Validate and persist the manga entity using Doctrine
+		// 	$errors = $this->validator->validate($manga);
+		// 	if (count($errors) > 0) {
+		// 		// Handle validation errors
+		// 		continue;
+		// 	}
+		// 	$this->entityManager->persist($manga);
+		// 	$importedMangaCount++;
+		// 	}
+		// $this->entityManager->flush();
+		// return $importedMangaCount;
 	}
 
 	private function handleAuthors(Manga $manga, array $authorData): void
@@ -171,17 +260,17 @@ class MangaImporter
 
 		// foreach ($mangaArray as $data) {
 		// 	$manga = new Manga();
-		// 	$manga->setName($data['name']);
-		// 	$manga->setImageUrl($data['imageUrl']);
-		// 	$manga->setType(MangaType::from($data['type']));
-		// 	$manga->setStartDate((int)$data['startDate']);
-		// 	$manga->setStatus(MangaPublicationStatus::from($data['status']));
-		// 	$manga->setVolumesNumber((int)$data['volumesNumber']);
+		// 	$manga->setName($manga['name']);
+		// 	$manga->setImageUrl($manga['imageUrl']);
+		// 	$manga->setType(MangaType::from($manga['type']));
+		// 	$manga->setStartDate((int)$manga['startDate']);
+		// 	$manga->setStatus(MangaPublicationStatus::from($manga['status']));
+		// 	$manga->setVolumesNumber((int)$manga['volumesNumber']);
 			
 		// 	// Handle array of genre and map it to existing MangaGenre enum 
-		// 	if (isset($data['genres'])) {
+		// 	if (isset($manga['genres'])) {
 		// 		$genreEnums = [];
-		// 		foreach ($data['genres'] as $genre) {
+		// 		foreach ($manga['genres'] as $genre) {
 		// 			// Checks if enum value exists
 		// 			if (MangaGenre::tryFrom($genre)) {
 		// 				$genreEnums[] = MangaGenre::from($genre);
@@ -189,12 +278,12 @@ class MangaImporter
 		// 		}
 		// 		$manga->setGenres($genreEnums);
 		// 	}
-		// 	$manga->setDescription($data['description']);
+		// 	$manga->setDescription($manga['description']);
 
 		// 	// Handle authors
-		// 	if (isset($data['author'])) {
+		// 	if (isset($manga['author'])) {
 			// 	// Check if story author exists in database
-			// 	$storyAuthorName = $data['author']['story'];
+			// 	$storyAuthorName = $manga['author']['story'];
 			// 	$storyAuthor = $this->authorRepository->findOneBy(['name' => $storyAuthorName]);
 
 			// 	if (!$storyAuthor) {
@@ -213,8 +302,8 @@ class MangaImporter
 			// 	$manga->addMangaAuthor($mangaAuthorStory);
 
 			// 	// Checks if art author exists and is different from story author
-			// 	if (isset($data['author']['art']) && $data['author']['art'] !== $storyAuthorName) {
-			// 		$artAuthorName = $data['author']['art'];
+			// 	if (isset($manga['author']['art']) && $manga['author']['art'] !== $storyAuthorName) {
+			// 		$artAuthorName = $manga['author']['art'];
 			// 		$artAuthor = $this->authorRepository->findOneBy(['name' => $artAuthorName]);
 
 			// 		if (!$artAuthor) {
@@ -248,5 +337,3 @@ class MangaImporter
 
 		// return $importedMangaCount;
 	// }
-
-	

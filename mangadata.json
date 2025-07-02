@@ -15179,5 +15179,789 @@
     "news": {
       "french": []
     }
+  },
+  {
+    "name": "Gun Dragon Sigma",
+    "japName": "Gun Dragon Σ / Gun Dragon Σ",
+    "alternateName": "Gundragon Sigma",
+    "url": "https://nautiljon.com/mangas/gun+dragon+sigma.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/09/gun_dragon_sigma_7290.webp?11747472442",
+    "score": "5.75",
+    "votersNumber": "4",
+    "country": "Japon",
+    "type": "Seinen",
+    "startDate": "1999",
+    "status": "Terminé",
+    "volumesNumber": "2",
+    "genres": [
+      "Action",
+      "Drame",
+      "Ecchi",
+      "Mature",
+      "Science-fiction"
+    ],
+    "author": {
+      "story": "Terasawa Buichi",
+      "art": "Terasawa Buichi"
+    },
+    "editor": {
+      "VO": "Shueisha",
+      "VF": "Isan Manga"
+    },
+    "description": "2030, les frontières de l'espaces sont officiellement ouvertes. Les visiteurs issus des différentes planètes du système sont autorisées à venir sur Terre. Le gouvernement décide de limiter les échanges sur une île artificielle créée au large d'Okinawa : l'île de Dejima. La rencontre des différentes espèces, issues de mondes tous plus différents les uns que les autres, créé des tensions sur l'île. Une force spéciale, composée d'humains comme d'extra-terrestres est créée afin de maintenir l'ordre à Dejima : les Gun Dragon. Pendant une patrouille, l'officier Σ (Sigma) arrête un camion transportant des marchandises illégales. A l'intérieur se trouve un Mumère, espèce venant d'une planète marine, qui met fin à ses jours afin de protéger un lourd secret. C'est le début d'une longue enquête pour l'officier \"Sigma\".",
+    "relations": {},
+    "news": {
+      "french": [
+        {
+          "name": "Arrêts de commercialisation chez Isan Manga",
+          "url": "https://nautiljon.com/breves/arrets-de-commercialisation-chez-isan-manga,18130.html",
+          "date": "01/12/2023",
+          "description": "Les éditions Isan Manga nous annoncent l'arrêt de commercialisation de plusieurs de leurs séries, à compter du 31 décembre 2023. Les titres concernés sont les suivants : Anne - La maison aux pign...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/03/arrets_de_commercialisation_chez_isan_manga_18130.webp?1701434052"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Gun Frontier",
+    "japName": "ンフロンティア",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/gun+frontier.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/76/gun_frontier_5467.webp?11718864745",
+    "score": "7.5",
+    "votersNumber": "8",
+    "country": "Japon",
+    "type": "Seinen",
+    "startDate": "1976",
+    "status": "Terminé",
+    "volumesNumber": "2",
+    "genres": [
+      "Action",
+      "Aventure",
+      "Comédie",
+      "Drame",
+      "Historique",
+      "Mature"
+    ],
+    "author": {
+      "story": "Matsumoto Leiji",
+      "art": "Matsumoto Leiji"
+    },
+    "editor": {
+      "VO": "Akita Shoten",
+      "VF": "Black Box"
+    },
+    "description": "Personne ne sait où vont ces deux hommes et cette femme. Mais personne n'ignore que ce monde est fait pour les vrais hommes. Quelqu'un a écrit un jour que c'est la présence des hommes qui fit l'histoire de l'Ouest. Cet homme disait la vérité. Le nom de ces hommes s'est perdu dans le temps mais leur histoire est restée. une aventure faite de solitude et de voyages, le pistolet constamment à la main.\n\nGun Frontier, c'est le monde dans lequel ces hommes vivent. Gun Frontier, le nom qu'un homme véritable ne peut s'empêcher de prononcer sans verser une larme.",
+    "relations": {
+      "Anime": [
+        {
+          "name": "Gun Frontier",
+          "url": "https://nautiljon.com//animes/gun+frontier.html",
+          "relationType": "[Adaptation]",
+          "imageUrl": "https://nautiljon.com//images/anime/00/93/gun_frontier_639.webp?1708369506",
+          "additionnalInformations": "(Série - 2002)"
+        }
+      ]
+    },
+    "news": {
+      "french": [
+        {
+          "name": "Un reboot pour le manga Gun Frontier de Leiji Matsumoto",
+          "url": "https://nautiljon.com/breves/un-reboot-pour-le-manga-gun-frontier-de-leiji-matsumoto,4440.html",
+          "date": "25/10/2016",
+          "description": "Bonne nouvelle pour les fans des œuvres de Leiji Matsumoto, son manga Gun Frontier, créé en 1972, va connaître un reboot. Dirigé par Yuzuru Shimazaki, cette nouvelle version s'intitulera Gun Fronti...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/04/un_reboot_pour_le_manga_gun_frontier_de_leiji_matsumoto_4440.webp?1477411489"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Gun Oukami ni Hana",
+    "japName": "群狼に花",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/gun+oukami+ni+hana.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/55/gun_oukami_ni_hana_31055.webp?11747695699",
+    "score": null,
+    "votersNumber": null,
+    "country": "Japon",
+    "type": "Shojo",
+    "startDate": "2025",
+    "status": null,
+    "volumesNumber": null,
+    "genres": [
+      "Comédie",
+      "Romance",
+      "School Life"
+    ],
+    "author": {
+      "story": "Tsukinagi Ayase",
+      "art": "Tsukinagi Ayase"
+    },
+    "editor": {
+      "VO": "Kodansha",
+      "VF": null
+    },
+    "description": "Yuri est un lycéen en première année avec un rêve bien précis en tête : fabriquer le vélo le plus cool qu'il soit ! C'est pour cela qu'il s'inscrit dans un lycée technique. Mais il déchante très vite quand une bagarre est provoquée à la rentrée par Akamatsu, l'un des quatre senpai à problème de l'établissement, et que Yuri se retrouve au milieu de celle-ci ! Il devient le centre de l'attention, ce qu'il déteste par-dessus tout ! Surtout qu'il cache un secret !",
+    "relations": {},
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Gun Smith Cats",
+    "japName": null,
+    "alternateName": "Gunsmith Cats",
+    "url": "https://nautiljon.com/mangas/gun+smith+cats.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/28/gun_smith_cats_2082.webp?11719950164",
+    "score": "8.19",
+    "votersNumber": "16",
+    "country": "Japon",
+    "type": "Seinen",
+    "startDate": "1991",
+    "status": "Terminé",
+    "volumesNumber": "8",
+    "genres": [
+      "Action",
+      "Aventure",
+      "Ecchi"
+    ],
+    "author": {
+      "story": "Sonoda Kenichi",
+      "art": "Sonoda Kenichi"
+    },
+    "editor": {
+      "VO": "Kodansha",
+      "VF": "Glénat"
+    },
+    "description": "L'agence Gun Smith Cats est dirigée par deux ravissantes créatures, Rally et Minie Meï.\nL'une est experte en armes à feu alors que l'autre adore les explosifs.\nLe duo formé par ces deux chasseuses de primes vous tiendra en haleine lors de leurs enquêtes menées à 200 à l'heure !\nAction, humour et charme sont les ingrédients de cette série au graphisme irréprochable qui plaira à tous les amateurs de BD.",
+    "relations": {
+      "Anime": [
+        {
+          "name": "Gunsmith Cats",
+          "url": "https://nautiljon.com//animes/gunsmith+cats.html",
+          "relationType": "[Adaptation]",
+          "imageUrl": "https://nautiljon.com//images/anime/00/28/gunsmith_cats_1182.webp?1590875010",
+          "additionnalInformations": "(OAV - 1995)"
+        }
+      ],
+      "Manga": [
+        {
+          "name": "Gunsmith Cats Burst",
+          "url": "https://nautiljon.com//mangas/gunsmith+cats+burst.html",
+          "relationType": "[Suite]",
+          "imageUrl": "https://nautiljon.com//images/manga/00/95/gunsmith_cats_burst_2359.webp?1639770213",
+          "additionnalInformations": null
+        },
+        {
+          "name": "Trap Dance - Desert Rose VS Gun Smith Cats",
+          "url": "https://nautiljon.com//mangas/trap+dance+-+desert+rose+vs+gun+smith+cats.html",
+          "relationType": "[Crossover]",
+          "imageUrl": "https://nautiljon.com//images/manga/00/36/trap_dance_-_desert_rose_vs_gun_smith_cats_20363.webp?1656490365",
+          "additionnalInformations": null
+        }
+      ]
+    },
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "GUN&HEAVEN",
+    "japName": null,
+    "alternateName": "GUN &amp; HEAVEN",
+    "url": "https://nautiljon.com/mangas/gun-heaven.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/22/gun_heaven_8222.webp?11527780113",
+    "score": "7.73",
+    "votersNumber": "11",
+    "country": "Japon",
+    "type": "Yaoi",
+    "startDate": "2016",
+    "status": "Terminé",
+    "volumesNumber": "1",
+    "genres": [
+      "Action",
+      "Mature",
+      "Romance"
+    ],
+    "author": {
+      "story": "Kodaka Kazuma",
+      "art": "Kodaka Kazuma"
+    },
+    "editor": {
+      "VO": "Libre Shuppan",
+      "VF": "Taifu Comics"
+    },
+    "description": "GUN&HEAVEN est un spin-off du manga Kizuna de Kazuma Kodaka. On y suit l'histoire de J.B et Roy.\n\nJ.B. et Roy sont deux tueurs à gages qui vivent ensemble. Recevant des demandes de clients, ils mènent une existence isolée dans diverses villes à travers le monde en dissimulant leur véritable identité. Un jour, Roy enfreint cette règle en s'impliquant trop personnellement dans une affaire. J.B. ayant été témoin de la scène, le met en garde. N'en pouvant plus d'être infantilisé par J.B., Roy accepte à son insu une mission de la CIA qui consiste à s'infiltrer dans le serveur principal de l'ATF.",
+    "relations": {
+      "Manga": [
+        {
+          "name": "Kizuna",
+          "url": "https://nautiljon.com//mangas/kizuna.html",
+          "relationType": "[Origine du spin off]",
+          "imageUrl": "https://nautiljon.com//images/manga/00/06/kizuna_1960.webp?1718998095",
+          "additionnalInformations": null
+        }
+      ]
+    },
+    "news": {
+      "french": [
+        {
+          "name": "GUN&HEAVEN, le spin-off de Kizuna, chez Taifu en juin",
+          "url": "https://nautiljon.com/actualite/mangas/gun-heaven-le-spin-off-de-kizuna-chez-taifu-en-juin,9239.html",
+          "date": "25/04/2018",
+          "description": "Voici le spin-off de la série Kizuna !",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/93/gun_heaven_le_spin-off_de_kizuna_chez_taifu_en_juin_9239.webp?1524662849"
+        }
+      ]
+    }
+  },
+  {
+    "name": "GUN×CLOVER",
+    "japName": "ガン×クローバー",
+    "alternateName": "GUNxCLOVER",
+    "url": "https://nautiljon.com/mangas/gun×clover.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/04/gun_clover_4440.webp?11568493646",
+    "score": "9.36",
+    "votersNumber": "11",
+    "country": "Japon",
+    "type": "Shonen",
+    "startDate": "2012",
+    "status": "Terminé",
+    "volumesNumber": "12",
+    "genres": [
+      "Action",
+      "Mature",
+      "School Life"
+    ],
+    "author": {
+      "story": "Yamaguchi Mikoto",
+      "art": "D.P"
+    },
+    "editor": {
+      "VO": "Fujimi Shobo",
+      "VF": null
+    },
+    "description": "Hayama Morito est un garde du corps de dernière classe, il étudie dans une école spécialisée qui forme les meilleurs gardes du corps au monde. Un jour, il se voit attribuer la protection d'une grande célébrité. Après divers événements lors de la protection, nous découvrons que Hayama n'est pas le faiblard que tout le monde connaît, il est en vérité un maître qui attribue les grades aux autres gardes du corps. Il n'est pas seulement un des maîtres, il est le garde du corps le plus fort et le plus redouté n'ayant jamais existé.",
+    "relations": {},
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Gunbared × Sisters",
+    "japName": "ガンバレッド×シスターズ",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/gunbared+×+sisters.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/22/ganbared_sisters_13622.webp?11674250092",
+    "score": "10",
+    "votersNumber": "2",
+    "country": "Japon",
+    "type": "Seinen",
+    "startDate": "2019",
+    "status": "Terminé",
+    "volumesNumber": "4",
+    "genres": [
+      "Action",
+      "Drame",
+      "Ecchi",
+      "Fantasy",
+      "Romance",
+      "Shôjo-aï",
+      "Surnaturel",
+      "Tragique"
+    ],
+    "author": {
+      "story": "Mitogawa Wataru",
+      "art": "Mitogawa Wataru"
+    },
+    "editor": {
+      "VO": "Shogakukan",
+      "VF": null
+    },
+    "description": "L'histoire se déroule dans un monde où le surnaturel, a commencé par l'existence des vampires est révélée de tous. Dorothy, membre du groupe clérical des Red Sisters chasse ces créatures surnaturelles... Jusqu'à ce qu'elle fasse la fatidique rencontre de Maria, une jeune femme mystérieuse aux crocs en sang.",
+    "relations": {},
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Gunbu no Pair Go",
+    "japName": "群舞のペア碁",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/gunbu+no+pair+go.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/49/gunbu_no_pair_go_19294.webp?10",
+    "score": "10",
+    "votersNumber": "1",
+    "country": "Japon",
+    "type": "Seinen",
+    "startDate": "2021",
+    "status": "En cours",
+    "volumesNumber": "4",
+    "genres": [
+      "Comédie",
+      "School Life"
+    ],
+    "author": {
+      "story": "Takagi Yuna",
+      "art": "Takagi Yuna"
+    },
+    "editor": {
+      "VO": "Futabasha",
+      "VF": null
+    },
+    "description": "Nozomi est un lycéen de 16 ans qui rêve de devenir un joueur professionnel au Pair Go, un jeu où les équipes sont composées d'un homme et d'une femme et où la parole est interdite. Mais le problème c'est que Nozomi est nul et aucune fille ne veut jouer avec lui jusqu'au jour où son rêve devient possible...",
+    "relations": {},
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Gunbuster 2",
+    "japName": "Top wo Narae 2 / トップをねらえ2",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/gunbuster+2.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/31/gunbuster_2_2813.webp?11717438022",
+    "score": "7.67",
+    "votersNumber": "3",
+    "country": "Japon",
+    "type": "Shonen",
+    "startDate": "2006",
+    "status": "Terminé",
+    "volumesNumber": "1",
+    "genres": [
+      "Action",
+      "Ecchi",
+      "Science-fiction"
+    ],
+    "author": {
+      "story": null,
+      "art": "Akane Kotetsu"
+    },
+    "editor": {
+      "VO": "Fujimi Shobo",
+      "VF": "Tonkam"
+    },
+    "description": "Nono est une jeune fille rêveuse qui travaille comme serveuse dans un bar miteux en rase campagne, mais souhaite devenir une Topless (une pilote spatiale). Sa vie est bouleversée par la rencontre de Lark, la plus jeune et plus talentueuse des Topless. Cette rencontre va sceller son destin et l'emmener aux confins de l'univers pour protéger l'humanité de la menace des monstres de l'espace !",
+    "relations": {
+      "Anime": [
+        {
+          "name": "Top wo Nerae 2!",
+          "url": "https://nautiljon.com//animes/top+wo+nerae+2!.html",
+          "relationType": "[Origine de l'adaptation]",
+          "imageUrl": "https://nautiljon.com//images/anime/00/84/gunbuster_2_848.webp?1643919325",
+          "additionnalInformations": "(OAV - 2004)"
+        }
+      ]
+    },
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Gundam Build Divers Break",
+    "japName": "ガンダムビルドダイバーズブレイク",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/gundam+build+divers+break.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/41/gundam_build_divers_break_8814.webp?11589423663",
+    "score": "6.5",
+    "votersNumber": "2",
+    "country": "Japon",
+    "type": "Seinen",
+    "startDate": "2018",
+    "status": "En cours",
+    "volumesNumber": "2",
+    "genres": [
+      "Action",
+      "Comédie",
+      "Science-fiction"
+    ],
+    "author": {
+      "story": "Sekinishi Ryoji",
+      "art": "Hara Kazuhiro (mangaka)"
+    },
+    "editor": {
+      "VO": "Kadokawa Shoten",
+      "VF": null
+    },
+    "description": "Ce manga est un spin-off de la série Gundam Build Divers.\n\nL'histoire se déroule dans un futur proche où les Gunplas, maquettes Gundam à monter soi-même, sont devenus un véritable phénomène grâce à un jeu en ligne très populaire : Gunpla Battle Nexus Online (ou GBN).",
+    "relations": {
+      "Anime": [
+        {
+          "name": "Gundam Build Divers",
+          "url": "https://nautiljon.com//animes/gundam+build+divers.html",
+          "relationType": "[Origine du spin off]",
+          "imageUrl": "https://nautiljon.com//images/anime/00/07/gundam_build_divers_7570.webp?1575748517",
+          "additionnalInformations": "(Série - 2018)"
+        }
+      ]
+    },
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Gundam Pilot Retsuden - Soukyuu no Yuushatachi",
+    "japName": "ガンダムパイロット列伝 蒼穹の勇者達",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/gundam+pilot+retsuden+-+soukyuu+no+yuushatachi.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/06/gundam_pilot_retsuden_-_soukyuu_no_yuushatachi_22060.webp?11730701972",
+    "score": "3",
+    "votersNumber": "1",
+    "country": "Japon",
+    "type": "Seinen",
+    "startDate": "2001",
+    "status": "Terminé",
+    "volumesNumber": "1",
+    "genres": [
+      "Action",
+      "Drame",
+      "Science-fiction"
+    ],
+    "author": {
+      "story": "Okiichi",
+      "art": "Okiichi"
+    },
+    "editor": {
+      "VO": "Hobby Japan",
+      "VF": null
+    },
+    "description": "De l'an 0078 à 0079 de l'Universal Century, l'histoire suit la vie de quatre grands pilotes de la principauté de Zeon avant et pendant La Guerre de Un An. L'histoire de déroule sous la forme de mission chacune étant centrée sur un des pilotes:\n\nMission 1 : Johnny Ridden, l'As surnommé \"Crimson Lightning\", ancien volontaire des forces des défense nationale de Zeon.\nMission 2 : Shin Matsunaga, seul membre de sa famille ayant quitté la Fédération pour Zeon et proche ami de Dozle Zabi.\nMission 3 : Elliot Rem, ingénieur diplômé en ingénierie spatiale, en physique nucléaire et en aéronautique générale. \nMission 4 : Thomas Kurtz, pilote de test et déserteur de la Fédération ayant rejoint l'armée de Zeon avant la début de la guerre.",
+    "relations": {
+      "Anime": [
+        {
+          "name": "Mobile Suit Gundam",
+          "url": "https://nautiljon.com//animes/mobile+suit+gundam.html",
+          "relationType": "[Histoire parallèle]",
+          "imageUrl": "https://nautiljon.com//images/anime/00/87/mobile_suit_gundam_778.webp?1730480940",
+          "additionnalInformations": "(Série - 1979)"
+        }
+      ]
+    },
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Gunggwigeomsin",
+    "japName": "궁귀검신",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/gunggwigeomsin.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/94/gunggwigeomsin_16649.webp?10",
+    "score": "6",
+    "votersNumber": "3",
+    "country": "Corée du Sud",
+    "type": "Manhwa",
+    "startDate": "2020",
+    "status": null,
+    "volumesNumber": null,
+    "genres": [
+      "Action",
+      "Aventure",
+      "Fantastique"
+    ],
+    "author": {
+      "story": "Jo Don Hyeong",
+      "art": "Park Gwang Jin"
+    },
+    "editor": {
+      "VO": "Kakao",
+      "VF": null
+    },
+    "description": "L'arc est une arme qui domine tout ce qui est en vue, même pour les cibles qui se cachent trop loin pour que les yeux puissent les voir. Imaginez une arme que vous ne pouvez même pas voir cibler votre vie. Qu'est-ce qui pourrait être plus effrayant que ça ? Un régime d'entraînement de l'enfer avec un grand-père brutal. Un joyeux voyage à Zhongyuan à la recherche d'une épouse. La montée d'un héros qui renversera le monde.",
+    "relations": {},
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Gunjou",
+    "japName": "羣青",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/gunjou.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/84/gunjou_9148.webp?11716061786",
+    "score": "8.6",
+    "votersNumber": "5",
+    "country": "Japon",
+    "type": "Seinen",
+    "startDate": "2007",
+    "status": "Terminé",
+    "volumesNumber": "3",
+    "genres": [
+      "Drame",
+      "Erotique",
+      "Mature",
+      "Psychologique",
+      "Shôjo-aï"
+    ],
+    "author": {
+      "story": "Nakamura Ching",
+      "art": "Nakamura Ching"
+    },
+    "editor": {
+      "VO": null,
+      "VF": null
+    },
+    "description": "« Je veux que tu le tues... »\n\nSon mari la maltraitait tous les jours. Incapable de le supporter plus longtemps, elle demande à son amie homosexuelle de tuer son mari pour elle. Et incapable de dire non à la femme qu'elle aime, cette dernière le tue, ainsi nous suivrons une relation particulière entre les deux femmes...",
+    "relations": {},
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Gunjou Natsukoi",
+    "japName": "群青夏恋",
+    "alternateName": "Summer Love in the Sea Blue",
+    "url": "https://nautiljon.com/mangas/gunjou+natsukoi.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/37/gunjou_natsukoi_14373.webp?11671151194",
+    "score": "3",
+    "votersNumber": "1",
+    "country": "Japon",
+    "type": "Yaoi",
+    "startDate": "2020",
+    "status": "Terminé",
+    "volumesNumber": "1",
+    "genres": [
+      "Drame",
+      "Romance",
+      "School Life",
+      "Slice of Life"
+    ],
+    "author": {
+      "story": "Kashio",
+      "art": "Kashio"
+    },
+    "editor": {
+      "VO": "Shueisha",
+      "VF": null
+    },
+    "description": "\"Je suis fatigué de regarder la route de campagne pour aller à l'école. C'est comme si le temps s'était arrêté ...\"\n\nDans une école secondaire provinciale, Asai est un garçon populaire qui s'entend bien avec ses camarades de classe et dirige les activités de son club. Mais il s'ennuie de cette existence banale. C'est alors que le nouveau transféré Konno, arrive pour briser cette tranquillité ...",
+    "relations": {},
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Gunjou ni Siren",
+    "japName": "群青にサイレン",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/gunjou+ni+siren.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/48/gunjou_ni_siren_4784.webp?11603184753",
+    "score": "9",
+    "votersNumber": "2",
+    "country": "Japon",
+    "type": "Josei",
+    "startDate": "2015",
+    "status": "Terminé",
+    "volumesNumber": "12",
+    "genres": [
+      "Drame",
+      "Psychologique",
+      "School Life"
+    ],
+    "author": {
+      "story": "Kawashita Mizuki",
+      "art": "Kawashita Mizuki"
+    },
+    "editor": {
+      "VO": "Shueisha",
+      "VF": null
+    },
+    "description": "Alors qu'il se trouvait à la cérémonie d'entrée de son lycée, Shuji Yoshizawa se voit confronté à des souvenirs douloureux. Quand il était plus petit, étant fan de baseball, il avait présenté son sport favoris à son cousin Sora. Cependant, Sora le dépassa très vite et Shuji fini par quitter son club. Maintenant lycéen, il se trouve que Sora est de retour après être parti en Angleterre quelques années plus tôt. Ce dernier, heureux de retrouver Shuji dans son lycée, lui demande si il compte rejoindre le club de baseball. Bien que ressenti comme un véritable cauchemar au début, Shuji va alors voir une occasion pour lui de se venger...",
+    "relations": {},
+    "news": {
+      "french": [
+        {
+          "name": "Top 10 des mangas qui mériteraient une adaptation en anime, selon les spectateurs japonais",
+          "url": "https://nautiljon.com/actualite/animes/top-10-des-mangas-qui-meriteraient-une-adaptation-en-anime-selon-les-spectateurs-japonais,10993.html",
+          "date": "28/03/2019",
+          "description": "10 séries qui, selon le public japonais, devraient être adaptées en animes.",
+          "imageUrl": "https://nautiljon.com/imagesmin/actualite/00/39/top_10_des_mangas_qui_meriteraient_une_adaptation_en_anime_selon_les_spectateurs_japonais_10993.webp?1553775315"
+        },
+        {
+          "name": "Nouveau manga pour Mikan Momokuri",
+          "url": "https://nautiljon.com/breves/nouveau-manga-pour-mikan-momokuri,2953.html",
+          "date": "15/07/2015",
+          "description": "Plus connue chez nous sous son autre nom Mizuki Kawashita, l'auteure d'Ichigo 100% et Hatsukoi Limited revient aujourd'hui dans le magazine de prépublication YOU chez Shueisha avec le manga Gunjou...",
+          "imageUrl": "https://nautiljon.com/imagesmin/breves/00/35/nouveau_manga_de_mikan_momokuri_2953.webp?1436995466"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Gunjou Reflection",
+    "japName": "群青リフレクション",
+    "alternateName": "Reflection of Azurite blue",
+    "url": "https://nautiljon.com/mangas/gunjou+reflection.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/24/gunjou_reflection_8242.webp?11576839524",
+    "score": "10",
+    "votersNumber": "3",
+    "country": "Japon",
+    "type": "Shojo",
+    "startDate": "2017",
+    "status": "Terminé",
+    "volumesNumber": "5",
+    "genres": [
+      "Romance",
+      "School Life",
+      "Slice of Life"
+    ],
+    "author": {
+      "story": "Sakai Mayu",
+      "art": "Sakai Mayu"
+    },
+    "editor": {
+      "VO": "Shueisha",
+      "VF": null
+    },
+    "description": "Koharu est une jeune étudiante qui s'inscrit dans une école dédiée aux arts de la scène. Dans sa classe, elle est la seule à ne pas avoir goûté aux joies de la gloire et si cette position la complexe un peu, elle se sent déterminée à réussir. À peine l'année scolaire a-t-elle commencé que déjà, elle obtient un premier rôle dans une petite pièce qui sera jouée lors d'une soirée de bienvenue pour les nouveaux élèves. Elle va se retrouver à jouer aux côtés de Ren Serizawa et ce premier rôle pourrait bien s'avérer décisif pour sa carrière.",
+    "relations": {},
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Gunjou Senki",
+    "japName": "群青戦記 グンジョーセンキ",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/gunjou+senki.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/68/gunjou_senki_4586.webp?11657615786",
+    "score": "10",
+    "votersNumber": "2",
+    "country": "Japon",
+    "type": "Seinen",
+    "startDate": "2013",
+    "status": "Terminé",
+    "volumesNumber": "17",
+    "genres": [
+      "Action",
+      "Drame",
+      "Historique",
+      "Mystère"
+    ],
+    "author": {
+      "story": "Kasahara Masaki",
+      "art": "Kasahara Masaki"
+    },
+    "editor": {
+      "VO": "Shueisha",
+      "VF": null
+    },
+    "description": "Aoi Nishino est un lycéen banal, voire minable, de deuxième année au lycée privé Seitoku, qui accueille les jeunes talents sportifs du pays. Lui-même appartient au club de tir à l'arc japonais, et ses compétences dans cette activité l'amènent à penser qu'il serait mieux taillé pour une vie à l'Époque Sengoku (1467-1603), période japonaise marquée par des guerres constantes et pour laquelle Aoi se passionne.\n\nUn soir après les cours, élèves et professeurs restés pour participer aux activités de leurs clubs respectifs voient apparaître le château d'Azuchi, pourtant détruit en 1582, sur une colline près du lycée et se font brusquement attaquer par des fantassins armés et sanguinaires. Aoi comprend rapidement qu'ils se trouvent désormais quelque part entre 1576 et 1582. Il ne leur reste qu'à s'adapter et tenter de se défendre contre leurs assaillants pour espérer survivre à ces temps périlleux.",
+    "relations": {
+      "Manga": [
+        {
+          "name": "Shin Gunjou Senki",
+          "url": "https://nautiljon.com//mangas/shin+gunjou+senki.html",
+          "relationType": "[Suite]",
+          "imageUrl": "https://nautiljon.com//images/manga/00/11/shin_gunjou_senki_24211.webp?1677841165",
+          "additionnalInformations": null
+        }
+      ]
+    },
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Gunka no Baltzar Gaiden - Ginkai no Jurij",
+    "japName": "Gunka no Baltzar Gaiden - Ginkai no Yuri / 軍靴のバルツァ - 銀灰のユーリ",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/gunka+no+baltzar+gaiden+-+ginkai+no+jurij.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/30/gunka_no_baltzar_gaiden_-_ginkai_no_jurij_23903.webp?10",
+    "score": "6.5",
+    "votersNumber": "2",
+    "country": "Japon",
+    "type": "Seinen",
+    "startDate": "2021",
+    "status": "Terminé",
+    "volumesNumber": "2",
+    "genres": [
+      "Action",
+      "Historique"
+    ],
+    "author": {
+      "story": "Nakajima Michitsune",
+      "art": "Kyoichi"
+    },
+    "editor": {
+      "VO": "Shinchosha",
+      "VF": null
+    },
+    "description": "Spin-off de Baltzar centré sur les personnages de Jurij et Timo.",
+    "relations": {
+      "Manga": [
+        {
+          "name": "Baltzar - La guerre dans le sang",
+          "url": "https://nautiljon.com//mangas/baltzar+-+la+guerre+dans+le+sang.html",
+          "relationType": "[Origine du spin off]",
+          "imageUrl": "https://nautiljon.com//images/manga/00/50/baltzar_-_la_guerre_dans_le_sang_4205.webp?1742756648",
+          "additionnalInformations": null
+        }
+      ]
+    },
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Gunkan Shounen",
+    "japName": "軍艦少年",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/gunkan+shounen.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/22/gunkan_shounen_29422.webp?10",
+    "score": null,
+    "votersNumber": null,
+    "country": "Japon",
+    "type": "Seinen",
+    "startDate": "2012",
+    "status": "Terminé",
+    "volumesNumber": "2",
+    "genres": [
+      "Furyo"
+    ],
+    "author": {
+      "story": "Yanauchi Daiju",
+      "art": "Yanauchi Daiju"
+    },
+    "editor": {
+      "VO": "Kodansha",
+      "VF": null
+    },
+    "description": "L'histoire prend place dans la préfecture de Nagasaki. Kaisei Sakamoto est un lycéen de 16 ans qui était un bon garçon, mais est devenu un délinquant suite à la mort de sa mère Sayuri. Il vit maintenant avec son père Genkai qui travaille dans un restaurant de ramen mais n'a plus de motivation pour aller travailler. \n\nUn jour, ils reçoivent la visite d'Iwao, un ami d'enfance de Sayuri et de Genkai. Après sa visite, Kaisei le raccompagne mais, sur le chemin, alors qu'il sont en train de parler, Iwao s'arrête et regarde l'île d'Hashima en face de la berge, dont les parents de Kaisei et d'Iwao sont originaires. Iwao raconte à Kaisei qu'il y a un trésor sur cette île et que, s'il le trouve, son père et lui retrouveraient le sourire. Le soir venu, Kaisei décide donc de s'y rendre...",
+    "relations": {},
+    "news": {
+      "french": []
+    }
+  },
+  {
+    "name": "Gunman Zak",
+    "japName": "Jakeuui Dosi / 자크의 도시",
+    "alternateName": null,
+    "url": "https://nautiljon.com/mangas/gunman+zak.html",
+    "imageUrl": "https://nautiljon.com/images/manga/00/27/gunman_zak_15372.webp?11617046792",
+    "score": "3",
+    "votersNumber": "1",
+    "country": "Corée du Sud",
+    "type": "Manhwa",
+    "startDate": "2018",
+    "status": null,
+    "volumesNumber": null,
+    "genres": [
+      "Action",
+      "Fantastique"
+    ],
+    "author": {
+      "story": "Kang Du Yeong",
+      "art": "Choi Hyeon Ju (manhwaga)"
+    },
+    "editor": {
+      "VO": "Toomics",
+      "VF": "Toomics"
+    },
+    "description": "Les habitants démunis de la cité d'Aria ont été attaqués. Alors qu'ils perdaient espoir, Zak est revenu. Pourra-t-il les sauver ?",
+    "relations": {},
+    "news": {
+      "french": []
+    }
   }
 ]
